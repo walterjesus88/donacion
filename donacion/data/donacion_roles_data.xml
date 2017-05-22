@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<!--Type Categorias-->
+		<record model="donacion.roles" id="rol_donatario"><field name="name">DONATARIO</field></record>
+		<record model="donacion.roles" id="rol_ogcti"><field name="name">OGCTI</field></record>
+		<record model="donacion.roles" id="rol_digesa"><field name="name">DIGESA</field></record>
+		<record model="donacion.roles" id="rol_digemid"><field name="name">DIGEMID</field></record>
+		<record model="donacion.roles" id="rol_disa"><field name="name">DISA</field></record>	
+		<record model="donacion.roles" id="rol_diresa"><field name="name">DIRESA</field></record>	
+		
+		<record model="donacion.roles" id="rol_colegiado"><field name="name">COLEGIADO</field></record>	
+		<record model="donacion.roles" id="rol_odontologo"><field name="name">ODONTOLOGO</field></record>	
+		<record model="donacion.roles" id="rol_medico"><field name="name">MEDICO</field></record>	
+		<record model="donacion.roles" id="rol_obstetra"><field name="name">OBSTETRA</field></record>	
+		<record model="donacion.roles" id="rol_enfermero"><field name="name">ENFERMERO</field></record>	
+		<record model="donacion.roles" id="rol_nutricionista"><field name="name">NUTRICIONISTA</field></record>
+    </data>
+</openerp>

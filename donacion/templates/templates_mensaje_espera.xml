@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <template id="signin_notificacion_usuario" name="Formulario Nuevo Usuario">
+     
+            <t t-call="website.layout">
+                <t t-set="html_data" t-value="{'style': 'height: 100%;'}" />
+                <t t-set="head">
+                    <t t-call-assets="web.assets_common" t-js="false" />
+                    <t t-call-assets="web.assets_frontend" t-js="false" />
+                    <t t-call-assets="web.assets_common" t-css="false" />
+                    <t t-call-assets="web.assets_frontend" t-css="false" />
+                </t>
+                <t t-set="body_classname" t-value="'container'" />
+                <div class="row">
+                    <center><h3 style="color:red">Mensaje </h3></center>
+                    <h3><center> La plataforma virtual de Donaciones y Misiones Sanitarias </center> </h3>
+                    <h3><center> le da la Bienvenida indicandoles que sus datos seran validados.. </center> </h3>
+                    <h3 style="color:green"><center> Revise su correo electronico </center> </h3>
+                    <p><center> Oficina General de Cooperacion Tecnica Internacional </center> </p>
+                
+                    
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>

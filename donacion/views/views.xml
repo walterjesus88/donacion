@@ -1,0 +1,851 @@
+<odoo>
+    <data>
+        <record id="view_form_donacion_requisito" model="ir.ui.view">
+            <field name="name">view_donacion_requisito</field>
+            <field name="model">donacion.requisito</field>
+            <field name="arch" type="xml">       
+                <form>
+                    <field name="id" invisible="True"/>
+                    <field name="create_uid" invisible="True"/>
+                    <field name="user_id_organ" invisible="True"/> 
+                <header>         
+                    <button string="Enviar a OGCTI" name="button_iniciado" states="B,01"  class="oe_highlight" groups="donacion.group_donacion_requisito_donatario"/>
+
+                    <!-- Enviar a Diresa- Digesa --> 
+                                    
+                    <label class="control-label" for="enviar_digesa" groups="donacion.group_donacion_requisito_ogcai" attrs="{'invisible': [('state', 'in', ('R','01','V','B'))]}"/> 
+                    <field  name="enviar_digesa" groups="donacion.group_donacion_requisito_ogcai" attrs="{'invisible': [('state', 'in', ('R','01','V','B'))]}"  />
+                    
+                    <label class="control-label" for="enviar_digemid" groups="donacion.group_donacion_requisito_ogcai" attrs="{'invisible': [('state', 'in', ('R','01','V','B'))]}"/>
+                    <field name="enviar_digemid" groups="donacion.group_donacion_requisito_ogcai" attrs="{'invisible': [('state', 'in', ('R','01','V','B'))]}"  />
+
+                    <button icon="fa-check"  string="Enviar" name="button_registrado" confirm="Esta seguro de enviar a las entidades seleccionadas?" states="I,02" class="oe_highlight" groups="donacion.group_donacion_requisito_ogcai" />
+
+                    <!-- Boton observara para estados I,02,R-->
+                    <button string="Observar" name="button_observado1"  states="I,02,R" class="oe_highlight" groups="donacion.group_donacion_requisito_ogcai" />  
+
+                    <button string="Validar proceso" name="button_validado"  states="R" class="oe_highlight" groups="donacion.group_donacion_requisito_ogcai" />
+
+                    <!--/Enviar por digesa-->
+                    <field name="state" nolabel="1" widget="statusbar" statusbar_visible="B,I,R,V" />
+
+
+                    <button name="visto_digemid" type="object" string="Enviar informe DIGEMID" class="oe_highlight" groups="donacion.group_donacion_requisito_digemid"/>
+
+                    <button name="visto_digesa" type="object" string="Enviar informe DIGESA" class="oe_highlight" groups="donacion.group_donacion_requisito_digesa"/>      
+                </header>
+                <sheet> 
+                    <group name="group_top" style="text-align:center;color:#263238" string="1"> 
+                        <field name="numero_expediente" readonly="True"/> 
+                        <group name="group_left">
+                        </group>             
+                        <group name="group_right">
+                        </group>             
+                    </group>       
+                    <group name="Solicitud"  style="text-align:center;color:#263238">
+                    </group>
+                    <group name="tecnico" style="text-align:center;color:#263238" > 
+                    </group>
+                    <group name="Carta"  style="text-align:center;color:#263238" string="2" >                      
+                    </group>  
+                    <group name="Embarque"  style="text-align:center;color:#263238" string="3"  >            
+                    </group>
+                    <group name="categoria" style="text-align:center;color:#263238"  string="4">             
+                    </group>
+                    <group name="lista_adicional"  style="text-align:center;color:#263238" >            
+                    </group>  
+                    <notebook>
+                        <page name="MEDICAMENTOS" string="Lista de productos farmaceuticos">
+                            <button class="btn-primary" string="Seleccionar de la lista de Catalogo" type="action" name="%(launch_session_wizard)d" context="{'default_donacion_id':id}" groups="donacion.group_donacion_requisito_donatario"/>          
+                            <group name="lista_donacion" > 
+                                <field name="lista_ids" nolabel="1" >
+                              
+                                    <search string="Search Lista">
+                                        <field name="name"/>
+                                        <!--     <field name="email"/>
+                                      <field name="partner_id"/>
+                                      <filter name="completed" string="Completed" domain="[('state', '=', 'done')]"/>
+                                      <filter string="Partially completed" domain="[('state', '=', 'skip')]"/>
+                                      <filter string="New" domain="[('state', '=', 'new')]"/>
+                                      <filter string="Test" domain="[('test_entry','=', True)]"/>
+                                      <group expand="0" string="Group By">
+                                          <filter name="group_by_survey" string="Survey" domain="[]" context="{'group_by': 'survey_id'}"/>
+                                          <filter string="Email" domain="[]" context="{'group_by': 'email'}"/>
+                                          <filter string="Partner" domain="[]" context="{'group_by': ['partner_id']}"/>
+                                      </group> -->
+                                    </search>
+
+                                    <!-- <input class="o_searchview_input"/> -->
+                                    <tree top="editable" limit="10">
+                                        <field name="name"/>
+                                        <field name="name_generico"/>
+                                        <field name="concentracion"/>
+                                        <field name="forma"/>
+                                        <field name="lote"/>
+                                        <field name="fecha_vencimiento"/>
+                                        <field name="temperatura"/>
+                                        <field name="pais"/>              
+                                        <field name="cantidad"/>                                
+                                    </tree>
+
+                                    <form editable="top">
+                                        <header>
+                                        </header>
+                                        <sheet>
+                                            <group>
+                                                <group>               
+                                                    <field name="name" />
+                                                    <field name="name_generico" />
+                                                </group>
+                                                <group>
+                                                    <field name="concentracion"  />
+                                                    <field name="forma" />
+                                                    <field name="lote" />
+                                                </group>                     
+                                                <group>
+                                                    <field name="fecha_vencimiento" />
+                                                    <field name="temperatura"  />
+                                                    <field name="pais" />
+                                                </group>                     
+                                                <group>
+                                                    <field name="cantidad"  />                              
+                                                </group>
+                                            </group>
+                                            <group>
+                                                <field name="certificado_protocolo" />
+                                            </group>
+                                            <group>
+                                                <field name="certificado_negatividad" />
+                                            </group>
+                                            <group>
+                                                <field name="certificado_exportacion"  />              
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </group>
+                        </page>
+                        <page name="DISPOSITIVOS_MEDICOS" string="Dispositivos medicos">
+                            <field name="dispositivos_ids" >
+                                <tree top="editable">                  
+                                    <field name="name"/>
+                                    <field name="cantidad"/>
+                                    <field name="codigo"/>
+                                    <field name="lote_serie"/>
+                                    <field name="fecha_expiracion"/>
+                                    <field name="finalidad_uso"/>
+                                    <field name="forma_presentacion"/>
+                                    <field name="accesorios"/>              
+                                    <field name="componentes"/> 
+                                    <field name="condiciones"/> 
+                                    <field name="certificado_repotenciacion"/> 
+                                    <field name="certificado_operatividad"/> 
+                                    <field name="manual_operacion"/>                   
+                                </tree>
+                                <form editable="top">
+                                    <header>
+                                    </header>
+                                    <sheet>
+                                        <group>
+                                            <group>               
+                                              <field name="name" />
+                                            </group>
+                                            <group>
+                                              <field name="cantidad" />
+                                            </group>
+                                            <group>
+                                              <field name="codigo"  />
+                                            </group>                     
+                                            <group>                     
+                                              <field name="lote_serie" />
+                                            </group>                     
+                                            <group>                     
+                                              <field name="fecha_expiracion" />
+                                            </group>                     
+                                            <group>
+                                              <field name="finalidad_uso" />
+                                            </group>
+                                            <group>
+                                              <field name="forma_presentacion"  />
+                                            </group>
+                                            <group>
+                                              <field name="accesorios" />
+                                            </group>                     
+                                            <group>
+                                              <field name="componentes"  />   
+                                            </group>
+                                            <group>
+                                              <field name="condiciones"  />                                 
+                                            </group>
+                                            <group>
+                                              <field name="certificado_repotenciacion"  />   
+                                            </group>
+                                            <group>
+                                              <field name="certificado_operatividad"  />                                 
+                                            </group>
+                                            <group>
+                                              <field name="manual_operacion"  />                                 
+                                            </group>
+                                        </group>                                   
+                                    </sheet>
+                                </form>
+                            </field>  
+                        </page>
+                        <page name="PROD_SANITARIOS" string="Productos Sanitarios">
+                            <field name="prodsanitarios_ids" >
+                                <tree editable="top">                  
+                                    <field name="name"/>
+                                    <field name="cantidad"/>                    
+                                    <field name="lote_serie"/>
+                                    <field name="fecha_vencimiento"/>
+                                    <field name="etiquetado"/>
+                                    <field name="condiciones"/>                                   
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>    
+                    <notebook>
+                        <page name="Observaciones" string="Observaciones">
+                            <group>
+                            </group>
+                        </page>
+                        <page name="DIGESA" string="Informe Tecnico DIGESA">
+                            <group>
+                            </group>
+                        </page>
+                        <page name="DIGEMID" string="Informe Tecnico DIGEMID">
+                            <group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>    
+                <footer>  
+                </footer> 
+                <div class="oe_chatter">           
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_tree_donacion_requisito" model="ir.ui.view">
+            <field name="name">view_donacion_requisito</field>
+            <field name="model">donacion.requisito</field>
+            <field name="arch" type="xml">
+                <tree>          
+                    <field name="numero_expediente"/>    
+                    <field name="name"/>      
+                    <field name="descripcion"/>
+                    <field name="solicitud" widget="binary" filename="name_filename_solicitud" attrs="{'readonly': [('state', 'not in', ('B','01'))]}" />
+                    <field name="name_filename_solicitud" invisible="1"/>
+
+                    <field name="carta" widget="binary" filename="name_filename_carta" attrs="{'readonly': [('state', 'not in', ('B','01'))]}"/>
+                    <field name="name_filename_carta" invisible="1" />
+
+                    <field name="embarque" widget="binary" filename="name_filename_embarque" attrs="{'readonly': [('state', 'not in', ('B','01'))]}"/>
+                    <field name="name_filename_embarque" invisible="1"/>     
+                    <field name="state"/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vistas Heredadas para DONATARIO -->
+        <record id="view_form_donacion_donatario" model="ir.ui.view">
+            <field name="name">donacion.requisito.donatario.form</field>
+            <field name="model">donacion.requisito</field>
+            <field name="inherit_id" ref="view_form_donacion_requisito" />
+            <field name="groups_id" eval="[(4, ref('donacion.group_donacion_requisito_donatario'))]" />
+            <field name="arch" type="xml">        
+                <xpath expr="//group[@name='group_top']" position="inside">  
+                    <group name="group_left"> 
+                        <field name="name" /> 
+                        <field name="descripcion" />
+                    </group> 
+                </xpath>        
+              
+                <xpath expr="//group[@name='categoria']" position="inside">  
+                    <group>                
+                        <p>Listas de Donación</p>
+                    </group>
+                    <group>
+                        <field name="categoria_ids"  widget="many2many_checkboxes" nolabel="1"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='lista_adicional']" position="inside">  
+                    <group>
+                        <p>Subir Archivos Donación</p>
+                    </group>
+                    <group>
+                        <field name="instrumentos_medicos" widget="binary" filename="name_filename_instrumentos_medicos"  />
+                        <field name="name_filename_instrumentos_medicos" invisible="1"/> 
+                      
+                        <field name="alimentos" widget="binary" filename="name_filename_alimentos" />
+                        <field name="name_filename_alimentos" invisible="1"/> 
+
+                        <field name="utiles_escolares" widget="binary" filename="name_filename_utiles_escolares"  />
+                        <field name="name_filename_utiles_escolares" invisible="1"/>
+
+                        <field name="productos_higiene" widget="binary" filename="name_filename_productos_higiene"  />
+                        <field name="name_filename_productos_higiene" invisible="1"/>
+
+                        <field name="equipos_medicos" widget="binary" filename="name_filename_equipos_medicos"  />   
+                        <field name="name_filename_equipos_medicos" invisible="1"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='Solicitud']" position="inside">
+                    <group>
+                        <label for="solicitud" groups="donacion.group_donacion_minsa" />
+                    </group>  
+                    <group>  
+                        <field name="solicitud" widget="binary" filename="name_filename_solicitud" attrs="{'readonly': [('state', 'not in', ('B','01'))]}" groups="donacion.group_donacion_minsa" nolabel="1" />
+                        <field name="validar_solicitud" readonly="True" groups="donacion.group_donacion_minsa" nolabel="1"/>    
+                        <field name="name_filename_solicitud" invisible="1"/>
+                        <field name="comentario_solicitud" nolabel="1" groups="donacion.group_donacion_minsa" readonly="True"/>
+
+                    </group>  
+                </xpath>
+
+                <xpath expr="//group[@name='tecnico']" position="inside">
+                    <group>
+                        <label for="opinion_tecnica" groups="donacion.group_donacion_ong" />              
+                    </group>
+                    <group>
+                        <field name="opinion_tecnica" widget="binary" filename="name_filename_tecnico" attrs="{'readonly': [('state', 'not in', ('B','01'))]}" groups="donacion.group_donacion_ong" nolabel="1" />        
+                        <field name="validar_tecnico" readonly="True" groups="donacion.group_donacion_ong" nolabel="1"/>
+                        <field name="name_filename_tecnico" invisible="1"  /> 
+                        <field name="comentario_opinion_tecnica" nolabel="1" groups="donacion.group_donacion_ong" readonly="True"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='Carta']" position="inside">
+                    <group>
+                        <label for="carta"  />              
+                    </group>
+                    <group>
+                        <field name="carta" widget="binary" filename="name_filename_carta" attrs="{'readonly': [('state', 'not in', ('B','01'))]}" nolabel="1"/> 
+                        <field name="validar_carta" readonly="True" nolabel="1"/>
+                        <field name="name_filename_carta" invisible="1" />
+                        <field name="comentario_carta" nolabel="1" readonly="True"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='Embarque']" position="inside">
+                    <group>
+                        <label for="embarque"  />              
+                    </group>
+                    <group>
+                        <field name="embarque" widget="binary" filename="name_filename_embarque" attrs="{'readonly': [('state', 'not in', ('B','01'))]}" nolabel="1"/>
+                        <field name="validar_embarque" readonly="True" nolabel="1"/>
+                        <field name="name_filename_embarque" invisible="1"/>   
+                        <field name="comentario_embarque" nolabel="1" readonly="True"/>                        
+                    </group>
+                </xpath>
+
+              <xpath expr="//page[@name='Observaciones']/group" position="inside">
+                <group>         
+                  <field name="observacion_ogcai" readonly='True' />
+                  <field name="observacion_digesa" readonly='True'/>
+                  <field name="observacion_digemid" readonly='True'/>                    
+                </group>
+              </xpath>
+
+              <xpath expr="//page[@name='DIGESA']/group" position="inside">
+                <group>              
+                  <field name="informedigesa" widget="binary" filename="name_filename_digesa" readonly='True'/>             
+                  <field name="name_filename_digesa" invisible="1"/>  
+                </group>
+              </xpath>
+
+              <xpath expr="//page[@name='DIGEMID']/group" position="inside">
+                <group>           
+                  <field name="informedigemid" widget="binary" filename="name_filename_digemid" readonly='True'/>             
+                  <field name="name_filename_digemid" invisible="1"/>              
+                </group>
+              </xpath>
+            </field>
+        </record>
+
+        <!-- vista grafica state por create_uid -->
+        <record model="ir.ui.view" id="view_donacion_requisito_graph">
+            <field name="name">donacion.requisito.graph</field>
+            <field name="model">donacion.requisito</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <graph string="Donacion requisito Lines">
+                    <field name="state" group="True"/>
+                    <field name="create_uid" operator="*"/>
+                </graph>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="donaciones_requisitos_action">
+            <field name="name">Donaciones</field>
+            <field name="res_model">donacion.requisito</field>    
+            <field name="view_mode">tree,form,graph</field>
+            <field name="view_type">form</field>
+            <field name="view_ids"
+              eval="[(5, 0, 0),
+                    (0, 0, {'view_mode': 'tree', 'view_id': ref('view_tree_donacion_requisito')}),
+                    (0, 0, {'view_mode': 'form', 'view_id': ref('view_form_donacion_donatario')}),
+                    (0, 0, {'view_mode': 'graph', 'view_id': ref('view_donacion_requisito_graph')}),
+                    ]"/>  
+        </record> 
+
+        <menuitem id="Donaciones_requisitos" name="Donaciones"  action="donaciones_requisitos_action" groups="donacion.group_donacion_requisito_donatario"/>
+
+
+        <!-- Vistas Heredadas para OGCTI -->
+        <record id="view_form_donacion_ogcti" model="ir.ui.view">
+            <field name="name">donacion.requisito.ogcti.form</field>
+            <field name="model">donacion.requisito</field>
+            <field name="inherit_id" ref="view_form_donacion_requisito" />
+            <field name="groups_id" eval="[(4, ref('donacion.group_donacion_requisito_ogcai'))]" />
+            <field name="arch" type="xml">                          
+                <xpath expr="//group[@name='group_left']" position="inside">  
+                    <field name="name" readonly="True"/>         
+                    <field name="descripcion" readonly="True"/>         
+                </xpath>
+
+                <xpath expr="//group[@name='Solicitud']" position="inside">
+                    <group>
+                        <label for="solicitud"  attrs="{'invisible':[('user_id_organ','=','O')]}" />              
+                    </group>
+                    <group>
+                        <field name="solicitud" widget="binary" filename="name_filename_solicitud" readonly="True"  attrs="{'invisible':[('user_id_organ','=','O')]}" nolabel="1"/>
+                        <field name="validar_solicitud" attrs="{'invisible':[('user_id_organ','=','O')]}" nolabel="1"/>
+                        <field name="name_filename_solicitud" invisible="1" />
+                        <field name="comentario_solicitud" nolabel="1" attrs="{'invisible':['|',('user_id_organ','=','O'),('validar_solicitud','=',True)]}"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='tecnico']" position="inside">
+                    <group>
+                        <label for="opinion_tecnica" attrs="{'invisible':[('user_id_organ','=','M')]}" />              
+                    </group>
+                    <group>
+                        <field name="opinion_tecnica" widget="binary" filename="name_filename_tecnico" readonly="True" attrs="{'invisible':[('user_id_organ','=','M')]}"  nolabel="1"/>
+                        <field name="validar_tecnico" attrs="{'invisible':[('user_id_organ','=','M')]}" nolabel="1"/>
+                        <field name="name_filename_tecnico" invisible="1" />
+                        <field name="comentario_opinion_tecnica" nolabel="1" attrs="{'invisible':['|',('user_id_organ','=','M'),('validar_tecnico','=',True)]}" />
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='Carta']" position="inside">
+                    <group>
+                        <label for="carta"  />              
+                    </group>
+                    <group>
+                        <field name="carta" widget="binary" filename="name_filename_carta" readonly="True" nolabel="1"/> 
+                        <field name="validar_carta" nolabel="1"/>
+                        <field name="name_filename_carta" invisible="1" /> 
+                        <field name="comentario_carta" nolabel="1" />                         
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='Embarque']" position="inside">
+                    <group>
+                        <label for="embarque"  />              
+                    </group>
+                    <group>
+                        <field name="embarque" widget="binary" filename="name_filename_embarque" readonly="True" nolabel="1"/>
+                        <field name="validar_embarque" nolabel="1"/>
+                        <field name="name_filename_embarque" invisible="1"/>
+                        <field name="comentario_embarque" nolabel="1"/>  
+                    </group>
+                </xpath> 
+
+                <xpath expr="//group[@name='categoria']" position="inside">  
+                    <group>                
+                        <p>Listas de Donación</p>
+                    </group>
+                    <group>
+                        <field name="categoria_ids"  widget="many2many_checkboxes" readonly="True" nolabel="1"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='lista_adicional']" position="inside">  
+                    <group>
+                        <p>Subir Archivos Donación</p>
+                    </group>
+                    <group>              
+                        <field name="instrumentos_medicos" widget="binary" filename="name_filename_instrumentos_medicos" readonly="True" />
+                        <field name="name_filename_instrumentos_medicos" invisible="1"/> 
+                      
+                        <field name="alimentos" widget="binary" filename="name_filename_alimentos" readonly="True"/>
+                        <field name="name_filename_alimentos" invisible="1"/> 
+
+                        <field name="utiles_escolares" widget="binary" filename="name_filename_utiles_escolares" readonly="True" />
+                        <field name="name_filename_utiles_escolares" invisible="1"/>
+
+                        <field name="productos_higiene" widget="binary" filename="name_filename_productos_higiene" readonly="True" />
+                        <field name="name_filename_productos_higiene" invisible="1"/>
+
+                        <field name="equipos_medicos" widget="binary" filename="name_filename_equipos_medicos" readonly="True" />   
+                        <field name="name_filename_equipos_medicos" invisible="1"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//page[@name='Observaciones']/group" position="after">
+                    <group>                    
+                        <field name="observacion_ogcai" />
+                        <field name="observacion_digesa" readonly='True'/>
+                        <field name="observacion_digemid" readonly='True'/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//page[@name='DIGESA']/group" position="inside">
+                    <group>     
+                        <field name="informedigesa" widget="binary" filename="name_filename_digesa" readonly="True"/>             
+                        <field name="name_filename_digesa" invisible="1"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//page[@name='DIGEMID']/group" position="inside">
+                    <group>             
+                        <field name="informedigemid" widget="binary" filename="name_filename_digemid" readonly="True"/>             
+                        <field name="name_filename_digemid" invisible="1"/>            
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Graficos extenos-->
+        <record model="ir.ui.view" id="view_donacion_requisito_graph_ogcti">
+            <field name="name">donacion.requisito.graph</field>
+            <field name="model">donacion.requisito</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <graph string="Donacion requisito General">
+                    <field name="state" group="True"/>
+                    <field name="create_uid" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_donacion_requisito_graph2_ogcti">
+            <field name="name">donacion.requisito.graph</field>
+            <field name="model">donacion.requisito</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <graph string="estado agrupado por usuario">
+                    <field name="state" group="True"/>
+                    <field name="create_uid" operator="*"/>                
+                </graph>        
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_donacion_requisito_graph3_ogcti">
+            <field name="name">donacion.requisito.graph</field>
+            <field name="model">donacion.requisito</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <graph string="Graficos por estado agrupado usuario creacion">
+                    <field name="create_date" type="col"/>             
+                    <field name="create_uid" type="row"/>
+                    <field name="state" type="measure"/>
+                </graph>        
+            </field>
+        </record>
+
+        <!-- Graficos interno-->
+        <record model="ir.ui.view" id="view_donacion_requisito_subgraph_general_ogcti">
+            <field name="name">donacion.requisito.graph</field>
+            <field name="model">donacion.requisito</field>
+            <field name="type">graph</field>
+            <field name="arch" type="xml">
+                <graph string="Graficos por estado agrupado usuario">
+                    <field name="create_uid" group="True"/>             
+                    <field name="state" type="measure"/>
+                </graph>        
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="donaciones_requisitos_ogcai_action">
+            <field name="name">Donaciones OGCTI</field>
+            <field name="res_model">donacion.requisito</field>    
+            <field name="view_mode">tree,form,graph</field>
+            <field name="view_type">form</field>
+            <field name="view_ids"
+                    eval="[(5, 0, 0),
+                           (0, 0, {'view_mode': 'tree', 'view_id': ref('view_tree_donacion_requisito')}),
+                           (0, 0, {'view_mode': 'form', 'view_id': ref('view_form_donacion_ogcti')}),
+                           (0, 0, {'view_mode': 'graph', 'view_id': ref('view_donacion_requisito_subgraph_general_ogcti')}),
+                          ]"/>
+        </record> 
+
+        <menuitem id="Donaciones_requisitos_ogcti" name="Donaciones"  action="donaciones_requisitos_ogcai_action" groups="donacion.group_donacion_requisito_ogcai"/>
+
+        <record id="action_for_donacion_graph" model="ir.actions.act_window">
+            <field name="name">donacion requisito graph ogcti</field>
+            <field name="res_model">donacion.requisito</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_donacion_requisito_graph_ogcti"/>
+        </record>
+
+        <record id="action_for_donacion2_graph" model="ir.actions.act_window">
+            <field name="name">donacion requisito graph ogcti</field>
+            <field name="res_model">donacion.requisito</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_donacion_requisito_graph2_ogcti"/>
+        </record>
+
+        <!--   <record id="action_for_donacion3_graph" model="ir.actions.act_window">
+            <field name="name">donacion requisito graph ogcti</field>
+            <field name="res_model">donacion.requisito</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_donacion_requisito_graph3_ogcti"/>
+        </record> -->
+
+        <menuitem action="action_for_donacion_graph" id="menu_donacion_graph_id" sequence="1" name='Graficos Donaciones'  groups="donacion.group_donacion_requisito_ogcai"/>
+        <menuitem action="action_for_donacion2_graph" id="menu_donacion_graph_id2" sequence="1" name='Graficos usuario/estado' parent='menu_donacion_graph_id' groups="donacion.group_donacion_requisito_ogcai"/>
+    
+        <!--     <menuitem action="action_for_donacion3_graph" id="menu_donacion_graph_id3"
+        sequence="1" name='Graficos usuario/estado/fecha' parent='menu_donacion_graph_id' groups="donacion.group_donacion_requisito_ogcai"/> -->
+
+
+        <!-- Vistas Heredadas para DIGESA -->
+        <record id="view_form_donacion_DIGESA" model="ir.ui.view">
+            <field name="name">donacion.requisito.digesa.form</field>
+            <field name="model">donacion.requisito</field>
+            <field name="inherit_id" ref="view_form_donacion_requisito" />
+            <field name="groups_id" eval="[(4, ref('donacion.group_donacion_requisito_digesa'))]" />
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='group_left']" position="inside">  
+                    <field name="name" readonly="True"/> 
+                    <field name="descripcion" readonly="True"/>     
+                </xpath>
+
+                <xpath expr="//group[@name='Solicitud']" position="inside">
+                    <group>
+                        <label for="solicitud" attrs="{'invisible':[('user_id_organ','=','O')]}"  />              
+                    </group>
+                    <group>
+                        <field name="solicitud" widget="binary" filename="name_filename_solicitud" readonly="True" attrs="{'invisible':[('user_id_organ','=','O')]}"  nolabel="1"/>
+                        <field name="validar_solicitud" nolabel="1" readonly="True" attrs="{'invisible':[('user_id_organ','=','O')]}"/>
+                        <field name="name_filename_solicitud" invisible="1"/>
+                        <field name="comentario_solicitud" nolabel="1" attrs="{'invisible':[('user_id_organ','=','O')]}" readonly="True"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='tecnico']" position="inside">
+                    <group>
+                        <label for="opinion_tecnica" attrs="{'invisible':[('user_id_organ','=','M')]}" />              
+                    </group>
+                    <group>
+                        <field name="opinion_tecnica" widget="binary" filename="name_filename_tecnico" readonly="True" attrs="{'invisible':[('user_id_organ','=','M')]}" nolabel="1"/>
+                        <field name="validar_tecnico" readonly="True" attrs="{'invisible':[('user_id_organ','=','M')]}"  nolabel="1"/>
+                        <field name="name_filename_tecnico" invisible="1" />
+                        <field name="comentario_opinion_tecnica" nolabel="1"  attrs="{'invisible':[('user_id_organ','=','M')]}" readonly="True"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='Carta']" position="inside">
+                    <group>
+                        <label for="carta"  />              
+                    </group>
+                    <group>
+                        <field name="carta" widget="binary" filename="name_filename_carta" readonly="True" nolabel="1"/> 
+                        <field name="validar_carta" readonly="True"  nolabel="1"/>
+                        <field name="name_filename_carta" invisible="1" />  
+                        <field name="comentario_carta" nolabel="1" readonly="True" />    
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='Embarque']" position="inside">
+                    <group>
+                        <label for="embarque"  />              
+                    </group>
+                    <group>
+                        <field name="embarque" widget="binary" filename="name_filename_embarque" readonly="True" nolabel="1"/>
+                        <field name="validar_embarque"  readonly="True"  nolabel="1"/>
+                        <field name="name_filename_embarque" invisible="1"/>
+                        <field name="comentario_embarque" nolabel="1" readonly="True" /> 
+                    </group>
+                </xpath> 
+
+                <xpath expr="//group[@name='categoria']" position="inside">  
+                    <group>                
+                        <p>Listas de Donación</p>
+                    </group>
+                    <group>
+                       <field name="categoria_ids"  widget="many2many_checkboxes" readonly="True" nolabel="1"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='lista_adicional']" position="inside">  
+                    <group>
+                        <p>Subir Archivos Donación</p>
+                    </group>
+                    <group>    
+                        <field name="instrumentos_medicos" widget="binary" filename="name_filename_instrumentos_medicos" readonly="True" />
+                        <field name="name_filename_instrumentos_medicos" invisible="1"/> 
+                      
+                        <field name="alimentos" widget="binary" filename="name_filename_alimentos" readonly="True"/>
+                        <field name="name_filename_alimentos" invisible="1"/> 
+
+                        <field name="utiles_escolares" widget="binary" filename="name_filename_utiles_escolares" readonly="True" />
+                        <field name="name_filename_utiles_escolares" invisible="1"/>
+
+                        <field name="productos_higiene" widget="binary" filename="name_filename_productos_higiene" readonly="True" />
+                        <field name="name_filename_productos_higiene" invisible="1"/>
+
+                        <field name="equipos_medicos" widget="binary" filename="name_filename_equipos_medicos" readonly="True" />   
+                        <field name="name_filename_equipos_medicos" invisible="1"/>          
+                    </group>
+                </xpath>
+
+                <xpath expr="//page[@name='Observaciones']/group" position="replace">
+                    <group>     
+                        <field name="observacion_digesa" />
+                    </group>
+                </xpath>
+
+                <xpath expr="//page[@name='DIGESA']/group" position="inside">
+                    <group>     
+                        <field name="informedigesa" widget="binary" filename="name_filename_digesa" />             
+                        <field name="name_filename_digesa" invisible="1"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="donaciones_requisitos_digesa_action">
+            <field name="name">Donaciones DIGESA</field>
+            <field name="res_model">donacion.requisito</field>    
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>       
+            <field name="domain">[('enviar_digesa','=',True)]</field>      
+            <field name="view_ids"
+                    eval="[(5, 0, 0),
+                           (0, 0, {'view_mode': 'tree', 'view_id': ref('view_tree_donacion_requisito')}),
+                           (0, 0, {'view_mode': 'form', 'view_id': ref('view_form_donacion_DIGESA')})]"/>
+        </record> 
+
+        <menuitem id="Donaciones_requisitos_digesa" name="Donaciones"  action="donaciones_requisitos_digesa_action" groups="donacion.group_donacion_requisito_digesa"/>
+
+        <!-- Vistas Heredadas para DIGEMID -->
+        <record id="view_form_donacion_DIGEMID" model="ir.ui.view">
+            <field name="name">donacion.requisito.digemid.form</field>
+            <field name="model">donacion.requisito</field>
+            <field name="inherit_id" ref="view_form_donacion_requisito" />
+            <field name="groups_id" eval="[(4, ref('donacion.group_donacion_requisito_digemid'))]" />
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='group_left']" position="inside">  
+                    <field name="name" readonly="True"/> 
+                    <field name="descripcion" readonly="True"/> 
+                </xpath>
+
+                <xpath expr="//group[@name='Solicitud']" position="inside">
+                    <group>
+                        <label for="solicitud"  attrs="{'invisible':[('user_id_organ','=','O')]}" />              
+                    </group>
+                    <group>
+                        <field name="solicitud" widget="binary" filename="name_filename_solicitud" readonly="True" attrs="{'invisible':[('user_id_organ','=','O')]}" nolabel="1"/>
+                        <field name="validar_solicitud" readonly="True" attrs="{'invisible':[('user_id_organ','=','O')]}" nolabel="1"/>
+                        <field name="name_filename_solicitud" invisible="1"/> 
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='tecnico']" position="inside">
+                    <group>
+                        <label for="opinion_tecnica" attrs="{'invisible':[('user_id_organ','=','M')]}" />              
+                    </group>
+                    <group>
+                        <field name="opinion_tecnica" widget="binary" filename="name_filename_tecnico" readonly="True" attrs="{'invisible':[('user_id_organ','=','M')]}" nolabel="1"/>
+                        <field name="validar_tecnico" readonly="True" attrs="{'invisible':[('user_id_organ','=','M')]}" nolabel="1"/>
+                        <field name="name_filename_tecnico" invisible="1" />
+                        <field name="comentario_opinion_tecnica" nolabel="1" attrs="{'invisible':[('user_id_organ','=','M')]}" readonly="True" />
+                    </group>
+                </xpath>      
+
+                <xpath expr="//group[@name='Carta']" position="inside">
+                    <group>
+                        <label for="carta"  />              
+                    </group>
+                    <group>
+                        <field name="carta" widget="binary" filename="name_filename_carta" readonly="True" nolabel="1"/> 
+                        <field name="validar_carta" readonly="True" nolabel="1"/>
+                        <field name="name_filename_carta" invisible="1" />  
+                        <field name="comentario_carta" nolabel="1" readonly="True" />
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='Embarque']" position="inside">
+                    <group>
+                        <label for="embarque"  />              
+                    </group>
+                    <group>
+                        <field name="embarque" widget="binary" filename="name_filename_embarque" readonly="True" nolabel="1"/>
+                        <field name="validar_embarque"  readonly="True" nolabel="1"/>
+                        <field name="name_filename_embarque" invisible="1"/>
+                        <field name="comentario_embarque" nolabel="1" readonly="True" />
+                    </group>
+                </xpath> 
+
+                <xpath expr="//group[@name='categoria']" position="inside">  
+                    <group>                
+                        <p>Listas de Donación</p>
+                    </group>
+                    <group>
+                        <field name="categoria_ids"  widget="many2many_checkboxes" readonly="True" nolabel="1"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='lista_adicional']" position="inside">  
+                    <group>
+                        <p>Subir Archivos Donación</p>
+                    </group>
+                    <group>    
+                        <field name="instrumentos_medicos" widget="binary" filename="name_filename_instrumentos_medicos" readonly="True" />
+                        <field name="name_filename_instrumentos_medicos" invisible="1"/> 
+                      
+                        <field name="alimentos" widget="binary" filename="name_filename_alimentos" readonly="True"/>
+                        <field name="name_filename_alimentos" invisible="1"/> 
+
+                        <field name="utiles_escolares" widget="binary" filename="name_filename_utiles_escolares" readonly="True" />
+                        <field name="name_filename_utiles_escolares" invisible="1"/>
+
+                        <field name="productos_higiene" widget="binary" filename="name_filename_productos_higiene" readonly="True" />
+                        <field name="name_filename_productos_higiene" invisible="1"/>
+
+                        <field name="equipos_medicos" widget="binary" filename="name_filename_equipos_medicos" readonly="True" />   
+                        <field name="name_filename_equipos_medicos" invisible="1"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//page[@name='Observaciones']/group" position="replace">
+                    <group>
+                        <field name="observacion_digemid" />
+                    </group>
+                </xpath>
+
+                <xpath expr="//page[@name='DIGEMID']/group" position="inside">
+                    <group>             
+                        <field name="informedigemid" widget="binary" filename="name_filename_digemid" />             
+                        <field name="name_filename_digemid" invisible="1"/>            
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="donaciones_requisitos_digemid_action">
+            <field name="name">Donaciones DIGEMID</field>
+            <field name="res_model">donacion.requisito</field>    
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field> 
+            <field name="view_ids"
+                    eval="[(5, 0, 0),
+                           (0, 0, {'view_mode': 'tree', 'view_id': ref('view_tree_donacion_requisito')}),
+                           (0, 0, {'view_mode': 'form', 'view_id': ref('view_form_donacion_DIGEMID')})]"/> 
+            <field name="domain">[('enviar_digemid','=',True)]</field>
+        </record> 
+
+        <menuitem id="Donaciones_requisitos_digemid" name="Donaciones"  action="donaciones_requisitos_digemid_action" groups="donacion.group_donacion_requisito_digemid"/>
+    </data>
+</odoo>

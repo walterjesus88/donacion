@@ -1,0 +1,1083 @@
+<odoo>
+    <data>
+        <record id="view_form_mision_form" model="ir.ui.view">
+            <field name="name">mision.form</field>
+            <field name="model">mision.requisito</field>       
+            <field name="arch" type="xml">    
+	            <form>
+	          		<header>
+	          			<button string="Enviar OGCCTI" name="button_iniciadom" states="B,01"  class="oe_highlight" groups="donacion.group_donacion_requisito_donatario"/>    
+			        	
+    					<button icon="fa-check"  string="Enviar" name="button_registradom" confirm="Esta seguro de enviar a las entidades seleccionadas?" states="I,02" class="oe_highlight" groups="donacion.group_donacion_requisito_ogcai" />
+
+    					<button string="Observar" name="button_observado1m"  states="I,02,R," class="oe_highlight" groups="donacion.group_donacion_requisito_ogcai" />
+
+    					<button string="Cerrar proceso" name="button_validadom"  states="R" class="oe_highlight" groups="donacion.group_donacion_requisito_ogcai" />
+    					
+			            <!--/Enviar por digesa-->
+			            <field name="state" nolabel="1" widget="statusbar" statusbar_visible="B,I,R,V" />
+
+			            <!-- Botones DISA DIRESA-->				        
+	                    <button name="visto_disa" type="object" string="Enviar informe DISA" class="oe_highlight" groups="donacion.group_mision_requisito_disa" states="R"/>
+
+	                    <button name="visto_diresa" type="object" string="Enviar informe DIRESA" class="oe_highlight" groups="donacion.group_mision_requisito_diresa" states="R"/>		 			
+	 				</header>
+	 				<sheet>	 				
+	 					<group style="text-align:center;color:#263238" string="Requisitos para Misiones Sanitarias">
+		 					<group name="requisito"> 
+	          			    	<field name="numero_expediente" readonly="True"/>	          				
+		 					</group>
+	 						<group name="diresas">
+	 						</group>		 					
+	 					</group>
+
+	 					<group style="text-align:center;color:#263238" string="1" name="carta_ogcai">		 				
+	 					</group>
+
+	 					<group style="text-align:center;color:#263238" string="2" name="plan_trabajo">		 					
+	 					</group>
+	 				
+	 					<group style="text-align:center;color:#263238" name="listaprofesional" string="3-4 Lista de Profesionales-CV">							
+				 			<field name="listaprofesionales_ids" nolabel="1" attrs="{'readonly': [('state', 'not in', ('B','01'))]}"  >
+				 				<!-- -->
+						        <tree editable="top">
+						            <field name="name" />
+						            <field name="institucion"/>
+						            <field name="pais"/>     
+						            <!-- <field name="especialidad" />      -->
+						            <field name="user_colegiado" domain="[('rol_id','=','COLEGIADO')]"/>     
+						            <field name="pasaporte" />     
+						            <field name="titulo" />     
+						            <field name="licencia" />     
+						            <field name="cv" />						 					            
+						           				            
+				                </tree>
+				                <form editable="top">
+				                    <header>
+				                    </header>
+				                    <sheet>
+					                    <group>
+					                        <group>               
+							                    <field name="name"/>
+							                    <field name="institucion"/>
+							                </group>
+							                <group>
+							                    <field name="pais"/>
+							                    <!-- <field name="especialidad"/> -->
+						            			<field name="user_colegiado" />     
+							                </group>                     
+							                <group>
+							                    <field name="pasaporte"/>
+							                    <field name="titulo"/>
+							                </group>
+							                <group>
+							                    <field name="licencia"/>
+							                    <field name="cv"/>
+							                </group>                     
+							                <group>  
+							                    <field name="mision_id" invisible="1"/> 
+							                </group>
+							            </group>
+							                    
+						            </sheet>
+					            </form>  
+						    </field>	
+			 			</group>	
+	 				
+	 					<group style="text-align:center;color:#263238" string="5" name="declaracion_jurada">		 				
+	 					</group>
+	 					<group style="text-align:center;color:#263238" string="6" name="carta_organizadora">		 				
+	 					</group>					
+	 					<group style="text-align:center;color:#263238" string="Con donaciones o ingreso temporal">	
+			 			</group>
+		 				<group style="text-align:center;color:#263238" string="7" name="carta_donacion">		 				
+				 		</group>
+		 				<group style="text-align:center;color:#263238" string="8" name="lista_donacion_mision">					
+				 		</group>
+						<group style="text-align:center;color:#263238" string="9" name="carta_embajada_consulado">
+
+				 		</group>
+						<group style="text-align:center;color:#263238" string="10" name="itinerario_vuelo">	 				
+			 			</group>	 				
+	 					<notebook>
+			              <page name="Observaciones" string="Observaciones">
+			                <group>			                	
+			                </group>
+			              </page>
+			              <page name="DIRESA" string="Informe Tecnico DISA - DIRESAS">
+			                <group>
+			                </group>
+			              </page>
+			              <page name="Convenios" string="Convenios">
+			                <group>
+			                </group>
+			              </page>
+			              <page name="Resolucion_ministerial" string="RM">
+			                <group>
+			                </group>
+			              </page>
+			            </notebook>
+	 				</sheet>
+	 				<footer>				 				
+		 				
+	 				</footer>
+	 				<div class="oe_chatter">
+		            	<field name="message_follower_ids" widget="mail_followers"/>
+		            	<field name="message_ids"  widget="mail_thread"/>
+		            		<!-- <tree>
+		            			<field name="id"/>
+		            			<field name="subject" />
+		            			<field name="message_type" />		            		
+		            		</tree>
+		            	</field> -->
+		            	 
+		          	</div>	
+	 			</form>             
+       
+            </field>
+        </record>
+
+
+        <record id="view_tree_mision_requisito" model="ir.ui.view">
+	      <field name="name">view_mision_requisito</field>
+	      <field name="model">mision.requisito</field>
+	      <field name="arch" type="xml">
+	        <tree>
+	          <field name="numero_expediente"/>       
+	          <field name="name"/>       
+	          <field name="descripcion"/> 
+	          <field name="descripcion"/> 
+	          <field name="fecha_inicio"/>
+	          <field name="fecha_fin"/>	         
+	          <field name="create_uid"/>	         
+	          <field name="state"/>
+	        </tree>
+	      </field>
+	    </record>
+
+ 	<!-- Vistas Heredadas para DONATARIO -->
+	    <record id="view_form_mision_donatario" model="ir.ui.view">
+	      <field name="name">mision.requisito.donatario.form</field>
+	      <field name="model">mision.requisito</field>
+	      <field name="inherit_id" ref="view_form_mision_form" />
+	      <field name="groups_id" eval="[(4, ref('donacion.group_donacion_requisito_donatario'))]" />
+	        <field name="arch" type="xml">
+
+	        	<xpath expr="//page[@name='Observaciones']/group" position="inside">
+		        	<field name="observacion_ogcti" readonly="True"/>		
+	        	</xpath>
+
+	          	<xpath expr="//page[@name='DIRESA']/group" position="inside">
+		            <group>      
+		              <field name="informediresas_ids" widget="many2many_binary" string="Subir Informe Diresa" readonly="True"/>  
+		            </group>
+	          	</xpath>
+
+	          	<xpath expr="//field[@name='cv']" position="after">		     	              
+		              <field name="documento_habilitacion" readonly="True"/>     
+		              <field name="habilitar" readonly="True"/>
+
+	          	</xpath>
+
+  				<xpath expr="//field[@name='numero_expediente']" position="after">
+	          		<field name="name" attrs="{'readonly': [('state', 'not in', ('B','01'))]}"/>
+		 			<field name="descripcion" attrs="{'readonly': [('state', 'not in', ('B','01'))]}" />
+		 			<field name="fecha_inicio" attrs="{'readonly': [('state', 'not in', ('B','01'))]}"/>
+	          		<field name="fecha_fin" attrs="{'readonly': [('state', 'not in', ('B','01'))]}"/>
+		 		</xpath>
+
+  				<xpath expr="//group[@name='diresas']" position="inside"> 
+		 			<field name="user_diresa" context="{'form_view_ref':'donacion.users_readonly'}" domain="['|',('rol_id','=','DIRESA'),('rol_id','=','DISA')]" readonly="True" nolabel="1"/>	        
+	          	</xpath>
+
+  				<xpath expr="//group[@name='carta_ogcai']" position="inside">
+	          		<group>	
+			 			<label for="carta_ogcai" />
+			 		</group>
+		 			<group> 	
+						<field style="text-align:center" name="carta_ogcai" nolabel="1"  attrs="{'readonly': [('state', 'not in', ('B','01'))]}" widget="binary" filename="name_filename_carta_ogcai"/>
+            			<field name="validar_carta_ogcai" readonly="True" nolabel="1" />
+            			<field name="name_filename_carta_ogcai" invisible="1"/>
+			 		</group>
+	          	</xpath>
+
+  				<xpath expr="//group[@name='plan_trabajo']" position="inside">
+	          		<group>	
+			 			<label for="plan_trabajo" />							
+			 		</group>
+		 			<group>
+			 			<field name="plan_trabajo" nolabel="1"  attrs="{'readonly': [('state', 'not in', ('B','01'))]}" widget="binary" filename="name_filename_plan_trabajo"/>
+            			<field name="validar_plan_trabajo" readonly="True"  nolabel="1" />
+            			<field name="name_filename_plan_trabajo" invisible="1"/>
+		 			</group>
+  				</xpath>
+
+  				<xpath expr="//group[@name='declaracion_jurada']" position="inside">
+	          		<group>			 				
+			 			<label for="declaracion_jurada" /> 
+			 		</group>
+			 		<group>
+			 			<field name="declaracion_jurada" nolabel="1"  attrs="{'readonly': [('state', 'not in', ('B','01'))]}" widget="binary" filename="name_filename_declaracion_jurada"/>
+            			<field name="validar_declaracion_jurada" readonly="True" nolabel="1" />
+            			<field name="name_filename_declaracion_jurada" invisible="1"/>
+			 		</group>
+			 	</xpath>
+  				
+  				<xpath expr="//group[@name='carta_organizadora']" position="inside">
+				 	<group>			 				
+				 		<label for="carta_organizadora" /> 
+				 	</group>
+				 	<group>
+				 		<field name="carta_organizadora" nolabel="1"  attrs="{'readonly': [('state', 'not in', ('B','01'))]}" widget="binary" filename="name_filename_carta_organizadora"/>
+            			<field name="validar_carta_organizadora" readonly="True" nolabel="1" />
+            			<field name="name_filename_carta_organizadora" invisible="1"/>
+				 	</group>
+				 </xpath>
+
+  				<xpath expr="//group[@name='carta_donacion']" position="inside">
+			 		<group>	
+		 				<label for="carta_donacion" /> 
+		 			</group>
+ 					<group>
+		 				<field name="carta_donacion" nolabel="1"  attrs="{'readonly': [('state', 'not in',  ('B','01'))]}" widget="binary" filename="name_filename_carta_donacion"/>
+            			<field name="validar_carta_donacion" readonly="True"  nolabel="1" /> 
+            			<field name="name_filename_carta_donacion" invisible="1"/>
+		 			</group>
+				</xpath>
+
+  				<xpath expr="//group[@name='lista_donacion_mision']" position="inside">
+					<group>
+				 		<label for="lista_donacion_mision" /> 
+				 	</group>
+				 	<group>
+				 		<field name="lista_donacion_mision"  nolabel="1"  attrs="{'readonly': [('state', 'not in', ('B','01'))]}" widget="binary" filename="name_filename_lista_donacion_mision"/>
+            			<field name="validar_lista_donacion_mision" readonly="True"  nolabel="1" />
+            			<field name="name_filename_lista_donacion_mision" invisible="1"/>
+				 	</group>
+				 	<group>
+				 		<label for="lista_donacion_temporal" /> 
+				 	</group>
+				 	<group>
+				 		<field name="lista_donacion_temporal"  nolabel="1"  attrs="{'readonly': [('state', 'not in', ('B','01'))]}" widget="binary" filename="name_filename_lista_donacion_temporal" />
+            			<field name="validar_lista_donacion_temporal" readonly="True"  nolabel="1" />	 		
+            			<field name="name_filename_lista_donacion_temporal" invisible="1"/>
+				 	</group>
+				</xpath>
+  				
+  				<xpath expr="//group[@name='carta_embajada_consulado']" position="inside">
+					<group>
+				 		<label for="carta_embajada_consulado" /> 
+				 	</group>
+				 	<group>
+				 		<field name="carta_embajada_consulado"  nolabel="1"  attrs="{'readonly': [('state', 'not in', ('B','01'))]}" widget="binary" filename="name_filename_carta_embajada_consulado"/>
+            			<field name="validar_carta_embajada_consulado" readonly="True"  nolabel="1" />
+            			<field name="name_filename_carta_embajada_consulado" invisible="1"/>
+
+				 	</group>
+				</xpath>				
+
+  				<xpath expr="//group[@name='itinerario_vuelo']" position="inside">
+					<group>	
+	 					<label for="itinerario_vuelo" />	 					
+	 				</group>
+					<group>	 					
+	 					<field name="itinerario_vuelo"   nolabel="1"  attrs="{'readonly': [('state', 'not in', ('B','01'))]}" widget="binary" filename="name_filename_itinerario_vuelo"/>
+            			<field name="validar_itinerario_vuelo" readonly="True" nolabel="1" />            			
+            			<field name="name_filename_itinerario_vuelo" invisible="1"/> 
+	 				</group>
+	 			</xpath>
+
+  				<xpath expr="//page[@name='Convenios']/group" position="inside">
+  					<field name="convenios"  widget="binary" filename="name_filename_convenios"/>
+            		<field name="name_filename_convenios" invisible="1"/>
+  				</xpath>
+
+  				<xpath expr="//page[@name='Resolucion_ministerial']/group" position="inside">
+  					<field name="resolucion_ministerial" readonly="True" widget="binary" filename="name_filename_resolucion_ministerial"/>
+            		<field name="name_filename_resolucion_ministerial" invisible="1"/>
+  				</xpath>
+
+	        </field>
+
+	    </record>
+
+	    <record model="ir.actions.act_window" id="misiones_requisitos_donatario_action">
+	      <field name="name">Misiones</field>
+	      <field name="res_model">mision.requisito</field>    
+	      <field name="view_mode">tree,form</field>
+	      <field name="view_type">form</field> 
+	      <field name="view_ids"
+	                eval="[(5, 0, 0),
+	                       (0, 0, {'view_mode': 'tree', 'view_id': ref('view_tree_mision_requisito')}),
+	                       (0, 0, {'view_mode': 'form', 'view_id': ref('view_form_mision_donatario')})]"/>  
+	    </record> 
+
+	    <menuitem id="Misiones_requisitos_donatario" name="Misiones Sanitarias"  action="misiones_requisitos_donatario_action" groups="donacion.group_donacion_requisito_donatario"/>
+
+
+	<!-- Vistas Heredadas para OGCTI -->
+
+	  	<record id="view_tree_mision_ogcti" model="ir.ui.view">
+	      <field name="name">view_mision_requisito</field>
+	      <field name="model">mision.requisito</field>
+	      <field name="arch" type="xml">
+	        <tree>
+	          <field name="numero_expediente"  />       
+	          <field name="name"  />       
+	          <field name="descripcion"  /> 
+	          <field name="fecha_inicio"  /> 
+	          <field name="fecha_fin"  /> 
+	          <field name="create_uid"  /> 
+	          <field name="state"  />
+	        </tree>
+	      </field>
+	    </record>
+
+	    <record id="view_form_mision_ogcti" model="ir.ui.view">
+	      <field name="name">mision.requisito.ogcti.form</field>
+	      <field name="model">mision.requisito</field>
+	      <field name="inherit_id" ref="view_form_mision_form" />
+	      <field name="groups_id" eval="[(4, ref('donacion.group_donacion_requisito_ogcai'))]" />
+	        <field name="arch" type="xml">
+
+	        	<xpath expr="//page[@name='Observaciones']/group" position="inside">
+		        	<field name="observacion_ogcti" />		
+	        	</xpath>
+     
+	          	<xpath expr="//page[@name='DIRESA']/group" position="inside">
+		            <group>      
+		              <field name="informediresas_ids" widget="many2many_binary" string="Subir Informe Diresas y Disas" readonly="True"/>  
+		            </group>
+	          	</xpath>
+
+	          	<xpath expr="//field[@name='cv']" position="after">		     	              
+		              <field name="documento_habilitacion" readonly="True"/>		        		              	        
+		              <field name="habilitar" readonly="True"/>
+	          	</xpath>
+  			
+  				<xpath expr="//field[@name='numero_expediente']" position="after">
+	          		<field name="name"  readonly="True" />
+		 			<field name="descripcion"  readonly="True" />
+		 			<field name="fecha_inicio" readonly="True"/>
+	          		<field name="fecha_fin" readonly="True"/>
+		 		</xpath>
+
+
+				<xpath expr="//group[@name='diresas']" position="inside"> 
+		 			<field name="user_diresa" context="{'form_view_ref':'donacion.users_readonly'}" domain="['|',('rol_id','=','DIRESA'),('rol_id','=','DISA')]" attrs="{'readonly': [('state', 'not in', ('I'))]}" nolabel="1"/>	        
+	          	</xpath>
+
+	          	<xpath expr="//group[@name='carta_ogcai']" position="inside">
+	          		<group>	
+			 			<label for="carta_ogcai" />
+			 		</group>
+		 			<group> 	
+						<field style="text-align:center" name="carta_ogcai" nolabel="1"  readonly="True" widget="binary" filename="name_filename_carta_ogcai"/>
+						<field name="validar_carta_ogcai" nolabel="1" />
+            			<field name="name_filename_carta_ogcai" invisible="1"/>
+			 		</group>
+	          	</xpath>
+
+	          	<xpath expr="//group[@name='plan_trabajo']" position="inside">
+	          		<group>	
+			 			<label for="plan_trabajo" />								
+			 		</group>
+		 			<group>
+			 			<field name="plan_trabajo" nolabel="1"  readonly="True" widget="binary" filename="name_filename_plan_trabajo"/>
+			 			<field name="validar_plan_trabajo" nolabel="1" />
+            			<field name="name_filename_plan_trabajo" invisible="1"/>
+		 			</group>
+  				</xpath>
+
+	          	<xpath expr="//group[@name='declaracion_jurada']" position="inside">
+	          		<group>			 				
+			 			<label for="declaracion_jurada" /> 
+			 		</group>
+			 		<group>
+			 			<field name="declaracion_jurada" nolabel="1"  readonly="True" widget="binary" filename="name_filename_declaracion_jurada"/>
+			 			<field name="validar_declaracion_jurada" nolabel="1" />
+            			<field name="name_filename_declaracion_jurada" invisible="1"/>
+			 		</group>
+			 	</xpath>
+
+				<xpath expr="//group[@name='carta_organizadora']" position="inside">
+				 	<group>			 				
+				 		<label for="carta_organizadora" /> 
+				 	</group>
+				 	<group>
+				 		<field name="carta_organizadora" nolabel="1"  readonly="True" widget="binary" filename="name_filename_carta_organizadora"/>
+            			<field name="validar_carta_organizadora" nolabel="1" />
+            			<field name="name_filename_carta_organizadora" invisible="1"/>
+				 	</group>
+				</xpath>
+
+				<xpath expr="//group[@name='carta_donacion']" position="inside">
+			 		<group>	
+		 				<label for="carta_donacion" /> 
+		 			</group>
+ 					<group>
+		 				<field name="carta_donacion" nolabel="1"   readonly="True" widget="binary" filename="name_filename_carta_donacion"/>
+		 				<field name="validar_carta_donacion" nolabel="1" /> 
+            			<field name="name_filename_carta_donacion" invisible="1"/>
+		 			</group>
+				</xpath>
+
+				<xpath expr="//group[@name='lista_donacion_mision']" position="inside">
+					<group>
+				 		<label for="lista_donacion_mision" /> 
+				 	</group>
+				 	<group>
+				 		<field name="lista_donacion_mision"  nolabel="1"  readonly="True"  widget="binary" filename="name_filename_lista_donacion_mision" />				 		
+            			<field name="validar_lista_donacion_mision" nolabel="1" />
+            			<field name="name_filename_lista_donacion_mision" invisible="1"/>
+				 	</group>
+				 	<group>
+				 		<label for="lista_donacion_temporal" /> 
+				 	</group>
+				 	<group>
+				 		<field name="lista_donacion_temporal"  nolabel="1"  readonly="True" widget="binary" filename="name_filename_lista_donacion_temporal"/>				 		
+            			<field name="validar_lista_donacion_temporal" nolabel="1" />	 		
+            			<field name="name_filename_lista_donacion_temporal" invisible="1"/>
+				 	</group>
+				</xpath>
+
+				<xpath expr="//group[@name='carta_embajada_consulado']" position="inside">
+					<group>
+				 		<label for="carta_embajada_consulado" /> 
+				 	</group>
+				 	<group>
+				 		<field name="carta_embajada_consulado"  nolabel="1"  readonly="True" widget="binary" filename="name_filename_carta_embajada_consulado"/>				 			
+            			<field name="validar_carta_embajada_consulado" nolabel="1" />
+            			<field name="name_filename_carta_embajada_consulado" invisible="1"/>
+				 	</group>
+				</xpath>	
+
+  				<xpath expr="//group[@name='itinerario_vuelo']" position="inside">
+					<group>	
+	 					<label for="itinerario_vuelo" /> 
+	 				</group>
+					<group>	
+	 					<field name="itinerario_vuelo"   nolabel="1" readonly="True" widget="binary" filename="name_filename_itinerario_vuelo"/>	 						
+            			<field name="validar_itinerario_vuelo" nolabel="1" />            			
+            			<field name="name_filename_itinerario_vuelo" invisible="1"/>	
+	 				</group>
+	 			</xpath>
+
+  				<xpath expr="//page[@name='Convenios']/group" position="inside">
+  					<field name="convenios"  widget="binary" filename="name_filename_convenios" readonly="True"/>
+            		<field name="name_filename_convenios" invisible="1"/>
+  				</xpath>
+
+  				<xpath expr="//page[@name='Resolucion_ministerial']/group" position="inside">
+  					<field name="resolucion_ministerial"  widget="binary" filename="name_filename_resolucion_ministerial"/>
+            		<field name="name_filename_resolucion_ministerial" invisible="1"/>
+  				</xpath>
+
+	        </field>
+	    </record>
+
+	   	<!-- Graficos extenos-->
+	    <record model="ir.ui.view" id="view_mision_requisito_graph_ogcti">
+	       <field name="name">mision.requisito.graph</field>
+	       <field name="model">mision.requisito</field>
+	       <field name="type">graph</field>
+	       <field name="arch" type="xml">
+	             <graph string="Mision requisito General">	 
+	                  <field name="state" group="True"/>
+	                  <field name="create_uid" type="measure"/>
+	            </graph>
+	        </field>
+	    </record>
+
+	    <record model="ir.ui.view" id="view_mision_requisito_graph2_ogcti">
+	       <field name="name">mision.requisito.graph</field>
+	       <field name="model">mision.requisito</field>
+	       <field name="type">graph</field>
+	       <field name="arch" type="xml">
+	            <graph string="estado agrupado por usuario">
+	                <field name="state" group="True"/>
+	                <field name="create_uid" operator="*"/>                
+	            </graph>
+	        
+	        </field>
+	    </record>
+
+	    <!-- Graficos interno-->
+	    <record model="ir.ui.view" id="view_mision_requisito_subgraph_general_ogcti">
+	       <field name="name">donacion.requisito.graph</field>
+	       <field name="model">donacion.requisito</field>
+	       <field name="type">graph</field>
+	       <field name="arch" type="xml">
+	            <graph string="Graficos por estado agrupado usuario">
+	                <field name="create_uid" group="True"/>             
+	                <field name="state" type="measure"/>
+	            </graph>        
+	        </field>
+	    </record>
+
+	    <record model="ir.actions.act_window" id="misiones_requisitos_ogcti_action">
+	      <field name="name">Misiones</field>
+	      <field name="res_model">mision.requisito</field>    
+	      <field name="view_mode">tree,form</field>
+	      <field name="view_type">form</field>      	
+	      <field name="view_ids"
+	                eval="[(5, 0, 0),
+	                       (0, 0, {'view_mode': 'tree', 'view_id': ref('view_tree_mision_ogcti')}),
+	                       (0, 0, {'view_mode': 'form', 'view_id': ref('view_form_mision_ogcti')}),
+	                       (0, 0, {'view_mode': 'graph', 'view_id': ref('view_mision_requisito_subgraph_general_ogcti')}),
+	                       ]
+	                       "/>  
+	    </record> 
+
+	    <menuitem id="Misiones_requisitos_ogcti" name="Misiones Sanitarias"  action="misiones_requisitos_ogcti_action" groups="donacion.group_donacion_requisito_ogcai"/>
+
+
+		<record id="action_for_mision_graph" model="ir.actions.act_window">
+	        <field name="name">Grafico general por estado</field>
+	        <field name="res_model">mision.requisito</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">graph</field>
+	        <field name="view_id" ref="view_mision_requisito_graph_ogcti"/>
+	    </record>
+
+	    <record id="action_for_mision2_graph" model="ir.actions.act_window">
+	        <field name="name">Grafico filtrado usuario por estado</field>
+	        <field name="res_model">mision.requisito</field>
+	        <field name="view_type">form</field>
+	        <field name="view_mode">graph</field>
+	        <field name="view_id" ref="view_mision_requisito_graph2_ogcti"/>
+	    </record>
+
+
+	    <menuitem action="action_for_mision_graph" id="menu_mision_graph_id"
+	    sequence="1" name="Graficos Misiones Sanitarias"  groups="donacion.group_donacion_requisito_ogcai"/>
+	    <menuitem action="action_for_mision2_graph" id="menu_mision_graph_id2"
+	    sequence="1" name='Graficos usuario/estado Misión' parent='menu_mision_graph_id' groups="donacion.group_donacion_requisito_ogcai"/>
+
+
+	<!-- Vistas Heredadas para DISA -->
+		<record id="view_form_mision_disa" model="ir.ui.view">
+	      <field name="name">mision.requisito.disa.form</field>
+	      <field name="model">mision.requisito</field>
+	      <field name="inherit_id" ref="view_form_mision_form" />
+	      <field name="groups_id" eval="[(4, ref('donacion.group_mision_requisito_disa'))]" />
+	        <field name="arch" type="xml">
+
+	        	<xpath expr="//page[@name='Observaciones']/group" position="inside">
+		        	<field name="observacion_ogcti" readonly="True" />				 
+	        	</xpath>
+	  	
+	          	<xpath expr="//page[@name='DIRESA']/group" position="inside">
+		            <group>      
+		              <field name="informediresas_ids" widget="many2many_binary" string="Subir Informe Diresa" readonly="True"/>  
+		            </group>
+	          	</xpath>
+
+	          	<xpath expr="//field[@name='cv']" position="after">		     	              
+		            <field name="documento_habilitacion" readonly="True"/>
+		            <field name="habilitar" readonly="True"/>		
+	          	</xpath>
+
+  				<xpath expr="//field[@name='numero_expediente']" position="after">	          		
+	          	    <field name="name" readonly="True"/>
+		 			<field name="descripcion" readonly="True" />
+		 			<field name="fecha_inicio" readonly="True"/>
+	          		<field name="fecha_fin" readonly="True"/>
+		 		</xpath>
+
+	          	<xpath expr="//group[@name='diresas']" position="inside"> 
+		 			<field name="user_diresa" context="{'form_view_ref':'donacion.users_readonly'}" 
+						domain="['|',('rol_id','=','DIRESA'),('rol_id','=','DISA')]" readonly="True" nolabel="1"/>	        
+	          	</xpath>
+
+  	          	<xpath expr="//group[@name='carta_ogcai']" position="inside">
+	          		<group>	
+			 			<label for="carta_ogcai" />
+			 		</group>
+		 			<group> 	
+						<field style="text-align:center" name="carta_ogcai" nolabel="1"  readonly="True" widget="binary" filename="name_filename_carta_ogcai"/>
+						<field name="validar_carta_ogcai" readonly="True" nolabel="1" />
+            			<field name="name_filename_carta_ogcai" invisible="1"/>
+			 		</group>
+	          	</xpath>
+
+	          	<xpath expr="//group[@name='plan_trabajo']" position="inside">
+	          		<group>	
+			 			<label for="plan_trabajo" />								
+			 		</group>
+		 			<group>
+			 			<field name="plan_trabajo" nolabel="1"  readonly="True" widget="binary" filename="name_filename_plan_trabajo"/>
+			 			<field name="validar_plan_trabajo" readonly="True"  nolabel="1" />
+            			<field name="name_filename_plan_trabajo" invisible="1"/>
+		 			</group>
+  				</xpath>
+
+	          	<xpath expr="//group[@name='declaracion_jurada']" position="inside">
+	          		<group>			 				
+			 			<label for="declaracion_jurada" /> 
+			 		</group>
+			 		<group>
+			 			<field name="declaracion_jurada" nolabel="1"  readonly="True" widget="binary" filename="name_filename_declaracion_jurada"/>
+			 			<field name="validar_declaracion_jurada" readonly="True" nolabel="1" />
+            			<field name="name_filename_declaracion_jurada" invisible="1"/>
+			 		</group>
+			 	</xpath>
+
+				<xpath expr="//group[@name='carta_organizadora']" position="inside">
+				 	<group>			 				
+				 		<label for="carta_organizadora" /> 
+				 	</group>
+				 	<group>
+				 		<field name="carta_organizadora" nolabel="1"  readonly="True" widget="binary" filename="name_filename_carta_organizadora"/>
+            			<field name="validar_carta_organizadora" readonly="True" nolabel="1" />
+            			<field name="name_filename_carta_organizadora" invisible="1"/>
+				 	</group>
+				</xpath>
+
+				<xpath expr="//group[@name='carta_donacion']" position="inside">
+			 		<group>	
+		 				<label for="carta_donacion" /> 
+		 			</group>
+ 					<group>
+		 				<field name="carta_donacion" nolabel="1"   readonly="True" widget="binary" filename="name_filename_carta_donacion"/>
+		 				<field name="validar_carta_donacion" readonly="True"  nolabel="1" /> 
+            			<field name="name_filename_carta_donacion" invisible="1"/>
+		 			</group>
+				</xpath>
+
+				<xpath expr="//group[@name='lista_donacion_mision']" position="inside">
+					<group>
+				 		<label for="lista_donacion_mision" /> 
+				 	</group>
+				 	<group>
+				 		<field name="lista_donacion_mision"  nolabel="1"  readonly="True"  widget="binary" filename="name_filename_lista_donacion_mision" />				 		
+            			<field name="validar_lista_donacion_mision" readonly="True"  nolabel="1" />
+            			<field name="name_filename_lista_donacion_mision" invisible="1"/>
+				 	</group>
+				 	<group>
+				 		<label for="lista_donacion_temporal" /> 
+				 	</group>
+				 	<group>
+				 		<field name="lista_donacion_temporal"  nolabel="1"  readonly="True" widget="binary" filename="name_filename_lista_donacion_temporal"/>				 		
+            			<field name="validar_lista_donacion_temporal" readonly="True"  nolabel="1" />	 		
+            			<field name="name_filename_lista_donacion_temporal" invisible="1"/>
+				 	</group>
+				</xpath>
+
+				<xpath expr="//group[@name='carta_embajada_consulado']" position="inside">
+					<group>
+				 		<label for="carta_embajada_consulado" /> 
+				 	</group>
+				 	<group>
+				 		<field name="carta_embajada_consulado"  nolabel="1"  readonly="True" widget="binary" filename="name_filename_carta_embajada_consulado"/>				 			
+            			<field name="validar_carta_embajada_consulado" readonly="True"  nolabel="1" />
+            			<field name="name_filename_carta_embajada_consulado" invisible="1"/>
+				 	</group>
+				</xpath>
+
+  			
+	 			<xpath expr="//group[@name='itinerario_vuelo']" position="inside">
+					<group>	
+	 					<label for="itinerario_vuelo" /> 
+	 				</group>
+					<group>	
+	 					<field name="itinerario_vuelo"   nolabel="1" readonly="True" widget="binary" filename="name_filename_itinerario_vuelo"/>	 						
+            			<field name="validar_itinerario_vuelo" readonly="True" nolabel="1" />            			
+            			<field name="name_filename_itinerario_vuelo" invisible="1"/>	
+	 				</group>
+	 			</xpath>
+
+	 			<xpath expr="//page[@name='Convenios']/group" position="inside">
+  					<field name="convenios" readonly="True" widget="binary" filename="name_filename_convenios"/>
+            		<field name="name_filename_convenios" invisible="1"/>
+  				</xpath>
+
+  				<xpath expr="//page[@name='Resolucion_ministerial']/group" position="inside">
+  					<field name="resolucion_ministerial" readonly="True" widget="binary" filename="name_filename_resolucion_ministerial"/>
+            		<field name="name_filename_resolucion_ministerial" invisible="1"/>
+  				</xpath>
+
+	        </field>
+	    </record>
+
+	    <record model="ir.actions.act_window" id="misiones_requisitos_disa_action">
+	      	<field name="name">Misiones</field>
+	      	<field name="res_model">mision.requisito</field>    
+	      	<field name="view_mode">tree,form</field>
+	      	<field name="view_type">form</field> 
+	      	<field name="view_ids"
+	                eval="[(5, 0, 0),
+	                       (0, 0, {'view_mode': 'tree', 'view_id': ref('view_tree_mision_requisito')}),
+	                       (0, 0, {'view_mode': 'form', 'view_id': ref('view_form_mision_disa')})]"/>  
+	    </record> 
+
+	    <menuitem id="Misiones_requisitos_disa" name="Misiones Sanitarias"  action="misiones_requisitos_disa_action" groups="donacion.group_mision_requisito_disa"/>
+
+
+	<!-- Vistas Heredadas para DIRESA -->
+		<record id="view_form_mision_diresa" model="ir.ui.view">
+	      <field name="name">mision.requisito.diresa.form</field>
+	      <field name="model">mision.requisito</field>
+	      <field name="inherit_id" ref="view_form_mision_form" />
+	      <field name="groups_id" eval="[(4, ref('donacion.group_mision_requisito_diresa'))]" />
+	        <field name="arch" type="xml">
+
+	        	<xpath expr="//page[@name='Observaciones']/group" position="inside">
+		        	<field name="observacion_ogcti" readonly="True" />
+	        	</xpath>
+
+	     	   	<xpath expr="//page[@name='DIRESA']/group" position="inside">
+		            <group>      
+		              <field name="informediresas_ids" widget="many2many_binary" string="Subir Informe Diresa"   attrs="{'readonly': [('state', 'not in', 'R')]}"/>  
+		            </group>
+	          	</xpath>
+
+	          	<xpath expr="//field[@name='cv']" position="after">		     	              
+		              <field name="documento_habilitacion" readonly="True"/>		        
+		              <field name="habilitar" readonly="True"/>		        
+	          	</xpath>
+
+				<xpath expr="//field[@name='numero_expediente']" position="after">
+	          		<field name="name"  attrs="{'readonly': [('state', 'not in', ('B','01'))]}"/>
+		 			<field name="descripcion"  attrs="{'readonly': [('state', 'not in', ('B','01'))]}" />
+		 			<field name="fecha_inicio" attrs="{'readonly': [('state', 'not in', ('B','01'))]}"/>
+	          		<field name="fecha_fin" attrs="{'readonly': [('state', 'not in', ('B','01'))]}"/>
+		 		</xpath>
+
+
+	          	<xpath expr="//group[@name='diresas']" position="inside"> 
+		 			<field name="user_diresa" context="{'form_view_ref':'donacion.users_readonly'}" domain="['|',('rol_id','=','DIRESA'),('rol_id','=','DISA')]" readonly="True"/>	        
+	          	</xpath>
+
+          		<xpath expr="//group[@name='carta_ogcai']" position="inside">
+	          		<group>	
+			 			<label for="carta_ogcai" />
+			 		</group>
+		 			<group> 	
+						<field style="text-align:center" name="carta_ogcai" nolabel="1"  readonly="True" widget="binary" filename="name_filename_carta_ogcai"/>
+						<field name="validar_carta_ogcai" readonly="True" nolabel="1" />
+            			<field name="name_filename_carta_ogcai" invisible="1"/>
+			 		</group>
+	          	</xpath>
+
+	          	<xpath expr="//group[@name='plan_trabajo']" position="inside">
+	          		<group>	
+			 			<label for="plan_trabajo" />								
+			 		</group>
+		 			<group>
+			 			<field name="plan_trabajo" nolabel="1"  readonly="True" widget="binary" filename="name_filename_plan_trabajo"/>
+			 			<field name="validar_plan_trabajo" readonly="True"  nolabel="1" />
+            			<field name="name_filename_plan_trabajo" invisible="1"/>
+		 			</group>
+  				</xpath>
+
+	          	<xpath expr="//group[@name='declaracion_jurada']" position="inside">
+	          		<group>			 				
+			 			<label for="declaracion_jurada" /> 
+			 		</group>
+			 		<group>
+			 			<field name="declaracion_jurada" nolabel="1"  readonly="True" widget="binary" filename="name_filename_declaracion_jurada"/>
+			 			<field name="validar_declaracion_jurada" readonly="True" nolabel="1" />
+            			<field name="name_filename_declaracion_jurada" invisible="1"/>
+			 		</group>
+			 	</xpath>
+
+				<xpath expr="//group[@name='carta_organizadora']" position="inside">
+				 	<group>			 				
+				 		<label for="carta_organizadora" /> 
+				 	</group>
+				 	<group>
+				 		<field name="carta_organizadora" nolabel="1"  readonly="True" widget="binary" filename="name_filename_carta_organizadora"/>
+            			<field name="validar_carta_organizadora" readonly="True" nolabel="1" />
+            			<field name="name_filename_carta_organizadora" invisible="1"/>
+				 	</group>
+				</xpath>
+
+				<xpath expr="//group[@name='carta_donacion']" position="inside">
+			 		<group>	
+		 				<label for="carta_donacion" /> 
+		 			</group>
+ 					<group>
+		 				<field name="carta_donacion" nolabel="1"   readonly="True" widget="binary" filename="name_filename_carta_donacion"/>
+		 				<field name="validar_carta_donacion" readonly="True"  nolabel="1" /> 
+            			<field name="name_filename_carta_donacion" invisible="1"/>
+		 			</group>
+				</xpath>
+
+				<xpath expr="//group[@name='lista_donacion_mision']" position="inside">
+					<group>
+				 		<label for="lista_donacion_mision" /> 
+				 	</group>
+				 	<group>
+				 		<field name="lista_donacion_mision"  nolabel="1"  readonly="True"  widget="binary" filename="name_filename_lista_donacion_mision" />				 		
+            			<field name="validar_lista_donacion_mision" readonly="True"  nolabel="1" />
+            			<field name="name_filename_lista_donacion_mision" invisible="1"/>
+				 	</group>
+				 	<group>
+				 		<label for="lista_donacion_temporal" /> 
+				 	</group>
+				 	<group>
+				 		<field name="lista_donacion_temporal"  nolabel="1"  readonly="True" widget="binary" filename="name_filename_lista_donacion_temporal"/>				 		
+            			<field name="validar_lista_donacion_temporal" readonly="True"  nolabel="1" />	 		
+            			<field name="name_filename_lista_donacion_temporal" invisible="1"/>
+				 	</group>
+				</xpath>
+
+				<xpath expr="//group[@name='carta_embajada_consulado']" position="inside">
+					<group>
+				 		<label for="carta_embajada_consulado" /> 
+				 	</group>
+				 	<group>
+				 		<field name="carta_embajada_consulado"  nolabel="1"  readonly="True" widget="binary" filename="name_filename_carta_embajada_consulado"/>				 			
+            			<field name="validar_carta_embajada_consulado" readonly="True"  nolabel="1" />
+            			<field name="name_filename_carta_embajada_consulado" invisible="1"/>
+				 	</group>
+				</xpath>
+
+  			
+	 			<xpath expr="//group[@name='itinerario_vuelo']" position="inside">
+					<group>	
+	 					<label for="itinerario_vuelo" /> 
+	 				</group>
+					<group>	
+	 					<field name="itinerario_vuelo"   nolabel="1" readonly="True" widget="binary" filename="name_filename_itinerario_vuelo"/>	 						
+            			<field name="validar_itinerario_vuelo" readonly="True" nolabel="1" />            			
+            			<field name="name_filename_itinerario_vuelo" invisible="1"/>	
+	 				</group>
+	 			</xpath>
+
+				<xpath expr="//page[@name='Convenios']/group" position="inside">
+  					<field name="convenios"  readonly="True" widget="binary" filename="name_filename_convenios"/>
+            		<field name="name_filename_convenios" invisible="1"/>
+  				</xpath>
+
+  				<xpath expr="//page[@name='Resolucion_ministerial']/group" position="inside">
+  					<field name="resolucion_ministerial"  readonly="True" widget="binary" filename="name_filename_resolucion_ministerial"/>
+            		<field name="name_filename_resolucion_ministerial" invisible="1"/>
+  				</xpath>
+
+	        </field>
+	    </record>
+
+	    <record model="ir.actions.act_window" id="misiones_requisitos_diresa_action">
+	      	<field name="name">Misiones</field>
+	      	<field name="res_model">mision.requisito</field>    
+	      	<field name="view_mode">tree,form</field>
+	      	<field name="view_type">form</field> 
+	      	<field name="view_ids"
+	                eval="[(5, 0, 0),
+	                       (0, 0, {'view_mode': 'tree', 'view_id': ref('view_tree_mision_requisito')}),
+	                       (0, 0, {'view_mode': 'form', 'view_id': ref('view_form_mision_diresa')})]"/>  
+	    </record> 
+
+	    <menuitem id="Misiones_requisitos_diresa" name="Misiones Sanitarias"  action="misiones_requisitos_diresa_action" groups="donacion.group_mision_requisito_diresa"/>
+
+
+		<!-- Vistas Heredadas para COLEGIADOS -->
+		<record id="view_form_mision_colegiado" model="ir.ui.view">
+	      <field name="name">mision.requisito.colegiado.form</field>
+	      <field name="model">mision.requisito</field>
+	      <field name="inherit_id" ref="view_form_mision_form" />
+	      <field name="groups_id" eval="[(4, ref('donacion.group_mision_colegiados'))]" />
+	        <field name="arch" type="xml">
+
+	        	<xpath expr="//page[@name='Observaciones']/group" position="inside">
+		        	<field name="observacion_ogcti" readonly="True" />	
+	        	</xpath>
+
+ 	           	<xpath expr="//page[@name='DIRESA']/group" position="inside">
+		            <group>      
+		              <field name="informediresas_ids" widget="many2many_binary" string="Subir Informe Diresa" readonly="True"/>  
+		            </group>
+	          	</xpath>
+
+
+	          	<xpath expr="//field[@name='cv']" position="after">		     	              
+		              <field name="documento_habilitacion" groups="donacion.group_mision_colegiados"/>		        
+		              <field name="habilitar" />
+	          	</xpath>
+
+	          	<xpath expr="//field[@name='listaprofesionales_ids']" position="replace">		     	              
+
+	          		<field name="listaprofesionales_ids" nolabel="1"  >
+						<tree editable="top">
+						    <field name="name" readonly="True"/>
+						    <field name="institucion" readonly="True"/>
+						    <field name="pais" readonly="True"/>     
+						     
+						    <field name="user_colegiado" domain="[('rol_id','=','COLEGIADO')]" readonly="True"/>     
+						    <field name="pasaporte" readonly="True"/>     
+						    <field name="titulo" readonly="True"/>     
+						    <field name="licencia" readonly="True"/>     
+						    <field name="cv" readonly="True"/>	
+						    <field name="documento_habilitacion" />		        
+		              		<field name="habilitar" />	
+				        </tree>
+				        <form editable="top">
+				            <header>
+				            </header>
+				            <sheet>
+					            <group>
+					                <group>               
+							            <field name="name" readonly="True"/>
+							            <field name="institucion" readonly="True"/>
+							        </group>
+							        <group>
+							            <field name="pais" readonly="True"/>							                 
+						            	<field name="user_colegiado" readonly="True"/>     
+							        </group>                     
+							        <group>
+							            <field name="pasaporte" readonly="True"/>
+							            <field name="titulo" readonly="True"/>
+							        </group>
+							        <group>
+							            <field name="licencia" readonly="True"/>
+							            <field name="cv" readonly="True"/>
+							        </group>                     
+							        <group>						            				
+							            <field name="mision_id" invisible="1"/> 
+							        </group>
+							    </group>							                    
+						    </sheet>
+					    </form>  
+					</field>	
+				</xpath>
+			
+  				<xpath expr="//field[@name='numero_expediente']" position="after">
+	          		<field name="name" readonly="True"/>
+		 			<field name="descripcion" readonly="True" />
+		 			<field name="fecha_inicio" readonly="True"/>
+	          		<field name="fecha_fin" readonly="True"/>
+		 		</xpath>
+
+	          	<xpath expr="//group[@name='diresas']" position="inside"> 
+		 			<field name="user_diresa" context="{'form_view_ref':'donacion.users_readonly'}" domain="['|',('rol_id','=','DIRESA'),('rol_id','=','DISA')]" readonly="True" nolabel="1"/>	        
+	          	</xpath>
+
+    			<xpath expr="//group[@name='carta_ogcai']" position="inside">
+	          		<group>	
+			 			<label for="carta_ogcai" />
+			 		</group>
+		 			<group> 	
+						<field style="text-align:center" name="carta_ogcai" nolabel="1"  readonly="True" widget="binary" filename="name_filename_carta_ogcai"/>
+						<field name="validar_carta_ogcai" readonly="True" nolabel="1" />
+            			<field name="name_filename_carta_ogcai" invisible="1"/>
+			 		</group>
+	          	</xpath>
+
+	          	<xpath expr="//group[@name='plan_trabajo']" position="inside">
+	          		<group>	
+			 			<label for="plan_trabajo" />								
+			 		</group>
+		 			<group>
+			 			<field name="plan_trabajo" nolabel="1"  readonly="True" widget="binary" filename="name_filename_plan_trabajo"/>
+			 			<field name="validar_plan_trabajo" readonly="True"  nolabel="1" />
+            			<field name="name_filename_plan_trabajo" invisible="1"/>
+		 			</group>
+  				</xpath>
+
+	          	<xpath expr="//group[@name='declaracion_jurada']" position="inside">
+	          		<group>			 				
+			 			<label for="declaracion_jurada" /> 
+			 		</group>
+			 		<group>
+			 			<field name="declaracion_jurada" nolabel="1"  readonly="True" widget="binary" filename="name_filename_declaracion_jurada"/>
+			 			<field name="validar_declaracion_jurada" readonly="True" nolabel="1" />
+            			<field name="name_filename_declaracion_jurada" invisible="1"/>
+			 		</group>
+			 	</xpath>
+
+				<xpath expr="//group[@name='carta_organizadora']" position="inside">
+				 	<group>			 				
+				 		<label for="carta_organizadora" /> 
+				 	</group>
+				 	<group>
+				 		<field name="carta_organizadora" nolabel="1"  readonly="True" widget="binary" filename="name_filename_carta_organizadora"/>
+            			<field name="validar_carta_organizadora" readonly="True" nolabel="1" />
+            			<field name="name_filename_carta_organizadora" invisible="1"/>
+				 	</group>
+				</xpath>
+
+				<xpath expr="//group[@name='carta_donacion']" position="inside">
+			 		<group>	
+		 				<label for="carta_donacion" /> 
+		 			</group>
+ 					<group>
+		 				<field name="carta_donacion" nolabel="1"   readonly="True" widget="binary" filename="name_filename_carta_donacion"/>
+		 				<field name="validar_carta_donacion" readonly="True"  nolabel="1" /> 
+            			<field name="name_filename_carta_donacion" invisible="1"/>
+		 			</group>
+				</xpath>
+
+				<xpath expr="//group[@name='lista_donacion_mision']" position="inside">
+					<group>
+				 		<label for="lista_donacion_mision" /> 
+				 	</group>
+				 	<group>
+				 		<field name="lista_donacion_mision"  nolabel="1"  readonly="True"  widget="binary" filename="name_filename_lista_donacion_mision" />				 		
+            			<field name="validar_lista_donacion_mision" readonly="True"  nolabel="1" />
+            			<field name="name_filename_lista_donacion_mision" invisible="1"/>
+				 	</group>
+				 	<group>
+				 		<label for="lista_donacion_temporal" /> 
+				 	</group>
+				 	<group>
+				 		<field name="lista_donacion_temporal"  nolabel="1"  readonly="True" widget="binary" filename="name_filename_lista_donacion_temporal"/>				 		
+            			<field name="validar_lista_donacion_temporal" readonly="True"  nolabel="1" />	 		
+            			<field name="name_filename_lista_donacion_temporal" invisible="1"/>
+				 	</group>
+				</xpath>
+
+				<xpath expr="//group[@name='carta_embajada_consulado']" position="inside">
+					<group>
+				 		<label for="carta_embajada_consulado" /> 
+				 	</group>
+				 	<group>
+				 		<field name="carta_embajada_consulado"  nolabel="1"  readonly="True" widget="binary" filename="name_filename_carta_embajada_consulado"/>				 			
+            			<field name="validar_carta_embajada_consulado" readonly="True"  nolabel="1" />
+            			<field name="name_filename_carta_embajada_consulado" invisible="1"/>
+				 	</group>
+				</xpath>
+
+  			
+	 			<xpath expr="//group[@name='itinerario_vuelo']" position="inside">
+					<group>	
+	 					<label for="itinerario_vuelo" /> 
+	 				</group>
+					<group>	
+	 					<field name="itinerario_vuelo"   nolabel="1" readonly="True" widget="binary" filename="name_filename_itinerario_vuelo"/>	 						
+            			<field name="validar_itinerario_vuelo" readonly="True" nolabel="1" />            			
+            			<field name="name_filename_itinerario_vuelo" invisible="1"/>	
+	 				</group>
+	 			</xpath>
+				
+				<xpath expr="//page[@name='Convenios']/group" position="inside">
+  					<field name="convenios" readonly="True" widget="binary" filename="name_filename_convenios"/>
+            		<field name="name_filename_convenios" invisible="1"/>
+  				</xpath>
+
+  				<xpath expr="//page[@name='Resolucion_ministerial']/group" position="inside">
+  					<field name="resolucion_ministerial" readonly="True" widget="binary" filename="name_filename_resolucion_ministerial"/>
+            		<field name="name_filename_resolucion_ministerial" invisible="1"/>
+  				</xpath>
+
+	        </field>
+	    </record>
+
+	    <record model="ir.actions.act_window" id="misiones_requisitos_colegiado_action">
+	      	<field name="name">Misiones</field>
+	      	<field name="res_model">mision.requisito</field>    
+	      	<field name="view_mode">tree,form</field>
+	      	<field name="view_type">form</field> 
+	      	<field name="view_ids"
+	                eval="[(5, 0, 0),
+	                       (0, 0, {'view_mode': 'tree', 'view_id': ref('view_tree_mision_requisito')}),
+	                       (0, 0, {'view_mode': 'form', 'view_id': ref('view_form_mision_colegiado')})]"/>  
+	    </record> 
+
+	    <menuitem id="Misiones_requisitos_colegiados" name="Misiones Sanitarias Colegiados" action="misiones_requisitos_colegiado_action" groups="donacion.group_mision_colegiados"/>
+
+
+    </data>
+</odoo>
+

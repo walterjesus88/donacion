@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+	<!-- 	<record model="mision.disas.diresas" id="diresa_amazonas">
+			<field name="name">Dirección Regional de Salud de Amazonas</field>
+			<field name="direccion">Jr. El Triunfo cuadra 3 s/n - Chachapoyas</field>
+			<field name="telefono">(041) 477-446 / 477-044</field>
+			<field name="web">http://www.regionamazonas.gob.pe</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_bagua">
+			<field name="name">Dirección Sub Regional de Salud Bagua</field>
+			<field name="direccion">Av. Héroes del Cenepa 980 - Bagua</field>
+			<field name="telefono">(041) 471-604  / 471-594</field>
+			<field name="web"></field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_ancash">
+			<field name="name">Dirección Regional de Salud de Ancash</field>
+			<field name="direccion">Av. Confraternidad Internacional Oeste N° 1544 Huaraz - Ancash</field>
+			<field name="telefono">(043) 422-038 / 421-321 / 428-235</field>
+			<field name="web">http://diresancash.gob.pe/portal/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_apurimac_abancay">
+			<field name="name">Dirección Regional de Salud de Apurímac - Abancay</field>
+			<field name="direccion">Av Pachacutec, Abancay, Perú</field>
+			<field name="telefono">(083) 323-690/ 322-856/ 322-117</field>
+			<field name="web">http://diresaapurimac.gob.pe/diresaa/</field>					
+		</record>
+ 			
+		
+		<record model="mision.disas.diresas" id="diresa_apurimac_andahuaylas">
+			<field name="name">Dirección Regional de Salud Apurimac II - Andahuaylas</field>
+			<field name="direccion">Jr. Túpac Amaru 135 -  Andahuaylas</field>
+			<field name="telefono">(083) 421-161</field>
+			<field name="web"></field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_arequipa">
+			<field name="name">Gerencia Regional de Salud de Arequipa</field>
+			<field name="direccion">Vía de la Salud s/n Cercado - Arequipa</field>
+			<field name="telefono">(054) 235-155 / 235-185 / 201-118</field>
+			<field name="web">http://www.saludarequipa.gob.pe/</field>					
+		</record>
+		
+		<record model="mision.disas.diresas" id="diresa_ayacucho">
+			<field name="name">Dirección Regional de Salud de Ayacucho</field>
+			<field name="direccion">Urb. Mariscal Cáceres Mz. L, Lote 1 y 2 - Ayacucho</field>
+			<field name="telefono">(066) 314-256</field>
+			<field name="web">http://www.saludayacucho.gob.pe/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_callao">
+			<field name="name">Dirección Regional de Salud de Callao</field>
+			<field name="direccion">Jr. Colina 879 - Bellavista</field>
+			<field name="telefono">(01)  465-0048 / 465-1801</field>
+			<field name="web">http://www.diresacallao.gob.pe/wdiresa/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_cajamarca">
+			<field name="name">Dirección Regional de Salud de  Cajamarca</field>
+			<field name="direccion">Jr. Mario Urteaga 500 - Cajamarca</field>
+			<field name="telefono">(076) 363-864</field>
+			<field name="web">http://www.diresacajamarca.gob.pe/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_chota">
+			<field name="name">Dirección  de Salud Chota</field>
+			<field name="direccion">Jr. Esequiel Montoya 718 Chota</field>
+			<field name="telefono">(076) 351-241 / 351-367	</field>
+			<field name="web"></field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_cutervo">
+			<field name="name">Dirección  de Salud Cutervo</field>
+			<field name="direccion">Jr. Benjamín Dublé 458 - Cutervo</field>
+			<field name="telefono">(076) 437-062</field>
+			<field name="web"></field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_jaen">
+			<field name="name">Dirección de Salud Jaén</field>
+			<field name="direccion">Av. Bolívar 1560 Jaén</field>
+			<field name="telefono">(076) 432-583 / 434-561 / 431-154</field>
+			<field name="web"></field>					
+		</record>
+		
+		<record model="mision.disas.diresas" id="diresa_cusco">
+			<field name="name">Dirección Regional de Salud de Cusco</field>
+			<field name="direccion">Av. De la Cultura s/n - Cusco</field>
+			<field name="telefono">(084) 581-560 / 581-562 </field>
+			<field name="web">http://www.diresacusco.gob.pe/new/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_huancavelica">
+			<field name="name">Dirección Regional de Salud  de Huancavelica</field>
+			<field name="direccion">Av. Andrés Avelino Cáceres s/n - Yananaco -Huancavelica</field>
+			<field name="telefono">(067) 453-113 / 451-100 /451-558</field>
+			<field name="web">http://www.diresahuancavelica.gob.pe/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_huanuco">
+			<field name="name">Dirección Regional de Salud de Huánuco</field>
+			<field name="direccion">Jr. Dámaso Beraun 1017 - Huanuco</field>
+			<field name="telefono">(062) 590-200  / 513-410</field>
+			<field name="web">http://www.minsa.gob.pe/diresahuanuco/main.htm</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_ica">
+			<field name="name">Dirección Regional de Salud de Ica</field>
+			<field name="direccion">Urb. San Miguel  Letra I-223 - Ica</field>
+			<field name="telefono">(056)  234-791/235-481</field>
+			<field name="web">http://www.diresaica.gob.pe/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_junin">
+			<field name="name">Dirección Regional de Salud de Junín</field>
+			<field name="direccion">Jr. Julio C. Tello 488  El Tambo- Huancayo</field>
+			<field name="telefono">(064)  481-270</field>
+			<field name="web">http://www.diresajunin.gob.pe/</field>					
+		</record>
+	
+		<record model="mision.disas.diresas" id="diresa_libertad">
+			<field name="name">Gerencia  Regional de Salud de La Libertad</field>
+			<field name="direccion">Calle Las Esmeraldas 403- Urb. Santa Ines- Trujillo</field>
+			<field name="telefono">(044)  231-515 / 222-201</field>
+			<field name="web">http://www.diresalalibertad.gob.pe/</field>					
+		</record>
+		
+		<record model="mision.disas.diresas" id="diresa_lambayeque">
+			<field name="name">Gerencia Regional de Salud de Lambayeque</field>
+			<field name="direccion">Av. Prolongación Salaverry 1610 - Chiclayo</field>
+			<field name="telefono">(074)  201-562 /202-598 / 219-349</field>
+			<field name="web">http://www.regionlambayeque.gob.pe/web/?pass=NA==</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_lima">
+			<field name="name">Dirección Regional de Salud Lima</field>
+			<field name="direccion">Calle Jose Arambulo La Rosa 134 - Huacho</field>
+			<field name="telefono">(01)  239-4672  / 239-3005</field>
+			<field name="web">http://www.diresalima.gob.pe/diresa/index.php</field>					
+		</record>
+	
+		<record model="mision.disas.diresas" id="diresa_loreto">
+			<field name="name">Dirección Regional de Salud de Loreto</field>
+			<field name="direccion">Av. 28 de Julio s/n- La Punchana - Iquitos</field>
+			<field name="telefono">(065)  251-756  / 253-573</field>
+			<field name="web">http://www.diresaloreto.gob.pe/</field>					
+		</record>
+
+
+		<record model="mision.disas.diresas" id="diresa_madre_dios">
+			<field name="name">Dirección Regional de Salud de Madre de Dios</field>
+			<field name="direccion">Av. 28 de Julio s/n- La Punchana - Iquitos</field>
+			<field name="telefono">(082)  571-127 / 571-126</field>
+			<field name="web">http://diresamdd.gob.pe/portal/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_moquegua">
+			<field name="name">Gerencia Regional de Salud de Moquegua</field>
+			<field name="direccion">Av. Simón Bolívar s/n- Moquegua</field>
+			<field name="telefono">(053)  462-217</field>
+			<field name="web">http://saludmoquegua.gob.pe/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_pasco">
+			<field name="name">Dirección Regional de Salud de Pasco</field>
+			<field name="direccion">Av. Los Incas s/n - San Juan Yanacancha - Cerro de Pasco</field>
+			<field name="telefono">(063)  422-284 /421-512 / 422-070</field>
+			<field name="web">http://diresapasco.gob.pe/pagina/</field>					
+		</record>
+
+
+		<record model="mision.disas.diresas" id="diresa_piura">
+			<field name="name">Dirección Regional de Salud de Piura</field>
+			<field name="direccion">Av. Irazola s/n - Castilla - Miraflores Piura</field>
+			<field name="telefono">(073)  342-424 / 341-580 / 340-901</field>
+			<field name="web">http://www.diresapiura.org/drsp/php/fram2.php</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_castilla_colonia">
+			<field name="name">Dirección Sub Regional de Salud Luciano Castilla Colonna</field>
+			<field name="direccion">Transversal Tumbes s/n - Sullana</field>
+			<field name="telefono">(073) 501-935 / 509-822 </field>
+			<field name="web"></field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_puno">
+			<field name="name">Dirección Regional de Salud de Puno</field>
+			<field name="direccion">Av. José Antonio Encinas 145 - Puno</field>
+			<field name="telefono">(051) 369-609</field>
+			<field name="web">http://www.diresapuno.gob.pe/web/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_sanmartin">
+			<field name="name">Dirección Regional de Salud de San Martín</field>
+			<field name="direccion">Av. Miguel Grau cuadra 1   Moyobamba</field>
+			<field name="telefono">(042)  563-113</field>
+			<field name="web">http://www.diressanmartin.gob.pe/web/</field>					
+		</record>
+
+
+		<record model="mision.disas.diresas" id="diresa_tacna">
+			<field name="name">Dirección Regional de Salud de Tacna</field>
+			<field name="direccion">Calle Blondell K3- Tacna</field>
+			<field name="telefono">(052)  245-798</field>
+			<field name="web">http://www.tacna.minsa.gob.pe/portal/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_tumbes">
+			<field name="name">Dirección Regional de Salud de Tumbes</field>
+			<field name="direccion">Av.Fernando Belaunde Terry Mz X Lt. 1 -10 - Urb. José Lishner Tudela</field>
+			<field name="telefono">(072)  523-789 / 521-624</field>
+			<field name="web">http://www.diresatumbes.gob.pe/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_ucayali">
+			<field name="name">Dirección Regional de Salud de Ucayali</field>
+			<field name="direccion">Jr. Huascar 353- Pucallpa</field>
+			<field name="telefono">(061) 571-446 / 571-046 / 572-375 / 573-600</field>
+			<field name="web">http://www.diresaucayali.gob.pe/</field>					
+		</record>
+
+		<record model="mision.disas.diresas" id="diresa_lima_sur">
+			<field name="name">DISA II Lima Sur</field>
+			<field name="direccion">Jr. Martinez de Pinillos 124-B Barranco</field>
+			<field name="telefono">477-3077 Anx:100 Telefax: 247-2947</field>
+			<field name="web">http://www.disalimasur.gob.pe/</field>					
+		</record>
+
+
+		<record model="mision.disas.diresas" id="diresa_lima_este">
+			<field name="name">DISA IV Lima Este</field>
+			<field name="direccion">Av. Cesar Vallejo, Cuadra 13 s/n</field>
+			<field name="telefono">363 - 0909 / 362 - 1354 Telefax: 362 - 0765</field>
+			<field name="web">http://www.limaeste.gob.pe/</field>					
+		</record>
+
+			
+		 	
+
+ -->
+    </data>
+</openerp>
+   
+		 			 	 
+ 			
+		                     	
+		 	
+			
+		

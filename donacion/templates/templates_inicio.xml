@@ -1,0 +1,168 @@
+<odoo>
+    <data>
+        <template id="index" name="Dashboard">
+     
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure">
+                        <section class="mb16">
+                            <div class="container">
+                              
+                            </div>
+                        </section>
+                    </div>
+      
+                    <section class="s_faq_collapse">   
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-md-3 mt8 mb8">
+                                </div>    
+                                <div style="text-align:center" class="col-sm-12 col-md-6 mt16 mb16">  
+                                                                    
+                                    <span  style="text-align:center" class="fa fa-suitcase fa-5x"></span>
+                                    <h2  class="page-header o_default_snippet_text" style="color:#14B54F;text-align:center">
+                                        <b>Donaciones</b>
+                                    </h2>      
+
+                                    <div class="panel-group" role="tablist">
+                                        
+                                        <h4 class="panel-title o_default_snippet_text" style="text-align:center"><b>REQUISITOS PARA REALIZAR EL TRÁMITE DE ACEPTACIÓN DE
+                                        DONACIONES PROVENIENTES DEL EXTERIOR A FAVOR DEL
+                                        MINISTERIO DE SALUD</b></h4>    
+                                        <div class="panel panel-default">
+
+                                            <p  class="text-justify"><span class="fa fa-2x fa-edit pull-left mb16 "></span> 
+                                                A. Solicitud de emisión de Resolución de Aceptación de donaciones
+                                                proveniente del exterior, con carácter de Declaración Jurada, dirigida al
+                                                titular de la Oficina General de Cooperación y Asuntos Internacionales del
+                                                Ministerio de Salud, suscrita por el titular del órgano y/o dependencia
+                                                beneficiaria de la donación, conforme al modelo establecido en la Directiva:
+                                                “Modelo de solicitud para tramitar la Resolución de Aceptación de la
+                                                donación proveniente del exterior”
+                                                <a class="oe_stat_button" t-attf-href="/controller/url/path?model=website.archive&amp;field=file&amp;id=&amp;file_name=indice (1).docx" id="pdf_download_link"  target="_blank" download='my_pdf_file.pdf' ><span class='fa fa-2x fa-save'></span>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <!-- <h6><a style="color:red" href="http://example.com/files/myfile.pdf" target="_blank">Descargar</a></h6> -->
+                                        <div class="panel panel-default">
+                                            <p class="text-justify"><span class="fa fa-2x fa-edit pull-left mb16 "></span> 
+                                                B. Carta de Donación
+                                                Suscrita por el titular o representante legal del donante, en la que conste su
+                                                voluntad de efectuar la donación y el destino de la misma, especificando los
+                                                datos siguientes:
+                                                <ul>
+                                                    <li style="text-align:left">                                   
+                                                    Identificación del donante: nombre, nombre del representante legal,
+                                                    domicilio legal, fax y teléfono, correo electrónico y página web </li>
+                                                    <li style="text-align:left">Lugar de origen o procedencia de la donación</li>
+                                                    <li style="text-align:left">Destino y Finalidad de la donación</li>
+                                                    <li style="text-align:left">Estado de la mercancía</li>
+                                                    <li style="text-align:left">Valor estimado</li>
+                                                    <li style="text-align:left">Otra información que se considere relevante.</li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                        
+                                        <div class="panel panel-default">
+                                            <p  class="text-justify">
+                                                <span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                                C. Lista de contenido: descripción, características, cantidad y valor estimado de los bienes a donar, consignada en dólares de los Estados Unidos de América, según el formato excel que se encuentra ubicado en la página web del MINSA y de DIGEMID y que deberá ser incluido en la presentación de los documentos y también remitido al correo electrónico: donaciones@minsa.gob.pe
+                                            </p>
+                                        </div>
+
+                                        <div class="panel panel-default">                                    
+                                            <p class="text-justify">
+                                                <span class="fa fa-2x fa-edit pull-left mb16"></span>
+                                                D. Copia simple del Documento de transporte</p>
+                                        </div>                 
+                                    </div>                                                           
+                                </div>
+                                <div class="col-sm-6 col-md-3 mt8 mb8">
+                                </div>   
+                                         
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3 mt8 mb8">
+                            </div>    
+                            <div style="text-align:left" class="col-sm-12 col-md-6 mt16 mb16">   
+                              
+
+                                <h4 class="panel-title o_default_snippet_text" style="text-align:center"><b>REQUISITOS PARA EL TRÁMITE DE LA AUTORIZACION (OPINIÓN TÉCNICA) DE
+                                    DONACIONES DE MERCANCIAS RESTRINGIDAS DONADAS PROVENIENTES DEL EXTERIOR.</b></h4>
+                                <div class="panel-group" role="tablist" id="myCollapse1495128804747">    
+                                <div class="panel panel-default">    
+                                    <p class="text-justify"><span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                        A. Solicitud de emisión de opinión técnica, dirigida al titular de la Oficina
+                                        General de Cooperación y Asuntos Internacionales del Ministerio de Salud,
+                                        suscrita por la entidad beneficiaria de la donación, conforme al modelo establecido
+                                        en la presente Directiva: “Modelo de solicitud para tramitar la opinión técnica sobre
+                                        mercancías restringidas donadas provenientes del exterior”.
+                                        <a class="oe_stat_button" t-attf-href="/controller/url/path?model=website.archive&amp;field=file&amp;id=&amp;file_name=indice (1).docx" id="pdf_download_link"  target="_blank" download='my_pdf_file.pdf' ><span class='fa fa-2x fa-save'></span>
+                                        </a>
+                                    </p>
+                                </div>  
+                                <div class="panel panel-default">
+                                    <p class="text-justify"><span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                    B. Carta o Certificado de Donación
+                                        Suscrita por el titular o representante legal del donante, en la que conste su
+                                        voluntad de efectuar la donación y el destino de la misma: Modelo de Carta de
+                                        Donación, especificando los siguientes datos:                          
+                                    </p>
+                                    <ul>
+                                        <li><p>                                   
+                                         Identificación del donante: nombre, nombre del representante legal,domicilio legal, fax y teléfono, correo electrónico y página web</p>
+                                        </li>
+                                        <li><p>Lugar de origen o procedencia de la donación</p></li>
+                                        <li><p>Destino y Finalidad de la donación</p></li>
+                                        <li><p>Estado de la mercancía</p></li>
+                                        <li><p>Valor estimado</p></li>
+                                        <li><p>Otra información que se considere relevante.</p></li>
+                                    </ul>
+                                </div>
+                                                         
+                                <div class="panel panel-default">
+                                    <p class="text-justify">
+                                    <span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                    C. Copia de la constancia de Inscripción vigente ante la Agencia Peruana de
+                                    Cooperación Internacional (ONGD, ENIEX e IPREDA).</p>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <p class="text-justify">
+                                    <span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                    D. Copia de la Resolución de Inscripción en el Registro de Entidades
+                                    perceptoras de donaciones de la SUNAT.</p>
+                                </div>
+
+                                <div class="panel panel-default">                                
+                                    <p class="text-justify">
+                                    <span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                    E. Lista de contenido (bienes): la descripción, características, cantidad y valor
+                                    estimado de los bienes, deben estar consignados en dólares americanos, según el
+                                    formato excel que se encuentra ubicado en la página web del MINSA y de
+                                    DIGEMID y que deberá ser incluido en la presentación de los documentos y
+                                    también remitido al correo electrónico: donaciones@minsa.gob.pe</p>
+                                </div>
+
+                                <div class="panel panel-default">
+                                    <p class="text-justify">
+                                    <span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                    F. Copia simple del Documento de transporte</p>
+                                </div>
+                                </div>
+                            </div>            
+                            <div class="col-sm-6 col-md-3 mt8 mb8">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </t>
+        </template>
+
+    </data>
+</odoo>

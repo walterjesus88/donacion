@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="email_template_demo" model="mail.template">
+        <field name="name">Cambio state donacion requisito</field>
+        <field name="email_from">${object.email_from_name} ${(object.email_from or '')|safe}</field> 
+       
+        <field name="subject">Se ha cambiado el estado del documento!, ${object.email_from_name}</field>
+        <field name="email_to">${object.email_to|safe}</field>
+        <field name="model_id" ref="donacion.model_donacion_requisito"/>
+        <field name="auto_delete" eval="False"/>
+        <field name="body_html"><![CDATA[
+
+          <div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+              <table cellspacing="0" cellpadding="0" style="width:600px;background:inherit;color:inherit">
+                  <tbody><tr>
+                      <td valign="center" width="200" style="padding:10px 10px 10px 5px;font-size: 12px">
+                          <img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${object.name}">
+                      </td>
+                  </tr></tbody>
+              </table>
+          </div>
+
+          <div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+    
+
+            <h2 style="text-align:center">MINISTERIO DE SALUD</h2>
+    				<h3><strong> Plataforma Virtual Sistema de Donaciones y Misiones Sanitarias </strong></h3>
+            <p><b> Notificacion Proceso Donacion<b></p>
+            <p> Tenga un cordial saludo de ${object.email_from_name} </p>
+
+            <table style="background-color:transparent;border-spacing:0px;border-collapse:collapse;width:100%;border-top:1px solid #e1e1e1;">
+              <tbody>
+                <tr>
+                  <td style="padding:25px 0px;vertical-align:top;">
+                    % if object.state=='I':
+                      <p> Ha sido enviado el documento <p><b> ${(object.name)} <b></p> con los requisitos del beneficiario a su bandeja ... por favor revise </hp>
+                    % endif  
+
+                    % if object.state=='R':
+                      % if object.vdigesa==False and object.vdigemid==False:
+                        <p> El documento  <p><b> ${(object.name)} <b></p> con numero de expediente <h5>${(object.numero_expediente)}</h5> ha sido enviado a su bandeja para el pertinente informe </p>
+                      % endif   
+                      % if object.vdigesa==True or object.vdigemid==True:
+                        <p> Tiene una notificacion del presente documento <h3>${(object.name)}</h3> con numero de expediente <h5>${(object.numero_expediente)}</h5> revise su cuenta de donaciones y misiones sanitarias </p>                
+                      % endif  
+                    % endif   
+
+                    % if object.state=='01':
+                      <p> Su documento <p><b> ${(object.name)} <b></p>  ha sido observado revise su bandeja </p>
+                    % endif 
+
+                    % if object.state=='V':
+                      <p> El documento <p><b> ${(object.name)} <b></p> con numero de expediente <h5>${(object.numero_expediente)}</h5> ha concluido satisfactoriamente siendo aprobado por la oficina de OGCTI. atte ${object.email_from_name} </p>
+                    % endif
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div style="padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777">
+        
+                           
+              <center><a style="padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;" href="/web?#id=${object.id}&view_type=form&model=donacion.requisito">Ir a donacion</a></center>
+
+              <p style="font-size: 11px; margin-top: 10px;">
+                <strong>Sent by ${object.name} </strong>
+              </p>
+            </div>
+
+          </div>
+       
+				]]>				
+		</field>
+    </record>  
+
+<!--     <record id="template_1_server_action" model="ir.actions.server">
+        <field name="name">Enviar formulario online</field>
+        <field name="model_id" ref="donacion.model_donacion_requisito" />
+        <field name="template_id" ref="email_template_demo" />
+        <field name="state">email</field> 
+   
+    </record> -->
+
+</odoo>
+
+<!-- <?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+    
+        <record id="example_email_template" model="mail.template">
+          <field name="name">Example e-mail template</field>
+          <field name="email_from">${object.company_id and object.company_id.email or ''}</field>
+          <field name="subject">Congratz ${object.name}</field>
+          <field name="email_to">${object.email|safe}</field>
+          <field name="lang">${object.lang}</field>
+          <field name="model_id" ref="base.model_res_partner"/>
+          <field name="auto_delete" eval="True"/>
+          <field name="body_html">
+              <![CDATA[
+              <p>Dear ${(object.name)},<br/><br/>
+                Good job, you've just created your first e-mail template!<br/></p>
+                  Regards,<br/>
+                ${(object.company_id.name)}
+            ]]>
+          </field>
+        </record>
+
+      
+    </data>
+</odoo> -->

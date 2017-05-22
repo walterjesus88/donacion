@@ -1,0 +1,78 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_donacion_ogcai,donacion requisito2,model_donacion_requisito,group_donacion_requisito_ogcai,1,1,0,1
+access_donacion_ogcaj,donacion requisito,model_donacion_requisito,group_donacion_requisito_ogcaj,1,0,0,0
+access_donacion_donatario,donacion requisito3,model_donacion_requisito,group_donacion_requisito_donatario,1,1,1,1
+access_donacion_digesa,donacion digesa,model_donacion_requisito,group_donacion_requisito_digesa,1,1,0,0
+access_donacion_digemid,donacion digemid,model_donacion_requisito,group_donacion_requisito_digemid,1,1,1,0
+
+access_donacion_lista_dona,lista donatario,model_donacion_lista,group_donacion_requisito_donatario,1,1,1,1
+access_donacion_lista,lista ogcai,model_donacion_lista,group_donacion_requisito_ogcai,1,0,0,0
+access_donacion_lista_ogcaj,lista ogcaj,model_donacion_lista,group_donacion_requisito_ogcaj,1,0,0,0
+access_donacion_lista_digesa,lista digesa,model_donacion_lista,group_donacion_requisito_digesa,1,0,0,0
+access_donacion_lista_digemid,lista digemid,model_donacion_lista,group_donacion_requisito_digemid,1,0,0,0
+
+access_donacion_users_ogcai,usuario ogcai,model_res_users,group_donacion_requisito_ogcai,1,1,1,1
+access_donacion_users_ogcaj,usuario ogcaj,model_res_users,group_donacion_requisito_ogcaj,1,1,1,0
+access_donacion_users_donatario,usuario donatario,model_res_users,group_donacion_requisito_donatario,1,1,1,0
+access_donacion_users_minsa,usuario donatario,model_res_users,group_donacion_minsa,1,1,1,0
+access_donacion_users_ong,usuario donatario,model_res_users,group_donacion_ong,1,1,1,0
+access_donacion_users_digemid,usuario digemid,model_res_users,group_donacion_requisito_digemid,1,1,1,0
+access_donacion_users_digesa,usuario digesa,model_res_users,group_donacion_requisito_digesa,1,1,1,0
+
+access_donacion_linea,donacion linea,model_linea,group_donacion_requisito_donatario,1,1,1,1
+
+access_roles_donatario,donacion roles,model_donacion_roles,group_donacion_requisito_donatario,1,1,1,1
+access_roles_ogcti,donacion roles ogcti,model_donacion_roles,group_donacion_requisito_ogcai,1,1,1,1
+access_roles_digesa,donacion roles digesa,model_donacion_roles,group_donacion_requisito_digesa,1,1,1,1
+access_roles_digemid,donacion roles digemid,model_donacion_roles,group_donacion_requisito_digemid,1,1,1,1
+
+access_roles_diresa,donacion roles diresa,model_donacion_roles,group_mision_requisito_diresa,1,1,1,1
+access_roles_disa,donacion roles disa,model_donacion_roles,group_mision_requisito_disa,1,1,1,1
+
+
+access_donacion_cat_dona,donacion categoria dona,model_donacion_categoria,group_donacion_requisito_donatario,1,1,1,1
+access_donacion_cat_ogcti,donacion categoria ogcti,model_donacion_categoria,group_donacion_requisito_ogcai,1,0,0,0
+access_donacion_cat_digesa,donacion categoria digesa,model_donacion_categoria,group_donacion_requisito_digesa,1,0,0,0
+access_donacion_cat_digemid,donacion categoria digemid,model_donacion_categoria,group_donacion_requisito_digemid,1,0,0,0
+
+access_donacion_disp_medico_dona,donacion disp_medico_d,model_donacion_dispositivos_medicos,group_donacion_requisito_donatario,1,1,1,1
+access_donacion_disp_medico_ogcti,donacion disp_medico_o,model_donacion_dispositivos_medicos,group_donacion_requisito_ogcai,1,0,0,0
+access_donacion_disp_medico_digesa,donacion disp_med_digesa,model_donacion_dispositivos_medicos,group_donacion_requisito_digesa,1,0,0,0
+access_donacion_disp_medico_digemid,donacion disp_med_digemid,model_donacion_dispositivos_medicos,group_donacion_requisito_digemid,1,0,0,0
+
+access_donacion_prod_san_don,donacion prod_san_don,model_donacion_productos_sanitarios,group_donacion_requisito_donatario,1,1,1,1
+access_donacion_prod_san_ogcti,donacion prod_san_ogcti,model_donacion_productos_sanitarios,group_donacion_requisito_ogcai,1,0,0,0
+access_donacion_prod_san_digesa,donacion prod_san_digesa,model_donacion_productos_sanitarios,group_donacion_requisito_digesa,1,0,0,0
+access_donacion_prod_san_digemid,donacion prod_san_digemid,model_donacion_productos_sanitarios,group_donacion_requisito_digemid,1,0,0,0
+
+
+access_mision_donatario_requisito,mision requisito donatario,model_mision_requisito,group_donacion_requisito_donatario,1,1,1,1
+access_mision_ogcti_requisito,mision requisito ogcti,model_mision_requisito,group_donacion_requisito_ogcai,1,1,1,1
+access_mision_disa_requisito,mision requisito disa,model_mision_requisito,group_mision_requisito_disa,1,1,1,0
+access_mision_diresa_requisito,mision requisito diresa,model_mision_requisito,group_mision_requisito_diresa,1,1,1,0
+access_mision_donatario_profesionales,mision profesionales donatario,model_mision_listaprofesionales,group_donacion_requisito_donatario,1,1,1,1
+access_mision_ogcti_profesionales,mision profesionales ogcti,model_mision_listaprofesionales,group_donacion_requisito_ogcai,1,0,0,0
+access_mision_disa_profesionales,mision profesionales disa,model_mision_listaprofesionales,group_mision_requisito_disa,1,0,0,0
+access_mision_diresa_profesionales,mision profesionales diresa,model_mision_listaprofesionales,group_mision_requisito_diresa,1,0,0,0
+
+access_mision_requisito_colegiado,mision requisito colegiado,model_mision_requisito,group_mision_colegiados,1,1,0,0
+access_mision_prof_colegiado,mision prof colegiado,model_mision_listaprofesionales,group_mision_colegiados,1,1,0,0
+
+
+
+
+access_donacion_minsa,donacion requisito minsa,model_donacion_requisito,group_donacion_minsa,1,1,1,0
+access_donacion_ong,donacion requisito ong,model_donacion_requisito,group_donacion_ong,1,1,1,0
+
+
+
+
+
+
+
+
+
+
+
+
+

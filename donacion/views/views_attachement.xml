@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+        <record id="view_tree_attachment" model="ir.ui.view">        
+            <field name="model">website.archive</field> 
+            <field name="name">web.attachment.form</field>   
+            <field name="arch" type="xml">
+            <tree>             
+                <field name="name"/> 
+                <field name="file"/>                  
+            </tree>    
+            </field>                        
+        </record>
+
+        <record id="view_form_attachment" model="ir.ui.view">        
+            <field name="model">website.archive</field>
+            <field name="name">web.attachment.tree</field>   
+            <field name="arch" type="xml">
+            <form>          
+                <field name="name" /> 
+                <field name="file" widget="binary" filename="file_name"/>    
+                <field name="file_name" invisible="1"/>
+            </form>    
+            </field>                        
+        </record>
+
+        <record model="ir.actions.act_window" id="websitearchives_action">
+            <field name="name">archivos web</field>
+            <field name="res_model">website.archive</field>     
+            <field name="view_mode">tree,form</field>        
+        </record>
+
+        <menuitem id="arch_webs" name="archivos website"  action="websitearchives_action" />
+    </data>
+</odoo>

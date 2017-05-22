@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="report_proceso_donacion">
+            <t t-call="report.html_container">
+                <t t-call="report.external_layout">
+                    <t t-foreach="docs" t-as="o">
+
+                        <div class="header">
+                          <div class="row">
+                            <div class="col-xs-3">
+
+  
+
+                            </div>
+                          </div>                            
+                        </div>
+
+                        <div class="page">
+                            <h3><center>Proceso de Donación</center></h3>                           
+
+                            <table class="table table-bordered" >
+                              <thead>
+                                <tr>
+                                </tr>  
+                              </thead>  
+                              <tbody>
+                                <tr style="text-align:right" > 
+                                  <td colspan="2"><span>Número de Expediente: </span> <strong t-field="o.numero_expediente"/></td>
+                                </tr> 
+                                      
+                                <tr style="text-align:right" >                        
+                                  <td colspan="2"><span>Beneficiario: </span><strong t-field="o.create_uid"/></td>
+                                </tr> 
+                                
+                                <tr style="text-align:right" >   
+                                  <td colspan="2"><span>Fecha de Creacion: </span><strong  t-field="o.create_date"/></td>
+                                </tr>
+                                
+                                <tr style="text-align:right" >                               
+                                  <td colspan="2"><span>Fecha de Modificación: </span><strong t-field="o.write_date"/></td>
+                                </tr> 
+                                <tr style="text-align:right" >                          
+                                  <td colspan="2"><span>Ultima Modificación: </span><strong t-field="o.write_uid"/></td>
+                                </tr> 
+                              </tbody>
+                            </table>
+
+                            <table class="table table-bordered" width="40%">
+                              <thead>
+                                <tr>
+                                </tr>  
+                              </thead>  
+                              <tbody>
+                                <tr>
+                                  <td colspan="2">
+                                    <strong>Nombre de Donante:</strong>
+                                  </td>
+                                  <td colspan="4">
+                                    <strong t-field="o.name"/>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2">
+                                    <strong>Descripcion:</strong>
+                                  </td>
+                                  <td colspan="4">
+                                    <strong t-field="o.descripcion"/>                      
+                                  </td>
+                                </tr>
+                         
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>Estado del documento:</strong>
+                                    </td>
+                                    <td colspan="4">
+                                        <strong t-field="o.state"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>observacion OGCTI:</strong>
+                                    </td>
+                                    <td colspan="4">
+                                        <strong t-field="o.observacion_ogcai"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>observacion Digesa:</strong>
+                                    </td>
+                                    <td colspan="4">
+                                        <strong t-field="o.observacion_digesa"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">
+                                        <strong>observacion Digemid:</strong>
+                                    </td>
+                                    <td colspan="4">
+                                        <strong t-field="o.observacion_digemid"/>
+                                    </td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+                          
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr class="success">
+                                      <th>Nombre de Marca#</th>
+                                      <th>Nombre Generico DCI</th>
+                                      <th>Concentracion</th>
+                                      <th>Forma</th>
+                                      <th>Lote</th>                                   
+                                      <th>Fecha de Vencimiento</th>
+                                      <th>Pais</th>                            
+                                      <th>Cantidad</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <t t-foreach="o.lista_ids" t-as="eval_prov">
+                                        <tr>
+                                            <td><span t-field="eval_prov.name"/></td>
+                                            <td><span t-field="eval_prov.name_generico"/></td>
+                                            <td><span t-field="eval_prov.concentracion"/></td>
+                                            <td><span t-field="eval_prov.forma"/></td>
+                                            <td><span t-field="eval_prov.lote"/></td>
+                                            <td><span t-field="eval_prov.fecha_vencimiento"/></td>
+                                            <td><span t-field="eval_prov.pais"/></td>
+                                            <td><span t-field="eval_prov.cantidad"/></td>                                         
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                          
+                          
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+        
+    </data>
+</openerp>

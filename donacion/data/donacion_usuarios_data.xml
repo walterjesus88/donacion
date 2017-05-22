@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+		<record model="res.users" id="user_obstetra">
+			<field name="name">colegiado obstetra</field>
+			<field name="login">colegiadoobstetra@gmail.com</field>
+			<field name="password">colegiadoobstetra@gmail.com</field>
+			<field name="email">colegiadoobstetra@gmail.com</field>
+			<field name="rol_id" ref="rol_colegiado"></field>        	
+			<field name="groups_id" eval="[(4, ref('group_mision_colegiados')),(4, ref('base.user_root'))]"/>		
+		</record>
+
+		<record model="res.users" id="user_odontologo">
+			<field name="name">colegiado odontologo</field>
+			<field name="login">colegiadoodontologo@gmail.com</field>
+			<field name="password">colegiadoodontologo@gmail.com</field>
+			<field name="email">colegiadoodontologo@gmail.com</field>
+			<field name="rol_id" ref="rol_colegiado"></field> 
+			<field name="groups_id" eval="[(4, ref('group_mision_colegiados')),(4, ref('base.user_root'))]"/>
+		</record>
+
+		<record model="res.users" id="user_medico">
+			<field name="name">colegiado medico</field>
+			<field name="login">colegiadomedico@gmail.com</field>
+			<field name="password">colegiadomedico@gmail.com</field>
+			<field name="email">colegiadomedico@gmail.com</field>
+			<field name="rol_id" ref="rol_colegiado"></field>        	
+			<field name="groups_id" eval="[(4, ref('group_mision_colegiados')),(4, ref('base.user_root'))]"/>			
+		</record>
+
+		<record model="res.users" id="user_enfermero">
+			<field name="name">colegiado enfermero</field>
+			<field name="login">colegiadoenfermero@gmail.com</field>
+			<field name="password">colegiadoenfermero@gmail.com</field>
+			<field name="email">colegiadoenfermero@gmail.com</field>
+			<field name="rol_id" ref="rol_colegiado"></field>        	
+			<field name="groups_id" eval="[(4, ref('group_mision_colegiados')),(4, ref('base.user_root'))]"/>
+		</record>
+
+
+    </data>
+</openerp>

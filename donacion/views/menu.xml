@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <openerp>
+        <data>
+ 
+            <record id="view_tree_linea" model="ir.ui.view" >
+                <field name="name">linea.tree</field>
+                <field name="model">linea</field>
+                <field name="arch" type="xml">
+                    <tree string="lineas">               
+                        <field name="codigo"/>
+                        <field name="marca"/>
+                        <field name="descripcion"/>
+                        <field name="concentracion"/>
+                        <field name="forma_simple"/>
+                    </tree>
+                </field>
+            </record>
+
+            <!-- Vista del wizard -->
+
+            <record model="ir.ui.view" id="wizard_form_view">
+                <field name="name">wizard.form</field>
+                <field name="model">donacion.wizard</field>
+                <field name="arch" type="xml">
+                    <form string="Add">
+                        <header>                                    
+                            <button type="object" string="Actualizar catalogo" name="buscar" class="oe_stat_button" icon="fa-check">buscador</button>
+                        </header>
+                        <group>                            
+                            <field name="donacion_id" invisible="True"/> 
+                            <field name="lista_ids" />                  
+                        </group>
+                    </form>
+                </field>
+            </record>
+
+            <record model="ir.ui.view" id="users_readonly">
+                <field name="name">users.donacion.form</field>
+                <field name="model">res.users</field>
+                <field name="arch" type="xml">
+                    <form string="Add">                        
+                        <group>                            
+                            <field name="name" readonly="1"/>                                            
+                            <field name="login" readonly="1"/>                                            
+                        </group>
+                    </form>
+                </field>
+            </record>
+
+            <!-- lanzamiento del wizard -->
+
+            <act_window id="launch_session_wizard"
+                        name="Agregar de lista de productos"
+                        src_model="res.users"
+                        res_model="donacion.wizard"
+                        view_mode="form"
+                        target="new"
+                        key2="client_action_multi"                
+            />
+            
+
+        </data>
+    </openerp>

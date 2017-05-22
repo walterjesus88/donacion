@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- RES USERS - VISTA FORM -->
+        <record id="view_users_simple_form" model="ir.ui.view">
+            <field name="name">res.users.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_simple_form"/>
+            <field name="arch" type="xml"> 
+                <sheet>                 
+                    <field name="partner_id" readonly="1" required="0" groups="donacion.group_donacion_requisito_ogcai" attrs="{'invisible': [('id', '=', False)]}"/>
+                    
+                    <field name="rol_id" />
+                    <div>
+                        <group name="Datos del encargado">                                     
+                            <field name="dni_person" /> 
+                            <field name="encargado_1" />                         
+                                          
+                        </group>
+                
+                        <group name="Documentos personales">
+                            <group name="Documento de autorizacion">                 
+                                <field widget="binary"  name="documentaut" filename="name_filename"/>     
+                                <field name="name_filename" invisible="1"/> 
+                            </group>    
+                            <group name="Documento de apci">
+                                <field widget="binary"  name="doc_apci" filename="name_apci"/>     
+                                <field name="name_apci" invisible="1"/>
+                            </group>
+
+                             <group name="Documento de apci">
+                                <field widget="binary"  name="doc_entidades" filename="name_entidades"/>     
+                                <field name="name_entidades" invisible="1"/>
+                               
+                            </group>
+
+                        </group>
+
+
+
+                        <group name="Institucion">
+                            <group name="institucion">                 
+                                <field name="institucion"/>     
+                            </group>
+                            <group name="Direccion Institucion">                    
+                                <field name="direccioninstitucion"/>
+                            </group>
+                        </group>                
+                    </div>
+                </sheet>  
+                
+                <field name="fax" position="before" invisible='1'>                   
+                    <group>
+                        <field name="comment"/>
+                    </group> 
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-check">
+                            <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;active&quot;}"/>
+                        </button>
+                    </div>                                                       
+                </field>        
+
+                <!-- <h2><field name="login"/></h2> -->
+         
+
+            </field>
+        </record>
+
+        <record id="view_usuarios_tree" model="ir.ui.view">        
+            <field name="model">res.users</field>    
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>    
+                    <field name="login"/>  
+                    <field name="active"/>                        
+                </tree>    
+            </field>                        
+        </record>
+
+        <!--Filtros res.users-->
+<!--         <record id="view_usuarios_filter" model="ir.ui.view">
+            <field name="name">res.users.search</field>
+            <field name="model">res.users</field>
+            <field name="arch" type="xml">
+                <search string="Usuarios activos">
+                    <field name="name"/>
+                    <field name="login"/>
+                    <filter string="Usuarios activos" name="active" domain="[('active','=',True)]"/>                    
+                </search>
+             </field>
+         </record>
+
+        <record id="view_usuariosinac_filter" model="ir.ui.view">
+            <field name="name">res.users.search</field>
+            <field name="model">res.users</field>
+            <field name="arch" type="xml">
+                <search string="Usuarios inactivos">
+                    <field name="name"/>
+                    <field name="login"/>                                   
+                </search>
+             </field>
+        </record> -->
+         <!-- fin filtros-->
+
+        <record model="ir.actions.act_window" id="users_list_action">
+            <field name="name">usuarios activar</field>
+            <field name="res_model">res.users</field>
+            <field name="domain">['|',('active','=',True),('active','=',False)]</field>     
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_usuarios_tree"/>
+            <!-- <field name="search_view_id" ref="view_usuariosinac_filter"/> -->
+            <!-- <field name="context">{'search_default_login':'walter_js56@hotmail.com'}</field> -->
+        </record>
+
+        <menuitem id="usuarios_lista" name="usuarios"  action="users_list_action" groups="donacion.group_donacion_requisito_ogcai"/>
+
+         <!--  -->
+
+    </data>
+</openerp>
+

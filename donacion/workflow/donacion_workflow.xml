@@ -1,0 +1,177 @@
+<odoo>
+  <data>
+
+	<record id="wkf_donacion_requisito" model="workflow">
+		<field name="name">donacion.requisito.basic</field>
+		<field name="osv">donacion.requisito</field>
+		<field name="on_create">True</field>
+	</record>
+
+	<!-- Activitys -->
+
+	<record id="act_borrador" model="workflow.activity">
+		<field name="name">borrador</field>
+		<field name="wkf_id" ref="wkf_donacion_requisito"/>
+		<field name="flow_start">True</field>
+		<field name="kind">function</field>
+		<field name="action">action_borrador()</field>
+	</record>
+
+	<record id="act_iniciado" model="workflow.activity">
+		<field name="wkf_id" ref="wkf_donacion_requisito"/>	
+		<field name="name">iniciado</field>
+		<field name="kind">function</field>
+		<field name="action">action_iniciado()</field>
+	</record>
+
+
+	<record id="act_observado1" model="workflow.activity">
+		<field name="wkf_id" ref="wkf_donacion_requisito"/>	
+		<field name="name">observado por OGCAI</field>
+		<field name="kind">function</field>
+		<field name="action">action_observado1()</field>
+	</record>
+
+	<record id="act_registrado" model="workflow.activity">
+		<field name="wkf_id" ref="wkf_donacion_requisito"/>
+		<field name="name">registrado</field>
+		<field name="kind">function</field>
+		<field name="action">action_registrado()</field>
+	</record>
+
+	<record id="act_observado2" model="workflow.activity">
+		<field name="wkf_id" ref="wkf_donacion_requisito"/>	
+		<field name="name">observado por DIRESA/DIGESA</field>
+		<field name="kind">function</field>
+		<field name="action">action_observado2()</field>
+	</record>
+
+	<record id="act_validado" model="workflow.activity">
+		<field name="wkf_id" ref="wkf_donacion_requisito"/>
+		<field name="name">validado</field>
+		<field name="kind">function</field>
+		<field name="action">action_validado()</field>
+		<field name="flow_stop">True</field>
+	</record>
+<!-- 
+	<record id="act_cerrado" model="workflow.activity">
+		<field name="wkf_id" ref="wkf_donacion_requisito"/>
+		<field name="name">cerrado</field>
+		<field name="kind">function</field>
+		<field name="action">action_cerrado()</field>
+		<field name="flow_stop">True</field>
+	</record> -->
+
+	<!-- PILOTOS -->
+<!-- 		<record id="act_registrado_diresa" model="workflow.activity">
+			<field name="wkf_id" ref="wkf_donacion_requisito"/>
+			<field name="name">Registrado por diresa</field>
+			<field name="kind">function</field>
+			<field name="action">action_registrado_diresa()</field>
+		</record>
+
+		<record id="act_registrado_digesa" model="workflow.activity">
+			<field name="wkf_id" ref="wkf_donacion_requisito"/>
+			<field name="name">Registrado por digesa</field>
+			<field name="kind">function</field>
+			<field name="action">action_registrado_digesa()</field>
+		</record> -->
+	<!-- -->
+
+
+	<!-- TRANSICIONES-->
+	<record id="trans_borrador_iniciado" model="workflow.transition">
+		<field name="act_from" ref="act_borrador"/>
+		<field name="act_to" ref="act_iniciado"/>
+		<field name="signal">button_iniciado</field>
+	</record>
+
+	<record id="trans_observado1_iniciado" model="workflow.transition">
+		<field name="act_from" ref="act_observado1"/>
+		<field name="act_to" ref="act_iniciado"/>
+		<field name="signal">button_iniciado</field>
+	</record>
+
+
+	<record id="trans_iniciado_registrado" model="workflow.transition">
+		<field name="act_from" ref="act_iniciado"/>
+		<field name="act_to" ref="act_registrado"/>
+		<field name="signal">button_registrado</field>
+	</record>
+
+	<record id="trans_observado2_registrado" model="workflow.transition">
+		<field name="act_from" ref="act_observado2"/>
+		<field name="act_to" ref="act_registrado"/>
+		<field name="signal">button_registrado</field>
+	</record>
+
+	
+	<!-- 	button_digesa button_diresa -->
+
+<!-- 		<record id="trans_iniciado_registrado_diresa" model="workflow.transition">
+			<field name="act_from" ref="act_iniciado"/>
+			<field name="act_to" ref="act_registrado_diresa"/>
+			<field name="signal">button_diresa</field>
+		</record>
+
+		<record id="trans_digesa_diresa" model="workflow.transition">
+			<field name="act_from" ref="act_registrado_digesa"/>
+			<field name="act_to" ref="act_registrado_diresa"/>
+			<field name="signal">button_diresa</field>
+		</record>
+
+
+		<record id="trans_iniciado_registrado_digesa" model="workflow.transition">
+			<field name="act_from" ref="act_iniciado"/>
+			<field name="act_to" ref="act_registrado_digesa"/>
+			<field name="signal">button_digesa</field>
+		</record>
+
+
+		<record id="trans_diresa_digesa" model="workflow.transition">
+			<field name="act_from" ref="act_registrado_diresa"/>
+			<field name="act_to" ref="act_registrado_digesa"/>
+			<field name="signal">button_digesa</field>
+		</record> -->
+
+	<!-- -->
+
+
+	<record id="trans_registrado_validado" model="workflow.transition">
+		<field name="act_from" ref="act_registrado"/>
+		<field name="act_to" ref="act_validado"/>
+		<field name="signal">button_validado</field>
+	</record>
+
+<!-- 
+	<record id="trans_validado_cerrado" model="workflow.transition">
+		<field name="act_from" ref="act_validado"/>
+		<field name="act_to" ref="act_cerrado"/>
+		<field name="signal">button_cerrado</field>
+	</record> -->
+
+
+
+	<!--OBSERVADOS BOTONES-->
+	<record id="trans_iniciado_observado1" model="workflow.transition">
+		<field name="act_from" ref="act_iniciado"/>
+		<field name="act_to" ref="act_observado1"/>
+		<field name="signal">button_observado1</field>
+	</record>
+
+	<record id="trans_observado2_iniciado" model="workflow.transition">
+		<field name="act_from" ref="act_observado2"/>
+		<field name="act_to" ref="act_observado1"/>
+		<field name="signal">button_observado1</field>
+	</record>
+
+
+	<record id="trans_registrado_observado2" model="workflow.transition">
+		<field name="act_from" ref="act_registrado"/>
+		<field name="act_to" ref="act_observado1"/>
+		<field name="signal">button_observado1</field>
+	</record>
+
+
+  </data>
+</odoo>  	

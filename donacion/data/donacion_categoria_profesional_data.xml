@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<!--Type Categorias-->
+<!-- 		<record model="mision.categoriaprofesional" id="CM"><field name="name">Colegio Medico del Peru</field></record>
+		<record model="mision.categoriaprofesional" id="CO"><field name="name">Colegio Odontologo del Peru</field></record>
+		<record model="mision.categoriaprofesional" id="CE"><field name="name">Colegio Enfermeros del Peru</field></record>
+		<record model="mision.categoriaprofesional" id="COS"><field name="name">Colegio Obstetras del Peru</field></record>
+		<record model="mision.categoriaprofesional" id="CN"><field name="name">Colegio Nutricionistas del Peru</field></record> -->
+	
+    </data>
+</openerp>

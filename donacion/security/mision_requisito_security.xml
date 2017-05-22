@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="0">
+    <record id="group_mision_requisito_disa" model="res.groups">
+        <field name="name">Grupo DISA</field>
+    </record>
+
+    <record id="group_mision_requisito_diresa" model="res.groups">
+        <field name="name">Grupo DIRESA</field>
+    </record>
+
+    <record id="group_mision_colegiados" model="res.groups">
+        <field name="name">Grupo Colegiados</field>
+    </record>
+
+    <record id="group_mision_colegiados_manager" model="res.groups">
+        <field name="name">Grupo Colegiados admin</field>
+         <field name="implied_ids" eval="[(4, ref('donacion.group_mision_colegiados'))]"/>
+    </record>
+
+    <!--PERMISOS PARA MISIONES MODEL MISION REQUISITO 3 GRUPOS CREADOS -->
+
+    <record id="acceso_mision_donatario" model="ir.rule">
+        <field name="name">Registros mision donatario</field>
+        <field name="model_id" ref="model_mision_requisito"/> 
+        <field name="domain_force">[('create_uid', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_donatario'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+
+    <record id="acceso_mision_ogcti" model="ir.rule">
+        <field name="name">Registros mision ogcti</field>
+        <field name="model_id" ref="model_mision_requisito"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_ogcai'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+    <record id="acceso_mision_disa" model="ir.rule">
+        <field name="name">Registros mision disa</field>
+        <field name="model_id" ref="model_mision_requisito"/> 
+        <field name="groups" eval="[(4, ref('group_mision_requisito_disa'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+    <record id="acceso_mision_diresa" model="ir.rule">
+        <field name="name">Registros mision diresa</field>
+        <field name="model_id" ref="model_mision_requisito"/>
+        <field name="domain_force">[('user_diresa', 'in', user.id)]</field>         
+        <field name="groups" eval="[(4, ref('group_mision_requisito_diresa'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="0" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+    <record id="acceso_mision_colegiados" model="ir.rule">
+        <field name="name">Registros mision colegiados</field>
+        <field name="model_id" ref="model_mision_requisito"/>
+        <field name="domain_force">[('users_access_ids', 'in', user.id),('state','=','R')]</field>  
+        <field name="groups" eval="[(4, ref('group_mision_colegiados'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="0" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+
+
+    <!--PERMISOS PARA MISIONES MODEL DONACION LISTAPROFESIONALES 3 GRUPOS CREADOS -->
+
+    <record id="acceso_mision_lista_donatario" model="ir.rule">
+        <field name="name">Registros mision profesional donatario</field>
+        <field name="model_id" ref="model_mision_listaprofesionales"/> 
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_donatario'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+
+    <record id="acceso_mision_lista_ogcti" model="ir.rule">
+        <field name="name">Registros mision profesional ogcti</field>
+        <field name="model_id" ref="model_mision_listaprofesionales"/> 
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_ogcai'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+    <record id="acceso_mision_lista_disa" model="ir.rule">
+        <field name="name">Registros mision profesional disa</field>
+        <field name="model_id" ref="model_mision_listaprofesionales"/> 
+        <field name="groups" eval="[(4, ref('group_mision_requisito_disa'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+    <record id="acceso_mision_lista_diresa" model="ir.rule">
+        <field name="name">Registros mision profesional diresa</field>
+        <field name="model_id" ref="model_mision_listaprofesionales"/> 
+        <field name="groups" eval="[(4, ref('group_mision_requisito_diresa'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+ 
+    <record id="acceso_mision_list_colegiados" model="ir.rule">
+        <field name="name">Registros mision lista colegiados</field>
+        <field name="model_id" ref="model_mision_listaprofesionales"/> 
+        <!-- <field name="domain_force">[('especialidad', '=', user.categoria_profesional.id)]</field> -->
+        <field name="domain_force">[('user_colegiado', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('group_mision_colegiados'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+
+    <!-- MISION CATEGORIA PROFESIONAL GRUPOS -->
+
+  <!--   <record id="acceso_mision_lista_donatario" model="ir.rule">
+        <field name="name">Registros mision profesional ogcti</field>
+        <field name="model_id" ref="model_mision_categoriaprofesional"/> 
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_donatario'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+
+    <record id="acceso_mision_categoria_ogcti" model="ir.rule">
+        <field name="name">Registros mision profesional ogcti</field>
+        <field name="model_id" ref="model_mision_categoriaprofesional"/> 
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_ogcai'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+    <record id="acceso_mision_categoria_disa" model="ir.rule">
+        <field name="name">Registros mision profesional disa</field>
+        <field name="model_id" ref="model_mision_categoriaprofesional"/> 
+        <field name="groups" eval="[(4, ref('group_mision_requisito_disa'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+    <record id="acceso_mision_categoria_diresa" model="ir.rule">
+        <field name="name">Registros mision profesional diresa</field>
+        <field name="model_id" ref="model_mision_categoriaprofesional"/> 
+        <field name="groups" eval="[(4, ref('group_mision_requisito_diresa'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+    <record id="acceso_mision_categoria_colegiados" model="ir.rule">
+        <field name="name">Registros mision profesional colegiados</field>
+        <field name="model_id" ref="model_mision_categoriaprofesional"/> 
+        <field name="groups" eval="[(4, ref('group_mision_colegiados'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record> -->
+
+</data>
+</openerp>

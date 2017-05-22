@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+	  <record id="email_newuser_ogcti" model="mail.template">
+        <field name="name">Nuevo Usuario revision</field>
+        <field name="email_from">${object.company_id and object.company_id.email or ''}</field>
+        <field name="subject">Nuevo usuario para revision!</field>
+        <field name="email_to">${object.email_remitente|safe}</field>
+        <field name="model_id" ref="base.model_res_users"/>
+   
+        <field name="auto_delete" eval="False"/>
+        <field name="body_html"><![CDATA[
+
+          <div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+              <table cellspacing="0" cellpadding="0" style="width:600px;background:inherit;color:inherit">
+                  <tbody><tr>
+                      <td valign="center" width="200" style="padding:10px 10px 10px 5px;font-size: 12px">
+                          <img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${object.name}">
+                      </td>
+                  </tr></tbody>
+              </table>
+          </div>
+
+    
+          <div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+         
+
+            <h2 style="text-align:center">MINISTERIO DE SALUD</h2>
+            <h3><strong> Plataforma Virtual Sistema de Donaciones y Misiones Sanitarias </strong></h3>
+            <p><b> Notificacion Proceso Mision Sanitaria<b></p>
+            <p> Tenga un cordial saludo de ${object.company_id and object.company_id.name or ''} </p>
+            <p>Se ha registrado el usuario  ${object.login and object.name or ''} </p>
+                       
+          </div>
+        
+          <div style="padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777">    
+            <center><a style="padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;" href="/web?#id=${object.id}&view_type=form&model=res.users">Ir a usuario</a></center>
+
+            <p style="font-size: 11px; margin-top: 10px;">
+              <strong>Sent by ${object.company_id and object.company_id.email or ''} </strong>
+            </p>
+          </div>
+
+				]]>				
+		    </field>
+    </record>  
+
+  </data>
+</odoo>
+

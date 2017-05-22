@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+		<!--Type Categorias-->
+		<record model="donacion.categoria" id="PF"><field name="name">Productos Farmacéuticos</field></record>
+		<record model="donacion.categoria" id="DM"><field name="name">Dispositivos Médicos</field></record>
+		<record model="donacion.categoria" id="PSF"><field name="name">Productos Sanitarios</field></record>
+		<record model="donacion.categoria" id="IM"><field name="name">Instrumentos Médicos</field></record>
+		<!-- <record model="donacion.categoria" id="PSI"><field name="name">Productos Sanitarios Industrializados</field></record> -->
+		<record model="donacion.categoria" id="PF"><field name="name">Productos Farmaceuticos</field></record>
+		<!-- <record model="donacion.categoria" id="ALI"><field name="name">Alimentos industrializados</field></record> -->
+		<record model="donacion.categoria" id="AL"><field name="name">Alimentos </field></record>
+		<record model="donacion.categoria" id="UE"><field name="name">Utiles Escolares</field></record>
+		<record model="donacion.categoria" id="PCH"><field name="name">Productos Cosmeticos e higiene Personal</field></record>
+		<record model="donacion.categoria" id="EM"><field name="name">Equipos Médicos</field></record>
+
+    </data>
+</openerp>

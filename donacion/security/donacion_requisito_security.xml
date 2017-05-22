@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="0">
+    <record id="group_donacion_minsa" model="res.groups">
+        <field name="name">Grupo MINSA</field>
+    </record>
+
+    <record id="group_donacion_ong" model="res.groups">
+        <field name="name">Grupo ONG</field>
+    </record>
+
+
+    <record id="group_donacion_requisito_ogcai" model="res.groups">
+        <field name="name">Grupo OGCTI</field>
+    </record>
+
+    <record id="group_donacion_requisito_ogcaj" model="res.groups">
+        <field name="name">Grupo OGGJ</field>
+    </record>
+
+    <record id="group_donacion_requisito_donatario" model="res.groups">
+        <field name="name">Grupo DONATARIO</field>
+    </record>
+
+    <record id="group_donacion_requisito_digesa" model="res.groups">
+        <field name="name">Grupo DIGESA</field>
+    </record>
+
+    <record id="group_donacion_requisito_digemid" model="res.groups">
+        <field name="name">Grupo DIGEMID</field>
+    </record>
+
+
+    <!--PERMISOS PARA DONACIONES 3 GRUPOS CREADOS -->
+    <record id="acceso_ogcai" model="ir.rule">
+        <field name="name">Registros ogcai</field>
+        <field name="model_id" ref="model_donacion_requisito"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_ogcai'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+
+    <record id="acceso_ogcaj" model="ir.rule">
+        <field name="name">Registros ogcaj</field>
+        <field name="model_id" ref="model_donacion_requisito"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_ogcaj'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+
+    <record id="acceso_dona" model="ir.rule">
+        <field name="name">Registros donatario</field>
+        <field name="model_id" ref="model_donacion_requisito"/>
+        <field name="domain_force">[('create_uid', '=', user.id)]</field>
+
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_donatario'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+    <record id="acceso_dona_minsa" model="ir.rule">
+        <field name="name">Registros minsa</field>
+        <field name="model_id" ref="model_donacion_requisito"/>
+        <field name="domain_force">[('create_uid', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('group_donacion_minsa'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+    
+    <record id="acceso_dona_ong" model="ir.rule">
+        <field name="name">Registros ong</field>
+        <field name="model_id" ref="model_donacion_requisito"/>
+        <field name="domain_force">[('create_uid', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('group_donacion_ong'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+
+    <record id="acceso_digesa" model="ir.rule">
+        <field name="name">Registros digesa </field>
+        <field name="model_id" ref="model_donacion_requisito"/>
+        <field name="domain_force">[('enviar_digesa','=',True)]</field> 
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_digesa'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+    <record id="acceso_digemid" model="ir.rule">
+        <field name="name">Registros digemid</field>
+        <field name="model_id" ref="model_donacion_requisito"/>
+        <field name="domain_force">[('enviar_digemid','=',True)]</field> 
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_digemid'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+
+
+
+    <!--PERMISOS PARA DONACIONES LISTA 3 GRUPOS CREADOS -->
+     <record id="lista_dona" model="ir.rule">
+        <field name="name">lista donatario</field>
+        <field name="model_id" ref="model_donacion_lista"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_donatario'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+    <record id="lista_ogcai" model="ir.rule">
+        <field name="name">lista ogcai</field>
+        <field name="model_id" ref="model_donacion_lista"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_ogcai'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="0" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="0" name="perm_create"/>
+    </record>
+
+    <record id="lista_digemid" model="ir.rule">
+        <field name="name">lista digemid</field>
+        <field name="model_id" ref="model_donacion_lista"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_digemid'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+    <record id="lista_digesa" model="ir.rule">
+        <field name="name">lista digesa</field>
+        <field name="model_id" ref="model_donacion_lista"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_digesa'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+
+   
+
+
+    <!-- PERMISOS PARA DONACIONES CATEGORIA  -->
+
+    <record id="categoria_ogcai" model="ir.rule">
+        <field name="name">lista ogcai</field>
+        <field name="model_id" ref="model_donacion_categoria"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_ogcai'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+    <record id="categoria_dona" model="ir.rule">
+        <field name="name">lista donatario</field>
+        <field name="model_id" ref="model_donacion_categoria"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_donatario'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+    <record id="categoria_digesa" model="ir.rule">
+        <field name="name">lista digesa</field>
+        <field name="model_id" ref="model_donacion_categoria"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_digesa'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+    <record id="categoria_digemid" model="ir.rule">
+        <field name="name">lista digemid</field>
+        <field name="model_id" ref="model_donacion_categoria"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_digemid'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+    
+    <!-- -->
+
+    <!-- PERMISOS PARA LINEA  -->
+
+    <record id="linea_donatario" model="ir.rule">
+        <field name="name">linea donatario</field>
+        <field name="model_id" ref="model_linea"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_donatario'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+
+    <!--PERMISOS PARA USERS 3 GRUPOS CREADOS -->
+
+    <record id="users_ogcai" model="ir.rule">
+        <field name="name">users ogcai</field>
+        <field name="model_id" ref="model_res_users"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_ogcai'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+    <record id="users_ogcaJ" model="ir.rule">
+        <field name="name">users ogcaj</field>
+        <field name="model_id" ref="model_res_users"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_ogcaj'))]"/>
+        <field eval="1" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+    <record id="users_ogcaJ" model="ir.rule">
+        <field name="name">users digemid</field>
+        <field name="model_id" ref="model_res_users"/>
+        <field name="groups" eval="[(4, ref('group_donacion_requisito_digemid'))]"/>
+        <field eval="0" name="perm_unlink"/>
+        <field eval="1" name="perm_write"/>
+        <field eval="1" name="perm_read"/>
+        <field eval="1" name="perm_create"/>
+    </record>
+
+
+</data>
+</openerp>

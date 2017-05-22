@@ -1,0 +1,91 @@
+<odoo>
+    <data>
+        <template id="mision" name="Dashboard">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure">
+                        <section class="mb16">
+                            <div class="container">
+                                <div class="row">
+                                   
+                                  
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+      
+                    <div class="container" >
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3 mt8 mb8">
+                            </div> 
+                            <div style="text-align:center"  class="col-sm-12 col-md-6 mt16 mb16">
+                              
+                                <span class="fa fa-5x fa-user"></span>                                
+                                <h2 class="page-header o_default_snippet_text"  style="color:#14B54F;text-align:center"><strong>Misiones Sanitarias</strong></h2>                      
+                                <h4 class="panel-title o_default_snippet_text" style="text-align:center"><b>REQUISITOS PARA LA REALIZACIÓN DE ACTIVIDADES SANITARIAS EN EL PERÚ</b></h4>
+
+                                <div class="panel-group" role="tablist">
+                                    <div class="panel panel-default">                                   
+                                        <p class="text-mute"><span class="fa fa-2x fa-edit pull-left mb16"></span>
+                                            1. Carta dirigida a la Director(a) General de Cooperacion Tecnica Internacional, presentada 30 días antes del inicio de la Misión Sanitaria
+                                            <a class="oe_stat_button" t-attf-href="/controller/url/path?model=website.archive&amp;field=file&amp;id=&amp;file_name=indice (1).docx" id="pdf_download_link"  target="_blank" download='my_pdf_file.pdf' ><span class='fa fa-2x fa-save'></span>
+                                            </a>
+                                        </p>
+                                    </div>                                                            
+                                    <div class="panel panel-default">
+                                        <p class="text-mute"><span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                        2. Plan de trabajo de las actividades a realizar, con el cronograma especifico por dia de la mision sanitaria:</p>
+                                    </div>      
+                                    <div class="panel panel-default">
+                                        <p class="text-mute">3. Lista de Profesionales que integran la mision sanitaria:</p>
+                                    </div>      
+                                    <div class="panel panel-default">
+                                        <p class="text-mute">4. Fotocopia simple de Pasaporte:</p>
+                                        <p class="text-mute"> Fotocopia simple de Titulo Profesional:</p>     
+                                        <p class="text-mute"> Fotocopia simple de LIcencia para ejercer su profesion en su pais:</p>
+                                        <p class="text-mute"> C.V. resumen:</p>
+                                    </div>      
+                                    <div class="panel panel-default">              
+                                        <p class="text-mute"><span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                        5. Declaracion jurada de no tener pendiente entrega de informes de actividades sanitarias realizadas en el pais:</p>
+                                    </div>
+                                    <div class="panel panel-default">
+                                        <p class="text-mute"><span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                        6. Carta de compromiso de la institucion organizadora Nacional o de la institucion extranjera responsable del seguimiento posterior a las atenciones, segun corresponda:</p>
+                                    </div>
+                                      
+                                    <h4 class="panel-title o_default_snippet_text" style="text-align:center"><b> Con donaciones o ingreso temporal</b></h4>
+
+                                    <div class="panel panel-default">
+                                        <p class="text-mute"><span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                        7. Carta de donacion indicando el monto total y el beneficiario:</p>
+                                    </div>                            
+                                    <div class="panel panel-default">
+                                        <p class="text-mute"><span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                        8. Listado detallado de bienes a ser donados:</p>  
+                                        <p class="text-mute">Listado detallado de bienes en calidad de ingreso temporal:</p>
+                                    </div>                        
+                                  
+                                    <div class="panel panel-default">
+                                        <p class="text-mute"><span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                        9. Carta presentada en la embajada o consulado del Perú en el país de origen sobre la mision sanitaria:</p>
+                                    </div>
+
+                                    <div class="panel panel-default">
+                                        <p class="text-mute"><span class="fa fa-2x fa-edit pull-left mb16"></span> 
+                                        10.Itinerario de vuelo, arribo y salida del pais de los profesionales que traen la donacion o ingreso temporal.</p>
+                                    </div>                 
+                                </div>                 
+                            </div>
+                            <div class="col-sm-6 col-md-3 mt8 mb8">
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+       
+
+    </data>
+</odoo>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<record id="email_template_mision" model="mail.template">
+        <field name="name">Cambio state mision requisito</field>
+        <field name="email_from">${object.email_from_name} ${(object.email_from or '')|safe}</field> 
+       
+        <field name="subject">Se ha cambiado el estado del documento!, ${object.email_from_name}</field>
+        <field name="email_to">${object.email_to|safe}</field>
+        <field name="model_id" ref="donacion.model_mision_requisito"/>
+        <field name="auto_delete" eval="False"/>
+        <field name="body_html"><![CDATA[
+
+          <div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+              <table cellspacing="0" cellpadding="0" style="width:600px;background:inherit;color:inherit">
+                  <tbody><tr>
+                      <td valign="center" width="200" style="padding:10px 10px 10px 5px;font-size: 12px">
+                          <img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${object.name}">
+                      </td>
+                  </tr></tbody>
+              </table>
+          </div>
+
+          <div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+    
+          <div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+            <table class="cellspacing="0" cellpadding="0" style="width:600px;background:inherit;color:inherit""><tbody><tr><td><p></p></td><td><br><img src="/web/image/1548" style="width: 25%;" class="pull-left" data-original-title="" title=""><br></td><td><br></td></tr></tbody></table>
+
+            <h2 style="text-align:center">MINISTERIO DE SALUD</h2>
+            <h3><strong> Plataforma Virtual Sistema de Donaciones y Misiones Sanitarias </strong></h3>
+            <p><b> Notificacion Proceso Mision Sanitaria<b></p>
+            <p> Tenga un cordial saludo de ${object.email_from_name} </p>
+
+            <table style="background-color:transparent;border-spacing:0px;border-collapse:collapse;width:100%;border-top:1px solid #e1e1e1;">
+              <tbody>
+                <tr>
+                  <td style="padding:25px 0px;vertical-align:top;">
+                    % if object.state=='I':
+                      <p> Ha sido enviado el documento <h3> ${(object.name)} </h3> con los requisitos del beneficiario a su bandeja ... por favor revise </hp>
+                    % endif  
+
+                    % if object.state=='R':
+                      % if object.vdisa==False and object.vdiresa==False:
+                        <p> El documento <h3>${(object.name)}</h3> con numero de expediente <h3>${(object.numero_expediente)}</h3> ha sido enviado a su bandeja para el pertinente informe </p>
+                      % endif   
+                      % if object.vdiresa==True or object.vdisa==True:
+                        <p> Tiene una notificacion del presente documento <h3>${(object.name)}</h3> con numero de expediente <h3>${(object.numero_expediente)}</h3> revise su cuenta de donaciones y misiones sanitarias </p>   
+
+                        % if object.observacion_disa 
+                          Observacion de DISA ${(object.observacion_disa)}
+                        % endif  
+                        % if object.observacion_diresa 
+                          Observacion de DIRESA ${(object.observacion_diresa)}
+                        % endif  
+
+                      % endif  
+                    % endif   
+
+                    % if object.state=='01':
+                      <p> Su documento <h3>${(object.name)}</h3> ha sido observado revise su bandeja </p>
+                      % if object.observacion_ogcti 
+                        Observacion de OGCTI ${(object.observacion_ogcti)}
+                      % endif
+                    % endif 
+
+                    % if object.state=='V':
+                      <p> El documento <h3>${(object.name)}</h3> con numero de expediente <h3>${(object.numero_expediente)}</h3> ha concluido satisfactoriamente siendo aprobado por la oficina de OGCTI. atte
+                      En breve nos comunicaremos con Ud.
+                      atte OGCTI
+                      ${object.email_from_name} </p>
+                    % endif
+                  </td>
+                </tr>
+    
+              </tbody>
+            </table>            
+          </div>
+        
+          <div style="padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777">
+        
+                           
+            <center><a style="padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;" href="/web?#id=${object.id}&view_type=form&model=mision.requisito">Mision Sanitaria</a></center>
+
+            <p style="font-size: 11px; margin-top: 10px;">
+              <strong>Sent by ${object.name} </strong>
+            </p>
+          </div>
+				]]>				
+		</field>
+    </record>  
+
+
+</odoo>
+

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="report_proceso_mision">          
+          <t t-call="report.html_container">
+            <t t-call="report.external_layout">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page">
+           
+                      <h3><strong><center>Misiones Sanitarias</center></strong></h3>
+
+                      <table class="table table-bordered" >
+                          <thead>
+                            <tr>
+                            </tr>
+                          </thead>
+
+                          <tbody>
+                            <tr style="text-align:right" > 
+                              <td colspan="2"><span>Número de Expediente: </span> <strong t-field="o.numero_expediente"/></td>
+                            </tr> 
+
+                            <tr style="text-align:right" >                                                     
+                              <td colspan="2"><span>Beneficiario: </span><strong t-field="o.create_uid"/></td>
+                            </tr> 
+                            <tr style="text-align:right" >                                           
+                              <td colspan="2"><span>Fecha de Creacion: </span><strong  t-field="o.create_date"/></td>
+                            </tr>
+                            <tr style="text-align:right" >                               
+                              <td colspan="2"><span>Fecha de Modificación: </span><strong t-field="o.write_date"/></td>
+                            </tr> 
+                            <tr style="text-align:right" >                                                       
+                              <td colspan="2"><span>Ultima Modificación: </span><strong t-field="o.write_uid"/></td>
+                            </tr> 
+                          </tbody>
+                      </table>
+
+                        <table class="table table-bordered" width="40%">
+                            <thead>
+                            </thead>
+                            <tbody>  
+                              <tr>
+                                  <td colspan="2">
+                                      <strong>Nombre de la Mision:</strong>
+                                  </td>
+                                  <td colspan="4">
+                                      <strong t-field="o.name"/>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td colspan="2">
+                                      <strong>Fecha de Inicio:</strong>
+                                  </td>
+                                  <td colspan="4">
+                                      <strong t-field="o.fecha_inicio"/>                                      
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td colspan="2">
+                                      <strong>Fecha de Fin:</strong>
+                                  </td>
+                                  <td colspan="4">
+                                      <strong t-field="o.fecha_inicio"/>                                      
+                                  </td>
+                              </tr>
+                       
+                              <tr>
+                                  <td colspan="2">
+                                      <strong>Estado del documento:</strong>
+                                  </td>
+                                  <td colspan="4">
+                                      <strong t-field="o.state"/>
+                                  </td>
+                              </tr>
+
+                              <tr>
+                                  <td colspan="2">
+                                      <strong>observacion OGCTI:</strong>
+                                  </td>
+                                  <td colspan="4">
+                                      <strong t-field="o.observacion_ogcti"/>
+                                  </td>
+                              </tr>                
+                            </tbody>  
+                        </table>
+
+                        <table class="table table-condensed">
+                                <thead>
+                                    <tr class="success">
+                                      <th>Nombre</th>
+                                      <th>Institucion</th>
+                                      <th>Pais</th>                            
+                                      <th>Colegio</th>               
+                                      <th>Habilitado</th>
+                                
+                                    </tr>
+                                </thead> 
+
+                                <h5>Lista de Profesionales</h5>
+                                <tbody>
+                                    <t t-foreach="o.listaprofesionales_ids" t-as="eval_prov">
+                                        <tr>
+                                            <td><span t-field="eval_prov.name"/></td>
+                                            <td><span t-field="eval_prov.institucion"/></td>
+                                            <td><span t-field="eval_prov.pais"/></td>
+                                            <td><span t-field="eval_prov.user_colegiado"/></td>                                   
+                                            <td><p t-if="eval_prov.habilitar == True">Si</p><p t-else="">No</p></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                        </table> 
+                    </div>
+                </t>
+            </t>
+          </t>
+        </template>
+        
+    </data>
+</openerp>

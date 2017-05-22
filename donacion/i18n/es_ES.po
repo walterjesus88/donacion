@@ -1,0 +1,2430 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* donacion
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-18 15:52+0000\n"
+"PO-Revision-Date: 2017-05-18 15:52+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: donacion
+#: model:mail.template,body_html:donacion.email_newuser_ogcti
+msgid "\n"
+"\n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"              <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;background:inherit;color:inherit\">\n"
+"                  <tbody><tr>\n"
+"                      <td valign=\"center\" width=\"200\" style=\"padding:10px 10px 10px 5px;font-size: 12px\">\n"
+"                          <img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.name}\">\n"
+"                      </td>\n"
+"                  </tr></tbody>\n"
+"              </table>\n"
+"          </div>\n"
+"\n"
+"    \n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"         \n"
+"\n"
+"            <h2 style=\"text-align:center\">MINISTERIO DE SALUD</h2>\n"
+"            <h3><strong> Plataforma Virtual Sistema de Donaciones y Misiones Sanitarias </strong></h3>\n"
+"            <p><b> Notificacion Proceso Mision Sanitaria<b></p>\n"
+"            <p> Tenga un cordial saludo de ${object.company_id and object.company_id.name or ''} </p>\n"
+"            <p>Se ha registrado el usuario  ${object.login and object.name or ''} </p>\n"
+"                       \n"
+"          </div>\n"
+"        \n"
+"          <div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">    \n"
+"            <center><a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;\" href=\"/web?#id=${object.id}&view_type=form&model=res.users\">Ir a usuario</a></center>\n"
+"\n"
+"            <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"              <strong>Sent by ${object.company_id and object.company_id.email or ''} </strong>\n"
+"            </p>\n"
+"          </div>\n"
+"\n"
+"								\n"
+"		    "
+msgstr "\n"
+"\n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"              <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;background:inherit;color:inherit\">\n"
+"                  <tbody><tr>\n"
+"                      <td valign=\"center\" width=\"200\" style=\"padding:10px 10px 10px 5px;font-size: 12px\">\n"
+"                          <img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.name}\">\n"
+"                      </td>\n"
+"                  </tr></tbody>\n"
+"              </table>\n"
+"          </div>\n"
+"\n"
+"    \n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"         \n"
+"\n"
+"            <h2 style=\"text-align:center\">MINISTERIO DE SALUD</h2>\n"
+"            <h3><strong> Plataforma Virtual Sistema de Donaciones y Misiones Sanitarias </strong></h3>\n"
+"            <p><b> Notificacion Proceso Mision Sanitaria<b></p>\n"
+"            <p> Tenga un cordial saludo de ${object.company_id and object.company_id.name or ''} </p>\n"
+"            <p>Se ha registrado el usuario  ${object.login and object.name or ''} </p>\n"
+"                       \n"
+"          </div>\n"
+"        \n"
+"          <div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">    \n"
+"            <center><a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;\" href=\"/web?#id=${object.id}&view_type=form&model=res.users\">Ir a usuario</a></center>\n"
+"\n"
+"            <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"              <strong>Sent by ${object.company_id and object.company_id.email or ''} </strong>\n"
+"            </p>\n"
+"          </div>\n"
+"\n"
+"								\n"
+"		    "
+
+#. module: donacion
+#: model:mail.template,body_html:donacion.email_template_demo
+msgid "\n"
+"\n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"              <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;background:inherit;color:inherit\">\n"
+"                  <tbody><tr>\n"
+"                      <td valign=\"center\" width=\"200\" style=\"padding:10px 10px 10px 5px;font-size: 12px\">\n"
+"                          <img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.name}\">\n"
+"                      </td>\n"
+"                  </tr></tbody>\n"
+"              </table>\n"
+"          </div>\n"
+"\n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    \n"
+"\n"
+"            <h2 style=\"text-align:center\">MINISTERIO DE SALUD</h2>\n"
+"    				<h3><strong> Plataforma Virtual Sistema de Donaciones y Misiones Sanitarias </strong></h3>\n"
+"            <p><b> Notificacion Proceso Donacion<b></p>\n"
+"            <p> Tenga un cordial saludo de ${object.email_from_name} </p>\n"
+"\n"
+"            <table style=\"background-color:transparent;border-spacing:0px;border-collapse:collapse;width:100%;border-top:1px solid #e1e1e1;\">\n"
+"              <tbody>\n"
+"                <tr>\n"
+"                  <td style=\"padding:25px 0px;vertical-align:top;\">\n"
+"                    % if object.state=='I':\n"
+"                      <p> Ha sido enviado el documento <p><b> ${(object.name)} <b></p> con los requisitos del beneficiario a su bandeja ... por favor revise </hp>\n"
+"                    % endif  \n"
+"\n"
+"                    % if object.state=='R':\n"
+"                      % if object.vdigesa==False and object.vdigemid==False:\n"
+"                        <p> El documento  <p><b> ${(object.name)} <b></p> con numero de expediente <h5>${(object.numero_expediente)}</h5> ha sido enviado a su bandeja para el pertinente informe </p>\n"
+"                      % endif   \n"
+"                      % if object.vdigesa==True or object.vdigemid==True:\n"
+"                        <p> Tiene una notificacion del presente documento <h3>${(object.name)}</h3> con numero de expediente <h5>${(object.numero_expediente)}</h5> revise su cuenta de donaciones y misiones sanitarias </p>                \n"
+"                      % endif  \n"
+"                    % endif   \n"
+"\n"
+"                    % if object.state=='01':\n"
+"                      <p> Su documento <p><b> ${(object.name)} <b></p>  ha sido observado revise su bandeja </p>\n"
+"                    % endif \n"
+"\n"
+"                    % if object.state=='V':\n"
+"                      <p> El documento <p><b> ${(object.name)} <b></p> con numero de expediente <h5>${(object.numero_expediente)}</h5> ha concluido satisfactoriamente siendo aprobado por la oficina de OGCTI. atte ${object.email_from_name} </p>\n"
+"                    % endif\n"
+"\n"
+"                  </td>\n"
+"                </tr>\n"
+"              </tbody>\n"
+"            </table>\n"
+"\n"
+"            <div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"        \n"
+"                           \n"
+"              <center><a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;\" href=\"/web?#id=${object.id}&view_type=form&model=donacion.requisito\">Ir a donacion</a></center>\n"
+"\n"
+"              <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"                <strong>Sent by ${object.name} </strong>\n"
+"              </p>\n"
+"            </div>\n"
+"\n"
+"          </div>\n"
+"       \n"
+"								\n"
+"		"
+msgstr "\n"
+"\n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"              <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;background:inherit;color:inherit\">\n"
+"                  <tbody><tr>\n"
+"                      <td valign=\"center\" width=\"200\" style=\"padding:10px 10px 10px 5px;font-size: 12px\">\n"
+"                          <img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.name}\">\n"
+"                      </td>\n"
+"                  </tr></tbody>\n"
+"              </table>\n"
+"          </div>\n"
+"\n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    \n"
+"\n"
+"            <h2 style=\"text-align:center\">MINISTERIO DE SALUD</h2>\n"
+"    				<h3><strong> Plataforma Virtual Sistema de Donaciones y Misiones Sanitarias </strong></h3>\n"
+"            <p><b> Notificacion Proceso Donacion<b></p>\n"
+"            <p> Tenga un cordial saludo de ${object.email_from_name} </p>\n"
+"\n"
+"            <table style=\"background-color:transparent;border-spacing:0px;border-collapse:collapse;width:100%;border-top:1px solid #e1e1e1;\">\n"
+"              <tbody>\n"
+"                <tr>\n"
+"                  <td style=\"padding:25px 0px;vertical-align:top;\">\n"
+"                    % if object.state=='I':\n"
+"                      <p> Ha sido enviado el documento <p><b> ${(object.name)} <b></p> con los requisitos del beneficiario a su bandeja ... por favor revise </hp>\n"
+"                    % endif  \n"
+"\n"
+"                    % if object.state=='R':\n"
+"                      % if object.vdigesa==False and object.vdigemid==False:\n"
+"                        <p> El documento  <p><b> ${(object.name)} <b></p> con numero de expediente <h5>${(object.numero_expediente)}</h5> ha sido enviado a su bandeja para el pertinente informe </p>\n"
+"                      % endif   \n"
+"                      % if object.vdigesa==True or object.vdigemid==True:\n"
+"                        <p> Tiene una notificacion del presente documento <h3>${(object.name)}</h3> con numero de expediente <h5>${(object.numero_expediente)}</h5> revise su cuenta de donaciones y misiones sanitarias </p>                \n"
+"                      % endif  \n"
+"                    % endif   \n"
+"\n"
+"                    % if object.state=='01':\n"
+"                      <p> Su documento <p><b> ${(object.name)} <b></p>  ha sido observado revise su bandeja </p>\n"
+"                    % endif \n"
+"\n"
+"                    % if object.state=='V':\n"
+"                      <p> El documento <p><b> ${(object.name)} <b></p> con numero de expediente <h5>${(object.numero_expediente)}</h5> ha concluido satisfactoriamente siendo aprobado por la oficina de OGCTI. atte ${object.email_from_name} </p>\n"
+"                    % endif\n"
+"\n"
+"                  </td>\n"
+"                </tr>\n"
+"              </tbody>\n"
+"            </table>\n"
+"\n"
+"            <div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"        \n"
+"                           \n"
+"              <center><a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;\" href=\"/web?#id=${object.id}&view_type=form&model=donacion.requisito\">Ir a donacion</a></center>\n"
+"\n"
+"              <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"                <strong>Sent by ${object.name} </strong>\n"
+"              </p>\n"
+"            </div>\n"
+"\n"
+"          </div>\n"
+"       \n"
+"								\n"
+"		"
+
+#. module: donacion
+#: model:mail.template,body_html:donacion.email_template_mision
+msgid "\n"
+"\n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"              <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;background:inherit;color:inherit\">\n"
+"                  <tbody><tr>\n"
+"                      <td valign=\"center\" width=\"200\" style=\"padding:10px 10px 10px 5px;font-size: 12px\">\n"
+"                          <img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.name}\">\n"
+"                      </td>\n"
+"                  </tr></tbody>\n"
+"              </table>\n"
+"          </div>\n"
+"\n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    \n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"            <table class=\"cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;background:inherit;color:inherit\"\"><tbody><tr><td><p></p></td><td><br><img src=\"/web/image/1548\" style=\"width: 25%;\" class=\"pull-left\" data-original-title=\"\" title=\"\"><br></td><td><br></td></tr></tbody></table>\n"
+"\n"
+"            <h2 style=\"text-align:center\">MINISTERIO DE SALUD</h2>\n"
+"            <h3><strong> Plataforma Virtual Sistema de Donaciones y Misiones Sanitarias </strong></h3>\n"
+"            <p><b> Notificacion Proceso Mision Sanitaria<b></p>\n"
+"            <p> Tenga un cordial saludo de ${object.email_from_name} </p>\n"
+"\n"
+"            <table style=\"background-color:transparent;border-spacing:0px;border-collapse:collapse;width:100%;border-top:1px solid #e1e1e1;\">\n"
+"              <tbody>\n"
+"                <tr>\n"
+"                  <td style=\"padding:25px 0px;vertical-align:top;\">\n"
+"                    % if object.state=='I':\n"
+"                      <p> Ha sido enviado el documento <h3> ${(object.name)} </h3> con los requisitos del beneficiario a su bandeja ... por favor revise </hp>\n"
+"                    % endif  \n"
+"\n"
+"                    % if object.state=='R':\n"
+"                      % if object.vdisa==False and object.vdiresa==False:\n"
+"                        <p> El documento <h3>${(object.name)}</h3> con numero de expediente <h3>${(object.numero_expediente)}</h3> ha sido enviado a su bandeja para el pertinente informe </p>\n"
+"                      % endif   \n"
+"                      % if object.vdiresa==True or object.vdisa==True:\n"
+"                        <p> Tiene una notificacion del presente documento <h3>${(object.name)}</h3> con numero de expediente <h3>${(object.numero_expediente)}</h3> revise su cuenta de donaciones y misiones sanitarias </p>   \n"
+"\n"
+"                        % if object.observacion_disa \n"
+"                          Observacion de DISA ${(object.observacion_disa)}\n"
+"                        % endif  \n"
+"                        % if object.observacion_diresa \n"
+"                          Observacion de DIRESA ${(object.observacion_diresa)}\n"
+"                        % endif  \n"
+"\n"
+"                      % endif  \n"
+"                    % endif   \n"
+"\n"
+"                    % if object.state=='01':\n"
+"                      <p> Su documento <h3>${(object.name)}</h3> ha sido observado revise su bandeja </p>\n"
+"                      % if object.observacion_ogcti \n"
+"                        Observacion de OGCTI ${(object.observacion_ogcti)}\n"
+"                      % endif\n"
+"                    % endif \n"
+"\n"
+"                    % if object.state=='V':\n"
+"                      <p> El documento <h3>${(object.name)}</h3> con numero de expediente <h3>${(object.numero_expediente)}</h3> ha concluido satisfactoriamente siendo aprobado por la oficina de OGCTI. atte\n"
+"                      En breve nos comunicaremos con Ud.\n"
+"                      atte OGCTI\n"
+"                      ${object.email_from_name} </p>\n"
+"                    % endif\n"
+"                  </td>\n"
+"                </tr>\n"
+"    \n"
+"              </tbody>\n"
+"            </table>            \n"
+"          </div>\n"
+"        \n"
+"          <div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"        \n"
+"                           \n"
+"            <center><a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;\" href=\"/web?#id=${object.id}&view_type=form&model=mision.requisito\">Mision Sanitaria</a></center>\n"
+"\n"
+"            <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"              <strong>Sent by ${object.name} </strong>\n"
+"            </p>\n"
+"          </div>\n"
+"								\n"
+"		"
+msgstr "\n"
+"\n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"              <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;background:inherit;color:inherit\">\n"
+"                  <tbody><tr>\n"
+"                      <td valign=\"center\" width=\"200\" style=\"padding:10px 10px 10px 5px;font-size: 12px\">\n"
+"                          <img src=\"/logo.png\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.name}\">\n"
+"                      </td>\n"
+"                  </tr></tbody>\n"
+"              </table>\n"
+"          </div>\n"
+"\n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"    \n"
+"          <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"            <table class=\"cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;background:inherit;color:inherit\"\"><tbody><tr><td><p></p></td><td><br><img src=\"/web/image/1548\" style=\"width: 25%;\" class=\"pull-left\" data-original-title=\"\" title=\"\"><br></td><td><br></td></tr></tbody></table>\n"
+"\n"
+"            <h2 style=\"text-align:center\">MINISTERIO DE SALUD</h2>\n"
+"            <h3><strong> Plataforma Virtual Sistema de Donaciones y Misiones Sanitarias </strong></h3>\n"
+"            <p><b> Notificacion Proceso Mision Sanitaria<b></p>\n"
+"            <p> Tenga un cordial saludo de ${object.email_from_name} </p>\n"
+"\n"
+"            <table style=\"background-color:transparent;border-spacing:0px;border-collapse:collapse;width:100%;border-top:1px solid #e1e1e1;\">\n"
+"              <tbody>\n"
+"                <tr>\n"
+"                  <td style=\"padding:25px 0px;vertical-align:top;\">\n"
+"                    % if object.state=='I':\n"
+"                      <p> Ha sido enviado el documento <h3> ${(object.name)} </h3> con los requisitos del beneficiario a su bandeja ... por favor revise </hp>\n"
+"                    % endif  \n"
+"\n"
+"                    % if object.state=='R':\n"
+"                      % if object.vdisa==False and object.vdiresa==False:\n"
+"                        <p> El documento <h3>${(object.name)}</h3> con numero de expediente <h3>${(object.numero_expediente)}</h3> ha sido enviado a su bandeja para el pertinente informe </p>\n"
+"                      % endif   \n"
+"                      % if object.vdiresa==True or object.vdisa==True:\n"
+"                        <p> Tiene una notificacion del presente documento <h3>${(object.name)}</h3> con numero de expediente <h3>${(object.numero_expediente)}</h3> revise su cuenta de donaciones y misiones sanitarias </p>   \n"
+"\n"
+"                        % if object.observacion_disa \n"
+"                          Observacion de DISA ${(object.observacion_disa)}\n"
+"                        % endif  \n"
+"                        % if object.observacion_diresa \n"
+"                          Observacion de DIRESA ${(object.observacion_diresa)}\n"
+"                        % endif  \n"
+"\n"
+"                      % endif  \n"
+"                    % endif   \n"
+"\n"
+"                    % if object.state=='01':\n"
+"                      <p> Su documento <h3>${(object.name)}</h3> ha sido observado revise su bandeja </p>\n"
+"                      % if object.observacion_ogcti \n"
+"                        Observacion de OGCTI ${(object.observacion_ogcti)}\n"
+"                      % endif\n"
+"                    % endif \n"
+"\n"
+"                    % if object.state=='V':\n"
+"                      <p> El documento <h3>${(object.name)}</h3> con numero de expediente <h3>${(object.numero_expediente)}</h3> ha concluido satisfactoriamente siendo aprobado por la oficina de OGCTI. atte\n"
+"                      En breve nos comunicaremos con Ud.\n"
+"                      atte OGCTI\n"
+"                      ${object.email_from_name} </p>\n"
+"                    % endif\n"
+"                  </td>\n"
+"                </tr>\n"
+"    \n"
+"              </tbody>\n"
+"            </table>            \n"
+"          </div>\n"
+"        \n"
+"          <div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"        \n"
+"                           \n"
+"            <center><a style=\"padding: 8px 30px 8px 30px;border-radius: 6px;border: 1px solid #CCCCCC;background:#8A89BA;margin : 0 15px 0 0;text-decoration: none;color:#FFFFFF;\" href=\"/web?#id=${object.id}&view_type=form&model=mision.requisito\">Mision Sanitaria</a></center>\n"
+"\n"
+"            <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"              <strong>Sent by ${object.name} </strong>\n"
+"            </p>\n"
+"          </div>\n"
+"								\n"
+"		"
+
+#. module: donacion
+#: model:mail.template,body_html:donacion.example_email_template
+msgid "\n"
+"                        \n"
+"                <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"                    <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;background:inherit;color:inherit\">\n"
+"                        <tbody><tr>\n"
+"                            <td valign=\"center\" width=\"200\" style=\"padding:10px 10px 10px 5px;font-size: 12px\">\n"
+"                                <img src=\"/web/image/1548\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\">\n"
+"                            </td>\n"
+"                        </tr></tbody>\n"
+"                    </table>\n"
+"                </div>\n"
+"                <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"                <p>Tenga un cordial saludo encargado de la institucion ${object.name},</p>\n"
+"                    <p>\n"
+"                        La oficina General de Cooperacion Tecnica Internacional - \"${object.company_id.name}\" le da la bienvenida al Sistema de Donaciones y Misiones Sanitarias.\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        Su password temporal es ${object.email} , por favor cambielo en su perfil de usuario:\n"
+"                    </p>\n"
+"                                 \n"
+"                    <p>Oficina de General de Cooperacion Tecnica Internacional</p>\n"
+"\n"
+"                </div>\n"
+"                <div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"                    ${user.signature | safe}\n"
+"                    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"                        <strong>Sent by ${user.company_id.name} using <a href=\"www.odoo.com\" style=\"text-decoration:none; color: #875A7B;\">Odoo</a></strong>\n"
+"                    </p>\n"
+"                </div>\n"
+"            \n"
+"          "
+msgstr "\n"
+"                        \n"
+"                <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"                    <table cellspacing=\"0\" cellpadding=\"0\" style=\"width:600px;background:inherit;color:inherit\">\n"
+"                        <tbody><tr>\n"
+"                            <td valign=\"center\" width=\"200\" style=\"padding:10px 10px 10px 5px;font-size: 12px\">\n"
+"                                <img src=\"/web/image/1548\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${user.company_id.name}\">\n"
+"                            </td>\n"
+"                        </tr></tbody>\n"
+"                    </table>\n"
+"                </div>\n"
+"                <div style=\"padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777\">\n"
+"                <p>Tenga un cordial saludo encargado de la institucion ${object.name},</p>\n"
+"                    <p>\n"
+"                        La oficina General de Cooperacion Tecnica Internacional - \"${object.company_id.name}\" le da la bienvenida al Sistema de Donaciones y Misiones Sanitarias.\n"
+"                    </p>\n"
+"                    <p>\n"
+"                        Su password temporal es ${object.email} , por favor cambielo en su perfil de usuario:\n"
+"                    </p>\n"
+"                                 \n"
+"                    <p>Oficina de General de Cooperacion Tecnica Internacional</p>\n"
+"\n"
+"                </div>\n"
+"                <div style=\"padding:0px;width:600px;margin:auto; margin-top: 10px; background: #fff repeat top /100%;color:#777777\">\n"
+"                    ${user.signature | safe}\n"
+"                    <p style=\"font-size: 11px; margin-top: 10px;\">\n"
+"                        <strong>Sent by ${user.company_id.name} using <a href=\"www.odoo.com\" style=\"text-decoration:none; color: #875A7B;\">Odoo</a></strong>\n"
+"                    </p>\n"
+"                </div>\n"
+"            \n"
+"          "
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "* DNI de la Persona Encargada"
+msgstr "* DNI de la Persona Encargada"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "* Direción de la Institución"
+msgstr "* Direción de la Institución"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "* Nombre de la Institucion"
+msgstr "* Nombre de la Institucion"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "* Nombre de la Persona Encargada"
+msgstr "* Nombre de la Persona Encargada"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "* Nombre de usuario"
+msgstr "* Nombre de usuario"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "* Telefono Institucional"
+msgstr "* Telefono Institucional"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "* Telefono Personal"
+msgstr "* Telefono Personal"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "10"
+msgstr "10"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "3-4 Lista de Profesionales-CV"
+msgstr "3-4 Lista de Profesionales-CV"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "3. Lista de Profesionales que integran la mision sanitaria:"
+msgstr "3. Lista de Profesionales que integran la mision sanitaria:"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "4. Fotocopia simple de Pasaporte:"
+msgstr "4. Fotocopia simple de Pasaporte:"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "<b> Con donaciones o ingreso temporal</b>"
+msgstr "<b> Con donaciones o ingreso temporal</b>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<b>Donaciones</b>"
+msgstr "<b>Donaciones</b>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<b>REQUISITOS PARA EL TRÁMITE DE LA AUTORIZACION (OPINIÓN TÉCNICA) DE\n"
+"                                    DONACIONES DE MERCANCIAS RESTRINGIDAS DONADAS PROVENIENTES DEL EXTERIOR.</b>"
+msgstr "<b>REQUISITOS PARA EL TRÁMITE DE LA AUTORIZACION (OPINIÓN TÉCNICA) DE\n"
+"                                    DONACIONES DE MERCANCIAS RESTRINGIDAS DONADAS PROVENIENTES DEL EXTERIOR.</b>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "<b>REQUISITOS PARA LA REALIZACIÓN DE ACTIVIDADES SANITARIAS EN EL PERÚ</b>"
+msgstr "<b>REQUISITOS PARA LA REALIZACIÓN DE ACTIVIDADES SANITARIAS EN EL PERÚ</b>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<b>REQUISITOS PARA REALIZAR EL TRÁMITE DE ACEPTACIÓN DE\n"
+"                                DONACIONES PROVENIENTES DEL EXTERIOR A FAVOR DEL\n"
+"                                MINISTERIO DE SALUD</b>"
+msgstr "<b>REQUISITOS PARA REALIZAR EL TRÁMITE DE ACEPTACIÓN DE\n"
+"                                DONACIONES PROVENIENTES DEL EXTERIOR A FAVOR DEL\n"
+"                                MINISTERIO DE SALUD</b>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16 \"/> \n"
+"                                    A. Solicitud de emisión de Resolución de Aceptación de donaciones\n"
+"                                    proveniente del exterior, con carácter de Declaración Jurada, dirigida al\n"
+"                                    titular de la Oficina General de Cooperación y Asuntos Internacionales del\n"
+"                                    Ministerio de Salud, suscrita por el titular del órgano y/o dependencia\n"
+"                                    beneficiaria de la donación, conforme al modelo establecido en la Directiva:\n"
+"                                    “Modelo de solicitud para tramitar la Resolución de Aceptación de la\n"
+"                                    donación proveniente del exterior”"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16 \"/> \n"
+"                                     A. Solicitud de emisión de Resolución de Aceptación de donaciones\n"
+"                                    proveniente del exterior, con carácter de Declaración Jurada, dirigida al\n"
+"                                    titular de la Oficina General de Cooperación y Asuntos Internacionales del\n"
+"                                    Ministerio de Salud, suscrita por el titular del órgano y/o dependencia\n"
+"                                    beneficiaria de la donación, conforme al modelo establecido en la Directiva:\n"
+"                                    “Modelo de solicitud para tramitar la Resolución de Aceptación de la\n"
+"                                    donación proveniente del exterior”"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16 \"/> \n"
+"                                    B. Carta de Donación\n"
+"                                    Suscrita por el titular o representante legal del donante, en la que conste su\n"
+"                                    voluntad de efectuar la donación y el destino de la misma, especificando los\n"
+"                                    datos siguientes:"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16 \"/> \n"
+"                                    B. Carta de Donación\n"
+"                                    Suscrita por el titular o representante legal del donante, en la que conste su\n"
+"                                    voluntad de efectuar la donación y el destino de la misma, especificando los\n"
+"                                    datos siguientes:"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/>\n"
+"                                    1. Carta dirigida a la Director(a) General de Cooperacion Tecnica Internacional, presentada 30 días antes del inicio de la Misión Sanitaria"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/>\n"
+"                                     1. Carta dirigida a la Director(a) General de Cooperacion Tecnica Internacional, presentada 30 días antes del inicio de la Misión Sanitaria"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/>\n"
+"                                    D. Copia simple del Documento de transporte"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/>\n"
+"                                    D. Copia simple del Documento de transporte"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                    A. Solicitud de emisión de opinión técnica, dirigida al titular de la Oficina\n"
+"                                    General de Cooperación y Asuntos Internacionales del Ministerio de Salud,\n"
+"                                    suscrita por la entidad beneficiaria de la donación, conforme al modelo establecido\n"
+"                                    en la presente Directiva: “Modelo de solicitud para tramitar la opinión técnica sobre\n"
+"                                    mercancías restringidas donadas provenientes del exterior”."
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                    A. Solicitud de emisión de opinión técnica, dirigida al titular de la Oficina\n"
+"                                    General de Cooperación y Asuntos Internacionales del Ministerio de Salud,\n"
+"                                    suscrita por la entidad beneficiaria de la donación, conforme al modelo establecido\n"
+"                                    en la presente Directiva: “Modelo de solicitud para tramitar la opinión técnica sobre\n"
+"                                    mercancías restringidas donadas provenientes del exterior”."
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                    C. Lista de contenido: descripción, características, cantidad y valor estimado de los bienes a donar, consignada en dólares de los Estados Unidos de América, según el formato excel que se encuentra ubicado en la página web del MINSA y de DIGEMID y que deberá ser incluido en la presentación de los documentos y también remitido al correo electrónico: donaciones@minsa.gob.pe"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                    C. Lista de contenido: descripción, características, cantidad y valor estimado de los bienes a donar, consignada en dólares de los Estados Unidos de América, según el formato excel que se encuentra ubicado en la página web del MINSA y de DIGEMID y que deberá ser incluido en la presentación de los documentos y también remitido al correo electrónico: donaciones@minsa.gob.pe"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                10.Itinerario de vuelo, arribo y salida del pais de los profesionales que traen la donacion o ingreso temporal."
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                10.Itinerario de vuelo, arribo y salida del pais de los profesionales que traen la donacion o ingreso temporal."
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                2. Plan de trabajo de las actividades a realizar, con el cronograma especifico por dia de la mision sanitaria:"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                2. Plan de trabajo de las actividades a realizar, con el cronograma especifico por dia de la mision sanitaria:"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                5. Declaracion jurada de no tener pendiente entrega de informes de actividades sanitarias realizadas en el pais:"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                5. Declaracion jurada de no tener pendiente entrega de informes de actividades sanitarias realizadas en el pais:"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                6. Carta de compromiso de la institucion organizadora Nacional o de la institucion extranjera responsable del seguimiento posterior a las atenciones, segun corresponda:"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                6. Carta de compromiso de la institucion organizadora Nacional o de la institucion extranjera responsable del seguimiento posterior a las atenciones, segun corresponda:"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                7. Carta de donacion indicando el monto total y el beneficiario:"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                7. Carta de donacion indicando el monto total y el beneficiario:"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                8. Listado detallado de bienes a ser donados:"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                8. Listado detallado de bienes a ser donados:"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                9. Carta presentada en la embajada o consulado del Perú en el país de origen sobre la mision sanitaria:"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                9. Carta presentada en la embajada o consulado del Perú en el país de origen sobre la mision sanitaria:"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                B. Carta o Certificado de Donación\n"
+"                                    Suscrita por el titular o representante legal del donante, en la que conste su\n"
+"                                    voluntad de efectuar la donación y el destino de la misma: Modelo de Carta de\n"
+"                                    Donación, especificando los siguientes datos:"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                B. Carta o Certificado de Donación\n"
+"                                    Suscrita por el titular o representante legal del donante, en la que conste su\n"
+"                                    voluntad de efectuar la donación y el destino de la misma: Modelo de Carta de\n"
+"                                    Donación, especificando los siguientes datos:"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                C. Copia de la constancia de Inscripción vigente ante la Agencia Peruana de\n"
+"                                Cooperación Internacional (ONGD, ENIEX e IPREDA)."
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                C. Copia de la constancia de Inscripción vigente ante la Agencia Peruana de\n"
+"                                Cooperación Internacional (ONGD, ENIEX e IPREDA)."
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                D. Copia de la Resolución de Inscripción en el Registro de Entidades\n"
+"                                perceptoras de donaciones de la SUNAT."
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                D. Copia de la Resolución de Inscripción en el Registro de Entidades\n"
+"                                perceptoras de donaciones de la SUNAT."
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                E. Lista de contenido (bienes): la descripción, características, cantidad y valor\n"
+"                                estimado de los bienes, deben estar consignados en dólares americanos, según el\n"
+"                                formato excel que se encuentra ubicado en la página web del MINSA y de\n"
+"                                DIGEMID y que deberá ser incluido en la presentación de los documentos y\n"
+"                                también remitido al correo electrónico: donaciones@minsa.gob.pe"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                E. Lista de contenido (bienes): la descripción, características, cantidad y valor\n"
+"                                estimado de los bienes, deben estar consignados en dólares americanos, según el\n"
+"                                formato excel que se encuentra ubicado en la página web del MINSA y de\n"
+"                                DIGEMID y que deberá ser incluido en la presentación de los documentos y\n"
+"                                también remitido al correo electrónico: donaciones@minsa.gob.pe"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                F. Copia simple del Documento de transporte"
+msgstr "<span class=\"fa fa-2x fa-edit pull-left mb16\"/> \n"
+"                                F. Copia simple del Documento de transporte"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "<span>Beneficiario: </span>"
+msgstr "<span>Beneficiario: </span>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "<span>Fecha de Creacion: </span>"
+msgstr "<span>Fecha de Creacion: </span>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "<span>Fecha de Modificación: </span>"
+msgstr "<span>Fecha de Modificación: </span>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "<span>Número de Expediente: </span>"
+msgstr "<span>Número de Expediente: </span>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "<span>Ultima Modificación: </span>"
+msgstr "<span>Ultima Modificación: </span>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "<strong>Descripcion:</strong>"
+msgstr "<strong>Descripcion:</strong>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "<strong>Estado del documento:</strong>"
+msgstr "<strong>Estado del documento:</strong>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "<strong>Fecha de Fin:</strong>"
+msgstr "<strong>Fecha de Fin:</strong>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "<strong>Fecha de Inicio:</strong>"
+msgstr "<strong>Fecha de Inicio:</strong>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "<strong>Misiones Sanitarias</strong>"
+msgstr "<strong>Misiones Sanitarias</strong>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "<strong>Nombre de Donante:</strong>"
+msgstr "<strong>Nombre de Donante:</strong>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "<strong>Nombre de la Mision:</strong>"
+msgstr "<strong>Nombre de la Mision:</strong>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "<strong>REGISTRO DE BENEFICIARIOS</strong>"
+msgstr "<strong>REGISTRO DE BENEFICIARIOS</strong>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "<strong>observacion Digemid:</strong>"
+msgstr "<strong>observacion Digemid:</strong>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "<strong>observacion Digesa:</strong>"
+msgstr "<strong>observacion Digesa:</strong>"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "<strong>observacion OGCTI:</strong>"
+msgstr "<strong>observacion OGCTI:</strong>"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_accesorios
+msgid "Accesorios"
+msgstr "Accesorios"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_active
+msgid "Active"
+msgstr "Activo"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.wizard_form_view
+msgid "Actualizar catalogo"
+msgstr "Actualizar catalogo"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.users_readonly
+#: model:ir.ui.view,arch_db:donacion.wizard_form_view
+msgid "Add"
+msgstr "Add"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_partner_docautoriza
+#: model:ir.model.fields,field_description:donacion.field_res_users_docautoriza
+msgid "Adjuntar docautoriza"
+msgstr "Adjuntar docautoriza"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_informedigemid
+msgid "Adjuntar informe tecnico digemid"
+msgstr "Adjuntar informe tecnico digemid"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_informedigesa
+msgid "Adjuntar informe tecnico digesa"
+msgstr "Adjuntar informe tecnico digesa"
+
+#. module: donacion
+#: model:ir.model.fields,help:donacion.field_mision_requisito_informediresas_ids
+msgid "Adjuntar informe tecnico diresa"
+msgstr "Adjuntar informe tecnico diresa"
+
+#. module: donacion
+#: model:ir.model.fields,help:donacion.field_mision_requisito_informedisas_ids
+msgid "Adjuntar informe tecnico disa"
+msgstr "Adjuntar informe tecnico disa"
+
+#. module: donacion
+#: model:ir.actions.act_window,name:donacion.launch_session_wizard
+msgid "Agregar de lista de productos"
+msgstr "Agregar de lista de productos"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_alimentos
+msgid "Alimentos"
+msgstr "Alimentos"
+
+#. module: donacion
+#: selection:donacion.requisito,state:0
+#: selection:mision.requisito,state:0
+msgid "Borrador"
+msgstr "Borrador"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_wizard_lista_ids
+msgid "Buscar por DCI o nombre generico"
+msgstr "Buscar por DCI o nombre generico"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "C.V. resumen:"
+msgstr "C.V. resumen:"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_cantidad
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "Cantidad"
+msgstr "Cantidad"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_cantidad
+msgid "Cantidad (unidades)"
+msgstr "Cantidad (unidades)"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_cantidad
+msgid "Cantidad unidades"
+msgstr "Cantidad unidades"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_carta_organizadora
+msgid "Carta de compromiso  de la institucion organizadora nacional o la institucion extranjera responsable del seguimiento posterior a las atenciones segun corresponda"
+msgstr "Carta de compromiso  de la institucion organizadora nacional o la institucion extranjera responsable del seguimiento posterior a las atenciones segun corresponda"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_carta
+msgid "Carta de donacion de la Entidad donante"
+msgstr "Carta de donacion de la Entidad donante"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_carta_donacion
+msgid "Carta de donacion indicando el monto total y el beneficiario"
+msgstr "Carta de donacion indicando el monto total y el beneficiario"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_carta_ogcai
+msgid "Carta dirigida a la Director(a) General de Cooperacion Tecnica Internacional, presentada 30 días antes del inicio de la Misión Sanitaria"
+msgstr "Carta dirigida a la Director(a) General de Cooperacion Tecnica Internacional, presentada 30 días antes del inicio de la Misión Sanitaria"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_carta_embajada_consulado
+msgid "Carta presentada en la Embajada o Consulado del Perú en el pais de origen sobre la misión sanitaria"
+msgstr "Carta presentada en la Embajada o Consulado del Perú en el pais de origen sobre la misión sanitaria"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_linea_codigo
+msgid "Catalogo codigo"
+msgstr "Catalogo codigo"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "Categoria"
+msgstr "Categoria"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_categoria_ids
+msgid "Categoria ids"
+msgstr "Categoria ids"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "Cerrar proceso"
+msgstr "Cerrar proceso"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_certificado_exportacion
+msgid "Certificado de Exportación emitido por la autoridad nacional del país de donde proviene la donación, en el caso de productos estupefacientes, psicotrópicos sujetos a fiscalización sanitaria"
+msgstr "Certificado de Exportación emitido por la autoridad nacional del país de donde proviene la donación, en el caso de productos estupefacientes, psicotrópicos sujetos a fiscalización sanitaria"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_certificado_negatividad
+msgid "Certificado de negatividad del VIH, Hepatitis B y C, Encefalopatía espongiforme bovina en el caso de Hemoderivados"
+msgstr "Certificado de negatividad del VIH, Hepatitis B y C, Encefalopatía espongiforme bovina en el caso de Hemoderivados"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_certificado_repotenciacion
+msgid "Certificado de repotenciacion"
+msgstr "Certificado de repotenciacion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_certificado_protocolo
+msgid "Certificado y Protocolo de análisis en el caso de productos biológicos"
+msgstr "Certificado y Protocolo de análisis en el caso de productos biológicos"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_codigo
+msgid "Codigo, marca y modelo"
+msgstr "Codigo, marca y modelo"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "Colegio"
+msgstr "Colegio"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "Con donaciones o ingreso temporal"
+msgstr "Con donaciones o ingreso temporal"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_linea_concentracion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "Concentracion"
+msgstr "Concentracion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_concentracion
+msgid "Concentración"
+msgstr "Concentración"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_condiciones
+msgid "Condiciones especiales de almacenamiento y/o conservacion"
+msgstr "Condiciones especiales de almacenamiento y/o conservacion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_condiciones
+msgid "Condiciones especiales de conservacion"
+msgstr "Condiciones especiales de conservacion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_certificado_operatividad
+msgid "Constancia o certificado de operatividad"
+msgstr "Constancia o certificado de operatividad"
+
+#. module: donacion
+#: model:mail.template,subject:donacion.example_email_template
+msgid "Contraseña por defecto ${object.name}"
+msgstr "Contraseña por defecto ${object.name}"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_convenios
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "Convenios"
+msgstr "Convenios"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_embarque
+msgid "Copia simple del documento de transporte"
+msgstr "Copia simple del documento de transporte"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_categoria_create_uid
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_create_uid
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_create_uid
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_create_uid
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_create_uid
+#: model:ir.model.fields,field_description:donacion.field_donacion_roles_create_uid
+#: model:ir.model.fields,field_description:donacion.field_donacion_wizard_create_uid
+#: model:ir.model.fields,field_description:donacion.field_linea_create_uid
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_create_uid
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_create_uid
+#: model:ir.model.fields,field_description:donacion.field_website_archive_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_categoria_create_date
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_create_date
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_create_date
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_create_date
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_create_date
+#: model:ir.model.fields,field_description:donacion.field_donacion_roles_create_date
+#: model:ir.model.fields,field_description:donacion.field_donacion_wizard_create_date
+#: model:ir.model.fields,field_description:donacion.field_linea_create_date
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_create_date
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_create_date
+#: model:ir.model.fields,field_description:donacion.field_website_archive_create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_website_archive_csv_url
+msgid "Csv url"
+msgstr "Csv url"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_cv
+msgid "Curriculum Vitae"
+msgstr "Curriculum Vitae"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_name_generico
+msgid "DCI ó nombre genérico"
+msgstr "DCI ó nombre genérico"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_enviar_digemid
+msgid "DIGEMID"
+msgstr "DIGEMID"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_enviar_digesa
+msgid "DIGESA"
+msgstr "DIGESA"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_enviar_diresa
+msgid "DIRESA"
+msgstr "DIRESA"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_enviar_disa
+msgid "DISA"
+msgstr "DISA"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_dni_person
+msgid "DNI"
+msgstr "DNI"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_partner_dni_person
+msgid "DNI persona"
+msgstr "DNI persona"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_declaracion_jurada
+msgid "Declaracion jurada de no tener pendiente entrega de informes de actividades sanitarias realizadas en el pais"
+msgstr "Declaracion jurada de no tener pendiente entrega de informes de actividades sanitarias realizadas en el pais"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_name
+msgid "Denominación o nombre común, generico o universal"
+msgstr "Denominación o nombre común, generico o universal"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_partner_descripcion
+#: model:ir.model.fields,field_description:donacion.field_res_users_descripcion
+msgid "Descripcion de la Institucion"
+msgstr "Descripcion de la Institucion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_descripcion
+msgid "Descripción"
+msgstr "Descripción"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_observacion
+msgid "Description"
+msgstr "Descripción"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "Destino y Finalidad de la donación"
+msgstr "Destino y Finalidad de la donación"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "Destino y Finalidad de la donación,"
+msgstr "Destino y Finalidad de la donación,"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "Direccion de la Persona encargada"
+msgstr "Direccion de la Persona encargada"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_partner_direccioninstitucion
+msgid "Direccion de la institucion"
+msgstr "Direccion de la institucion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_direccioninstitucion
+msgid "Direccion institucion"
+msgstr "Direccion institucion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_categoria_display_name
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_display_name
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_display_name
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_display_name
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_display_name
+#: model:ir.model.fields,field_description:donacion.field_donacion_roles_display_name
+#: model:ir.model.fields,field_description:donacion.field_donacion_wizard_display_name
+#: model:ir.model.fields,field_description:donacion.field_linea_display_name
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_display_name
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_display_name
+#: model:ir.model.fields,field_description:donacion.field_website_archive_display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_dispositivos_ids
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+msgid "Dispositivos medicos"
+msgstr "Dispositivos medicos"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_doc_apci
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "Documento de APCI"
+msgstr "Documento de APCI"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "Documento de Autorizacion"
+msgstr "Documento de Autorizacion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_documentaut
+msgid "Documento de autorizacion"
+msgstr "Documento de autorizacion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_doc_entidades
+msgid "Documento de entidades"
+msgstr "Documento de entidades"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_documento_habilitacion
+msgid "Documento de habilitacion"
+msgstr "Documento de habilitacion"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "Documento de su direccion que autoriza el uso del sistema a nombre de la institucion"
+msgstr "Documento de su direccion que autoriza el uso del sistema a nombre de la institucion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_wizard_donacion_id
+msgid "Donacion id"
+msgstr "Donacion id"
+
+#. module: donacion
+#: model:ir.actions.report.xml,name:donacion.donacion_requisito
+msgid "Donacion requisito"
+msgstr "Donacion requisito"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_donacion_requisito_graph_ogcti
+msgid "Donacion requisito General"
+msgstr "Donacion requisito General"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_donacion_requisito_graph
+msgid "Donacion requisito Lines"
+msgstr "Donacion requisito Lines"
+
+#. module: donacion
+#: model:ir.actions.act_window,name:donacion.donaciones_requisitos_action
+#: model:ir.ui.menu,name:donacion.Donaciones_requisitos
+#: model:ir.ui.menu,name:donacion.Donaciones_requisitos_digemid
+#: model:ir.ui.menu,name:donacion.Donaciones_requisitos_digesa
+#: model:ir.ui.menu,name:donacion.Donaciones_requisitos_ogcti
+msgid "Donaciones"
+msgstr "Donaciones"
+
+#. module: donacion
+#: model:ir.actions.act_window,name:donacion.donaciones_requisitos_digemid_action
+msgid "Donaciones DIGEMID"
+msgstr "Donaciones DIGEMID"
+
+#. module: donacion
+#: model:ir.actions.act_window,name:donacion.donaciones_requisitos_digesa_action
+msgid "Donaciones DIGESA"
+msgstr "Donaciones DIGESA"
+
+#. module: donacion
+#: model:ir.actions.act_window,name:donacion.donaciones_requisitos_ogcai_action
+msgid "Donaciones OGCTI"
+msgstr "Donaciones OGCTI"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_wizard_elemento
+msgid "Elemento"
+msgstr "Elemento"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_email_from
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_email_from
+msgid "Email from"
+msgstr "Email from"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_email_from_name
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_email_from_name
+msgid "Email from name"
+msgstr "Email from name"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_email_remitente
+msgid "Email remitente"
+msgstr "Email remitente"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_email_to
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_email_to
+msgid "Email to"
+msgstr "Email to"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_encargado_1
+msgid "Encargado"
+msgstr "Encargado"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_name_entidades
+msgid "Entidades"
+msgstr "Entidades"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "Enviar"
+msgstr "Enviar"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "Enviar OGCCTI"
+msgstr "Enviar OGCCTI"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "Enviar Registro"
+msgstr "Enviar Registro"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+msgid "Enviar a OGCTI"
+msgstr "Enviar a OGCTI"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+msgid "Enviar informe DIGEMID"
+msgstr "Enviar informe DIGEMID"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+msgid "Enviar informe DIGESA"
+msgstr "Enviar informe DIGESA"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "Enviar informe DIRESA"
+msgstr "Enviar informe DIRESA"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "Enviar informe DISA"
+msgstr "Enviar informe DISA"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_equipos_medicos
+msgid "Equipos Médicos"
+msgstr "Equipos Médicos"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "Esta seguro de enviar a las entidades seleccionadas?"
+msgstr "Esta seguro de enviar a las entidades seleccionadas?"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_state
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_state
+msgid "Estado"
+msgstr "Estado"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "Estado de la mercancía"
+msgstr "Estado de la mercancía"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "Estado de la mercancía;"
+msgstr "Estado de la mercancía;"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_etiquetado
+msgid "Etiquetado con informacion solicitada"
+msgstr "Etiquetado con informacion solicitada"
+
+#. module: donacion
+#. openerp-web
+#: code:addons/donacion/static/src/xml/web_printscreen_export.xml:13
+#, python-format
+msgid "Excel"
+msgstr "Excel"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "Fecha de Vencimiento"
+msgstr "Fecha de Vencimiento"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_fecha_vencimiento
+msgid "Fecha de Vnecimiento"
+msgstr "Fecha de Vnecimiento"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_fecha_expiracion
+msgid "Fecha de expiracion y/o vencimiento/Fecha de fabricacion"
+msgstr "Fecha de expiracion y/o vencimiento/Fecha de fabricacion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_fecha_fin
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_fecha_inicio
+msgid "Fecha de inicio de la mision sanitaria"
+msgstr "Fecha de inicio de la mision sanitaria"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_fecha_vencimiento
+msgid "Fecha de vencimiento"
+msgstr "Fecha de vencimiento"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_website_archive_file
+msgid "File"
+msgstr "Archivo"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_finalidad_uso
+msgid "Finalidad de uso o uso previsto por el fabricante"
+msgstr "Finalidad de uso o uso previsto por el fabricante"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_disa_diresa
+msgid "Flat Diresas"
+msgstr "Flat Diresas"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "Forma"
+msgstr "Forma"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_forma_presentacion
+msgid "Forma de presentacion o comercial"
+msgstr "Forma de presentacion o comercial"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_forma
+msgid "Forma farmacéutica"
+msgstr "Forma farmacéutica"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_linea_forma_simple
+msgid "Forma simple descripcion"
+msgstr "Forma simple descripcion"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "Fotocopia simple de LIcencia para ejercer su profesion en su pais:"
+msgstr "Fotocopia simple de LIcencia para ejercer su profesion en su pais:"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_pasaporte
+msgid "Fotocopia simple de Pasaporte"
+msgstr "Fotocopia simple de Pasaporte"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_titulo
+msgid "Fotocopia simple de Titulo Profesional"
+msgstr "Fotocopia simple de Titulo Profesional"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "Fotocopia simple de Titulo Profesional:"
+msgstr "Fotocopia simple de Titulo Profesional:"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_licencia
+msgid "Fotocopia simple de licencia para ejercer su profesion en su pais"
+msgstr "Fotocopia simple de licencia para ejercer su profesion en su pais"
+
+#. module: donacion
+#: model:ir.ui.menu,name:donacion.menu_donacion_graph_id
+msgid "Graficos Donaciones"
+msgstr "Graficos Donaciones"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_donacion_requisito_subgraph_general_ogcti
+msgid "Graficos por estado agrupado usuario"
+msgstr "Graficos por estado agrupado usuario"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_donacion_requisito_graph3_ogcti
+msgid "Graficos por estado agrupado usuario creacion"
+msgstr "Graficos por estado agrupado usuario creacion"
+
+#. module: donacion
+#: model:ir.ui.menu,name:donacion.menu_donacion_graph_id2
+msgid "Graficos usuario/estado"
+msgstr "Graficos usuario/estado"
+
+#. module: donacion
+#: model:res.groups,name:donacion.group_mision_colegiados
+msgid "Grupo Colegiados"
+msgstr "Grupo Colegiados"
+
+#. module: donacion
+#: model:res.groups,name:donacion.group_mision_colegiados_manager
+msgid "Grupo Colegiados admin"
+msgstr "Grupo Colegiados admin"
+
+#. module: donacion
+#: model:res.groups,name:donacion.group_donacion_requisito_digemid
+msgid "Grupo DIGEMID"
+msgstr "Grupo DIGEMID"
+
+#. module: donacion
+#: model:res.groups,name:donacion.group_donacion_requisito_digesa
+msgid "Grupo DIGESA"
+msgstr "Grupo DIGESA"
+
+#. module: donacion
+#: model:res.groups,name:donacion.group_mision_requisito_diresa
+msgid "Grupo DIRESA"
+msgstr "Grupo DIRESA"
+
+#. module: donacion
+#: model:res.groups,name:donacion.group_mision_requisito_disa
+msgid "Grupo DISA"
+msgstr "Grupo DISA"
+
+#. module: donacion
+#: model:res.groups,name:donacion.group_donacion_requisito_donatario
+msgid "Grupo DONATARIO"
+msgstr "Grupo DONATARIO"
+
+#. module: donacion
+#: model:res.groups,name:donacion.group_donacion_minsa
+msgid "Grupo MINSA"
+msgstr "Grupo MINSA"
+
+#. module: donacion
+#: model:res.groups,name:donacion.group_donacion_requisito_ogcai
+msgid "Grupo OGCTI"
+msgstr "Grupo OGCTI"
+
+#. module: donacion
+#: model:res.groups,name:donacion.group_donacion_requisito_ogcaj
+msgid "Grupo OGGJ"
+msgstr "Grupo OGGJ"
+
+#. module: donacion
+#: model:res.groups,name:donacion.group_donacion_ong
+msgid "Grupo ONG"
+msgstr "Grupo ONG"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "Habilitado"
+msgstr "Habilitado"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_habilitar
+msgid "Habilitar"
+msgstr "Habilitar"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_categoria_id
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_id
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_id
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_id
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_id
+#: model:ir.model.fields,field_description:donacion.field_donacion_roles_id
+#: model:ir.model.fields,field_description:donacion.field_donacion_wizard_id
+#: model:ir.model.fields,field_description:donacion.field_linea_id
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_id
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_id
+#: model:ir.model.fields,field_description:donacion.field_website_archive_id
+msgid "ID"
+msgstr "ID"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "Identificación del donante: nombre, nombre del representante legal,\n"
+"                                        domicilio legal, fax y teléfono, correo electrónico y página web"
+msgstr "Identificación del donante: nombre, nombre del representante legal,\n"
+"                                        domicilio legal, fax y teléfono, correo electrónico y página web"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "Identificación del donante: nombre, nombre del representante legal,domicilio legal, fax y teléfono, correo electrónico y página web"
+msgstr "Identificación del donante: nombre, nombre del representante legal,domicilio legal, fax y teléfono, correo electrónico y página web"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+msgid "Informe Tecnico DIGEMID"
+msgstr "Informe Tecnico DIGEMID"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+msgid "Informe Tecnico DIGESA"
+msgstr "Informe Tecnico DIGESA"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "Informe Tecnico DISA - DIRESAS"
+msgstr "Informe Tecnico DISA - DIRESAS"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_informediresas_ids
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_informedisas_ids
+msgid "Informe tecnico diresa"
+msgstr "Informe tecnico diresa"
+
+#. module: donacion
+#: selection:donacion.requisito,state:0
+#: selection:mision.requisito,state:0
+msgid "Iniciado"
+msgstr "Iniciado"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_institucion
+#: model:ir.model.fields,field_description:donacion.field_res_partner_institucion
+#: model:ir.model.fields,field_description:donacion.field_res_users_institucion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "Institucion"
+msgstr "Institucion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_instrumentos_medicos
+msgid "Instrumentos médicos"
+msgstr "Instrumentos médicos"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_itinerario_vuelo
+msgid "Itinerario de vuelo arribo y salida del país de los profesionales que traen la donacion o ingreso temporal"
+msgstr "Itinerario de vuelo arribo y salida del país de los profesionales que traen la donacion o ingreso temporal"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.signin_notificacion_usuario
+msgid "La plataforma virtual de Donaciones y Misiones Sanitarias"
+msgstr "La plataforma virtual de Donaciones y Misiones Sanitarias"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_categoria___last_update
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos___last_update
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista___last_update
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios___last_update
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito___last_update
+#: model:ir.model.fields,field_description:donacion.field_donacion_roles___last_update
+#: model:ir.model.fields,field_description:donacion.field_donacion_wizard___last_update
+#: model:ir.model.fields,field_description:donacion.field_linea___last_update
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales___last_update
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito___last_update
+#: model:ir.model.fields,field_description:donacion.field_website_archive___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_categoria_write_uid
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_write_uid
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_write_uid
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_write_uid
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_write_uid
+#: model:ir.model.fields,field_description:donacion.field_donacion_roles_write_uid
+#: model:ir.model.fields,field_description:donacion.field_donacion_wizard_write_uid
+#: model:ir.model.fields,field_description:donacion.field_linea_write_uid
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_write_uid
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_write_uid
+#: model:ir.model.fields,field_description:donacion.field_website_archive_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_categoria_write_date
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_write_date
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_write_date
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_write_date
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_write_date
+#: model:ir.model.fields,field_description:donacion.field_donacion_roles_write_date
+#: model:ir.model.fields,field_description:donacion.field_donacion_wizard_write_date
+#: model:ir.model.fields,field_description:donacion.field_linea_write_date
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_write_date
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_write_date
+#: model:ir.model.fields,field_description:donacion.field_website_archive_write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_lista_ids
+msgid "Lista"
+msgstr "Lista"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_listaprofesionales_ids
+msgid "Lista Profesionales"
+msgstr "Lista Profesionales"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "Lista de Donacion"
+msgstr "Lista de Donacion"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "Lista de Profesionales"
+msgstr "Lista de Profesionales"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+msgid "Lista de productos farmaceuticos"
+msgstr "Lista de productos farmaceuticos"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_lista_donacion_mision
+msgid "Listado detallado de bienes a ser donados"
+msgstr "Listado detallado de bienes a ser donados"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_lista_donacion_temporal
+msgid "Listado detallado de bienes en calidad de ingreso temporal"
+msgstr "Listado detallado de bienes en calidad de ingreso temporal"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.mision
+msgid "Listado detallado de bienes en calidad de ingreso temporal:"
+msgstr "Listado detallado de bienes en calidad de ingreso temporal:"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_DIGEMID
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_DIGESA
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_donatario
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_ogcti
+msgid "Listas de Donación"
+msgstr "Listas de Donación"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_lote
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "Lote"
+msgstr "Lote"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "Lugar de origen o procedencia de la donación"
+msgstr "Lugar de origen o procedencia de la donación"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "Lugar de origen o procedencia de la donación;"
+msgstr "Lugar de origen o procedencia de la donación;"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "MINSA/DIRESA/OTROS"
+msgstr "MINSA/DIRESA/OTROS"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_manual_operacion
+msgid "Manual de operacion o usuario o instrucciones"
+msgstr "Manual de operacion o usuario o instrucciones"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_linea_marca
+msgid "Marca"
+msgstr "Marca"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.signin_notificacion_usuario
+msgid "Mensaje"
+msgstr "Mensaje"
+
+#. module: donacion
+#: model:ir.actions.report.xml,name:donacion.mision_requisito
+msgid "Mision requisito"
+msgstr "Mision requisito"
+
+#. module: donacion
+#: model:ir.actions.act_window,name:donacion.misiones_requisitos_colegiado_action
+#: model:ir.actions.act_window,name:donacion.misiones_requisitos_diresa_action
+#: model:ir.actions.act_window,name:donacion.misiones_requisitos_disa_action
+#: model:ir.actions.act_window,name:donacion.misiones_requisitos_donatario_action
+#: model:ir.actions.act_window,name:donacion.misiones_requisitos_ogcti_action
+msgid "Misiones"
+msgstr "Misiones"
+
+#. module: donacion
+#: model:ir.ui.menu,name:donacion.Misiones_requisitos_diresa
+#: model:ir.ui.menu,name:donacion.Misiones_requisitos_disa
+#: model:ir.ui.menu,name:donacion.Misiones_requisitos_donatario
+#: model:ir.ui.menu,name:donacion.Misiones_requisitos_ogcti
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "Misiones Sanitarias"
+msgstr "Misiones Sanitarias"
+
+#. module: donacion
+#: model:ir.ui.menu,name:donacion.Misiones_requisitos_colegiados
+msgid "Misiones Sanitarias Colegiados"
+msgstr "Misiones Sanitarias Colegiados"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "No"
+msgstr "No"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_categoria_name
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_name
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "Nombre"
+msgstr "Nombre"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_name_filename_alimentos
+msgid "Nombre Alimentos"
+msgstr "Nombre Alimentos"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_name_filename_equipos_medicos
+msgid "Nombre Equipos Médicos"
+msgstr "Nombre Equipos Médicos"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "Nombre Generico DCI"
+msgstr "Nombre Generico DCI"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_name_filename_instrumentos_medicos
+msgid "Nombre Instrumentos medicos"
+msgstr "Nombre Instrumentos medicos"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_name_filename_productos_higiene
+msgid "Nombre Productos de higiene personal"
+msgstr "Nombre Productos de higiene personal"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_name_filename_utiles_escolares
+msgid "Nombre Utiles escolares"
+msgstr "Nombre Utiles escolares"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_name_filename_embarque
+msgid "Nombre copia simple del documento de transporte"
+msgstr "Nombre copia simple del documento de transporte"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "Nombre de Marca#"
+msgstr "Nombre de Marca#"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_linea_descripcion
+msgid "Nombre de concentracion"
+msgstr "Nombre de concentracion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_name_apci
+msgid "Nombre de documento de autorizacion"
+msgstr "Nombre de documento de autorizacion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_name_filename_itinerario_vuelo
+msgid "Nombre de itinerario vuelo"
+msgstr "Nombre de itinerario vuelo"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_name
+msgid "Nombre de la Misión"
+msgstr "Nombre de la Misión"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_name_filename_carta
+msgid "Nombre de la carta de donacion de la Entidad donante"
+msgstr "Nombre de la carta de donacion de la Entidad donante"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_name_filename_carta_donacion
+msgid "Nombre de la carta donacion"
+msgstr "Nombre de la carta donacion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_name_filename_carta_embajada_consulado
+msgid "Nombre de la carta embajada consulado"
+msgstr "Nombre de la carta embajada consulado"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_name_filename_carta_ogcai
+msgid "Nombre de la carta ogcai"
+msgstr "Nombre de la carta ogcai"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_name_filename_carta_organizadora
+msgid "Nombre de la carta organizadora"
+msgstr "Nombre de la carta organizadora"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_name_filename_declaracion_jurada
+msgid "Nombre de la declaracion_jurada"
+msgstr "Nombre de la declaracion_jurada"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_name_filename_lista_donacion_mision
+msgid "Nombre de la lista donacion mision"
+msgstr "Nombre de la lista donacion mision"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_name_filename_lista_donacion_temporal
+msgid "Nombre de la lista donacion temporal"
+msgstr "Nombre de la lista donacion temporal"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_name_filename_resolucion_ministerial
+msgid "Nombre de la resolucion ministerial"
+msgstr "Nombre de la resolucion ministerial"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_name_filename_solicitud
+msgid "Nombre de la solicitud"
+msgstr "Nombre de la solicitud"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_name_filename_tecnico
+msgid "Nombre de la solicitud de emisión de opinión técnica"
+msgstr "Nombre de la solicitud de emisión de opinión técnica"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_name
+msgid "Nombre de marca"
+msgstr "Nombre de marca"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_descripcion
+msgid "Nombre del Donante"
+msgstr "Nombre del Donante"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_website_archive_file_name
+msgid "Nombre del archivo"
+msgstr "Nombre del archivo"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_name_filename_convenios
+msgid "Nombre del convenio"
+msgstr "Nombre del convenio"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_name_filename_digemid
+msgid "Nombre del informe digemid"
+msgstr "Nombre del informe digemid"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_name_filename_digesa
+msgid "Nombre del informe digesa"
+msgstr "Nombre del informe digesa"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_name_filename_plan_trabajo
+msgid "Nombre del plan de trabajo"
+msgstr "Nombre del plan de trabajo"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_name
+msgid "Nombre del producto"
+msgstr "Nombre del producto"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_roles_name
+msgid "Nombre del rol"
+msgstr "Nombre del rol"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_pais
+msgid "Nombre y País del laboratorio fabricante"
+msgstr "Nombre y País del laboratorio fabricante"
+
+#. module: donacion
+#: model:mail.template,subject:donacion.email_newuser_ogcti
+msgid "Nuevo usuario para revision!"
+msgstr "Nuevo usuario para revision!"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_numero_expediente
+msgid "Numero de expediente"
+msgstr "Numero de expediente"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_numero_expediente
+msgid "Numero de expediente mision"
+msgstr "Numero de expediente mision"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_lote_serie
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_lote_serie
+msgid "Numero de lote y/o serie"
+msgstr "Numero de lote y/o serie"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "ONGD/ENIEX/IPREDA"
+msgstr "ONGD/ENIEX/IPREDA"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_observacion_digesa
+msgid "Observacion  DIGESA"
+msgstr "Observacion  DIGESA"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_observacion_digemid
+msgid "Observacion DIGEMID"
+msgstr "Observacion DIGEMID"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_observacion_ogcai
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_observacion_ogcti
+msgid "Observacion OGCTI"
+msgstr "Observacion OGCTI"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "Observaciones"
+msgstr "Observaciones"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "Observar"
+msgstr "Observar"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.signin_notificacion_usuario
+msgid "Oficina General de Cooperacion Tecnica Internacional"
+msgstr "Oficina General de Cooperacion Tecnica Internacional"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_user_id_organ
+msgid "Organizacion"
+msgstr "Organizacion"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "Otra información que se considere relevante."
+msgstr "Otra información que se considere relevante."
+
+#. module: donacion
+#. openerp-web
+#: code:addons/donacion/static/src/xml/web_printscreen_export.xml:8
+#, python-format
+msgid "PDF"
+msgstr "PDF"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "Pais"
+msgstr "Pais"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_pais
+msgid "Pais de procedencia"
+msgstr "Pais de procedencia"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_partner_encargado_1
+msgid "Persona encargada"
+msgstr "Persona encargada"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_plan_trabajo
+msgid "Plan de trabajo de las actividades a realizar, con el cronograma especifico por dia de la mision sanitaria"
+msgstr "Plan de trabajo de las actividades a realizar, con el cronograma especifico por dia de la mision sanitaria"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_donacion
+msgid "Proceso de Donación"
+msgstr "Proceso de Donación"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_prodsanitarios_ids
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+msgid "Productos Sanitarios"
+msgstr "Productos Sanitarios"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_productos_higiene
+msgid "Productos de higiene personal"
+msgstr "Productos de higiene personal"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "RM"
+msgstr "RM"
+
+#. module: donacion
+#: selection:donacion.requisito,state:0
+#: selection:mision.requisito,state:0
+msgid "Registrado"
+msgstr "Registrado"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "Registro de Entidades\n"
+"                                            perceptoras de donaciones de la SUNAT"
+msgstr "Registro de Entidades\n"
+"                                            perceptoras de donaciones de la SUNAT"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_form
+msgid "Requisitos para Misiones Sanitarias"
+msgstr "Requisitos para Misiones Sanitarias"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_resolucion_ministerial
+msgid "Resolucion ministerial"
+msgstr "Resolucion ministerial"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.signin_notificacion_usuario
+msgid "Revise su correo electronico"
+msgstr "Revise su correo electronico"
+
+#. module: donacion
+#: model:mail.template,subject:donacion.email_template_demo
+#: model:mail.template,subject:donacion.email_template_mision
+msgid "Se ha cambiado el estado del documento!, ${object.email_from_name}"
+msgstr "Se ha cambiado el estado del documento!, ${object.email_from_name}"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+msgid "Seleccionar de la lista de Catalogo"
+msgstr "Seleccionar de la lista de Catalogo"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.report_proceso_mision
+msgid "Si"
+msgstr "Si"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_solicitud
+msgid "Solicitud de emisión de Resolución de Aceptación de donaciones proveniente del exterior dirigido a OGCTI"
+msgstr "Solicitud de emisión de Resolución de Aceptación de donaciones proveniente del exterior dirigido a OGCTI"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_opinion_tecnica
+msgid "Solicitud de emisión de opinión técnica "
+msgstr "Solicitud de emisión de opinión técnica "
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_DIGEMID
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_DIGESA
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_donatario
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_ogcti
+msgid "Subir Archivos Donación"
+msgstr "Subir Archivos Donación"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_colegiado
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_diresa
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_disa
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_donatario
+msgid "Subir Informe Diresa"
+msgstr "Subir Informe Diresa"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_mision_ogcti
+msgid "Subir Informe Diresas y Disas"
+msgstr "Subir Informe Diresas y Disas"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_wizard_texto
+msgid "Texto a buscar"
+msgstr "Texto a buscar"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "Tipo de organizacion"
+msgstr "Tipo de organizacion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_name
+msgid "Titulo de la donación"
+msgstr "Titulo de la donación"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_temperatura
+msgid "T° de almacenamiento"
+msgstr "T° de almacenamiento"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_user_diresa
+msgid "User diresa"
+msgstr "User diresa"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_res_users
+msgid "Users"
+msgstr "Users"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_users_access_ids_4278
+msgid "Users access ids"
+msgstr "Users access ids"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_utiles_escolares
+msgid "Utiles escolares"
+msgstr "Utiles escolares"
+
+#. module: donacion
+#: selection:donacion.requisito,state:0
+#: selection:mision.requisito,state:0
+msgid "Validado"
+msgstr "Validado"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_validar_solicitud
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_validar_tecnico
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_validar_carta_ogcai
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_validar_plan_trabajo
+msgid "Validar"
+msgstr "Validar"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_form_donacion_requisito
+msgid "Validar proceso"
+msgstr "Validar proceso"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.index
+msgid "Valor estimado"
+msgstr "Valor estimado"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_vdigemid
+msgid "Visto Bueno DIGEMID"
+msgstr "Visto Bueno DIGEMID"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_vdigesa
+msgid "Visto Bueno DIGESA"
+msgstr "Visto Bueno DIGESA"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_vdiresa
+msgid "Visto Bueno DIRESA"
+msgstr "Visto Bueno DIRESA"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_vdisa
+msgid "Visto Bueno DISA"
+msgstr "Visto Bueno DISA"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.form_nuevo_usuario
+msgid "admin@digesa.com.pe"
+msgstr "admin@digesa.com.pe"
+
+#. module: donacion
+#: model:ir.actions.act_window,name:donacion.websitearchives_action
+msgid "archivos web"
+msgstr "archivos web"
+
+#. module: donacion
+#: model:ir.ui.menu,name:donacion.arch_webs
+msgid "archivos website"
+msgstr "archivos website"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.wizard_form_view
+msgid "buscador"
+msgstr "buscador"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_componentes
+msgid "componentes de la forma de presentacion o comercial"
+msgstr "componentes de la forma de presentacion o comercial"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_dispositivos_medicos_dispositivo_id
+#: model:ir.model.fields,field_description:donacion.field_donacion_lista_donacion_id
+#: model:ir.model.fields,field_description:donacion.field_donacion_productos_sanitarios_productosanitario_id
+msgid "donacion"
+msgstr "donacion"
+
+#. module: donacion
+#: model:ir.actions.act_window,name:donacion.action_for_donacion2_graph
+#: model:ir.actions.act_window,name:donacion.action_for_donacion_graph
+msgid "donacion requisito graph ogcti"
+msgstr "donacion requisito graph ogcti"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_donacion_categoria
+msgid "donacion.categoria"
+msgstr "donacion.categoria"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_donacion_dispositivos_medicos
+msgid "donacion.dispositivos.medicos"
+msgstr "donacion.dispositivos.medicos"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_donacion_lista
+msgid "donacion.lista"
+msgstr "donacion.lista"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_donacion_lista_verificacion
+msgid "donacion.lista.verificacion"
+msgstr "donacion.lista.verificacion"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_donacion_proceso
+msgid "donacion.proceso"
+msgstr "donacion.proceso"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_donacion_productos_sanitarios
+msgid "donacion.productos.sanitarios"
+msgstr "donacion.productos.sanitarios"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_donacion_requisito
+msgid "donacion.requisito"
+msgstr "donacion.requisito"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_donacion_roles
+msgid "donacion.roles"
+msgstr "donacion.roles"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_donacion_usuario
+msgid "donacion.usuario"
+msgstr "donacion.usuario"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_donacion_wizard
+msgid "donacion.wizard"
+msgstr "donacion.wizard"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_donacion_requisito_graph2_ogcti
+msgid "estado agrupado por usuario"
+msgstr "estado agrupado por usuario"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_ir_attachment
+msgid "ir.attachment"
+msgstr "ir.attachment"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.signin_notificacion_usuario
+msgid "le da la Bienvenida indicandoles que sus datos seran validados.."
+msgstr "le da la Bienvenida indicandoles que sus datos seran validados.."
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_linea
+msgid "linea"
+msgstr "linea"
+
+#. module: donacion
+#: model:ir.ui.view,arch_db:donacion.view_tree_linea
+msgid "lineas"
+msgstr "lineas"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_mision_categoriaprofesional
+msgid "mision.categoriaprofesional"
+msgstr "mision.categoriaprofesional"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_mision_disas_diresas
+msgid "mision.disas.diresas"
+msgstr "mision.disas.diresas"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_mision_listaprofesionales
+msgid "mision.listaprofesionales"
+msgstr "mision.listaprofesionales"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_mision_observacion
+msgid "mision.observacion"
+msgstr "mision.observacion"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_mision_requisito
+msgid "mision.requisito"
+msgstr "mision.requisito"
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_mision_requisitos
+msgid "mision.requisitos"
+msgstr "mision.requisitos"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_mision_id
+msgid "misiones"
+msgstr "misiones"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_website_archive_name
+msgid "nombre"
+msgstr "nombre"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_name_filename
+msgid "nombre del archivo"
+msgstr "nombre del archivo"
+
+#. module: donacion
+#: selection:donacion.requisito,state:0
+msgid "observado por DIGEMID/DIGESA"
+msgstr "observado por DIGEMID/DIGESA"
+
+#. module: donacion
+#: selection:mision.requisito,state:0
+msgid "observado por DISA/DIRESA"
+msgstr "observado por DISA/DIRESA"
+
+#. module: donacion
+#: selection:donacion.requisito,state:0
+#: selection:mision.requisito,state:0
+msgid "observado por OGCTI"
+msgstr "observado por OGCTI"
+
+#. module: donacion
+#. openerp-web
+#: code:addons/donacion/static/src/xml/web_printscreen_export.xml:9
+#, python-format
+msgid "or"
+msgstr "or"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_organizacion
+msgid "organizacion"
+msgstr "organizacion"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_res_users_rol_id
+msgid "rol"
+msgstr "rol"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_user_id
+msgid "users"
+msgstr "users"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_listaprofesionales_user_colegiado
+msgid "usuario colegiado"
+msgstr "usuario colegiado"
+
+#. module: donacion
+#: model:ir.ui.menu,name:donacion.usuarios_lista
+msgid "usuarios"
+msgstr "usuarios"
+
+#. module: donacion
+#: model:ir.actions.act_window,name:donacion.users_list_action
+msgid "usuarios activar"
+msgstr "usuarios activar"
+
+#. module: donacion
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_validar_carta
+#: model:ir.model.fields,field_description:donacion.field_donacion_requisito_validar_embarque
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_validar_carta_donacion
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_validar_carta_embajada_consulado
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_validar_carta_organizadora
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_validar_declaracion_jurada
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_validar_itinerario_vuelo
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_validar_lista_donacion_mision
+#: model:ir.model.fields,field_description:donacion.field_mision_requisito_validar_lista_donacion_temporal
+msgid "validar "
+msgstr "validar "
+
+#. module: donacion
+#: model:ir.model,name:donacion.model_website_archive
+msgid "website.archive"
+msgstr "website.archive"
+

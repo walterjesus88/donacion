@@ -1,0 +1,57 @@
+<!-- <odoo>
+  <data>
+    <record model="ir.ui.view" id="partner_instructor_form_view">
+            <field name="name">partner.instructor</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Sessions">
+                        <group string="Documento de autorizacion">
+                            <field name="attachment_ids">
+                                <tree editable="bottom">
+                                    <field name="db_datas"/>                               
+                                    <field name="file_size"/>                               
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+    </record>
+
+  </data>
+</odoo>
+
+ -->
+
+<odoo>
+  <data>
+<!--       <record id="send_mail_partner_form_inherit" model="ir.ui.view">
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+              <header>
+                <button name="send_mail_templatex" string="Send e-mail" type="object" class="oe_highlight"/>
+                <button name="boton_envi" string="enviar a email" type="object" class="oe_highlight"/>
+
+              </header>
+            </xpath>
+        </field>
+      </record>
+
+
+        <record model="ir.actions.act_window" id="partner_list_action">
+            <field name="name">partner activar</field>
+            <field name="res_model">res.partner</field>           
+            <field name="view_mode">tree,form</field>            
+        </record>
+
+        <menuitem id="partner" name="partner"  action="partner_list_action" />
+
+ -->
+  </data>
+</odoo>
+
+

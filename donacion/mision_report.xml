@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<report
+		    id="mision_requisito"
+		    model="mision.requisito"
+		    string="Mision requisito"
+		    report_type="qweb-pdf"
+		    name="donacion.report_proceso_mision"
+		    file="donacion.report_proceso_mision"
+		    attachment_use="True"		   
+		/>
+    </data>
+</openerp>
